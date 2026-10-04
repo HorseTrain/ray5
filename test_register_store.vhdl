@@ -208,10 +208,7 @@ begin
         write_value => register_store_write_value,
         index => register_store_index,
 
-        ready => register_store_ready,
-
-        -- `reset_done`, and `value_out` are irrelevant for this test. 
-        -- reset_done => ...
+        ready => register_store_ready,-
         value_out => register_store_value_out
     );
 
