@@ -9,21 +9,12 @@
 
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.numeric_std.all;
-use work.register_store_pkg.all;
+use ieee.numeric_std.all; 
 
 entity register_store is 
 
     generic (
-        ------------------------------------------------------------------------
-        -- @brief Register data. 
-        --
-        -- @see 
-        --      register_store_pkg.register_store_template_t
-        ------------------------------------------------------------------------
-        register_store_template : register_store_template_t := new_register_store_template_t(
-            5, 3
-        )
+        package register_store_pkg is new work.register_store_type_p generic map (<>)
     );
 
     port (
@@ -34,10 +25,7 @@ entity register_store is
         -- @see 
         --      register_store_pkg.register_store_inputs_t
         ------------------------------------------------------------------------
-        inputs : in register_store_inputs_t(
-            write_value (0 to (register_store_template.register_width - 1)),
-            index (0 to (register_store_template.register_count_bit - 1))
-        );
+        inputs : in register_store_pkg.register_store_inputs_t;
 
         ------------------------------------------------------------------------
         -- @brief Register store inputs. 
@@ -45,9 +33,7 @@ entity register_store is
         -- @see 
         --      register_store_pkg.register_store_outputs_t
         ------------------------------------------------------------------------
-        outputs : out register_store_outputs_t(
-            value_out(0 to (register_store_template.register_width - 1))
-        )
+        outputs : out register_store_pkg.register_store_outputs_t
     );
 
 end entity;
@@ -66,7 +52,7 @@ architecture rtl of register_store is
     ----------------------------------------------------------------------------
     -- @brief Type of register index. 
     ----------------------------------------------------------------------------
-    subtype register_index_t is unsigned (0 to (register_store_template.register_count_bit - 1));
+    subtype register_index_t is unsigned (0 to (register_store_pkg.register_count_bit - 1));
 
     ----------------------------------------------------------------------------
     -- @brief Unready state.
@@ -101,7 +87,7 @@ architecture rtl of register_store is
     ----------------------------------------------------------------------------
     -- @brief Register store type.
     ----------------------------------------------------------------------------
-    type register_store_t is array (0 to (register_store_template.register_count - 1)) of unsigned (0 to (register_store_template.register_width - 1));
+    type register_store_t is array (0 to (register_store_pkg.register_count - 1)) of unsigned (0 to (register_store_pkg.register_width - 1));
 
     ----------------------------------------------------------------------------
     -- @brief Register store.
@@ -167,7 +153,7 @@ begin
                 register_store(to_integer(reset_idx)) <= (others => '0');
                 reset_idx <= reset_idx + "001";
 
-                if reset_idx = (to_unsigned(register_store_template.register_count - 1, 3)) then
+                if reset_idx = (to_unsigned(register_store_pkg.register_count - 1, 3)) then
                     state <= STATE_NOT_READY;
                 end if;
 
