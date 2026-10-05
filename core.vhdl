@@ -20,7 +20,7 @@ entity core is
         -- @note Represented as log2(register_count) for internal indexing ease.
         --       For example, 5 bits = 2^5 = 32.
         ------------------------------------------------------------------------
-        register_width_bit : integer := 3;
+        register_width_bit : integer := 5;
 
         ------------------------------------------------------------------------
         -- @brief Number of general-purpose registers (as address bit-width).
@@ -28,7 +28,7 @@ entity core is
         -- @note Represented as log2(register_count) for internal indexing ease.
         --       For example, 3 bits = 2^3 = 8 registers.
         ------------------------------------------------------------------------
-        register_count_bit : integer := 5
+        register_count_bit : integer := 3
     );
 
     port (
@@ -62,7 +62,7 @@ entity core is
     );
 
 end;
-   
+        
 architecture rtl of core is 
 
     ----------------------------------------------------------------------------
@@ -84,6 +84,9 @@ architecture rtl of core is
     ----------------------------------------------------------------------------
     signal core_initialized : std_logic := '0';
 
+    ----------------------------------------------------------------------------
+    -- General purpose register store signals.
+    ----------------------------------------------------------------------------
 begin
 
     process (clock_input) 
@@ -91,17 +94,6 @@ begin
 
         -- All core activity occurs on the rising edge.
         if rising_edge(clock_input) then
-
-            if core_initialized = '0' then
-
-                -- Core init process.                          
-
-                -- Signal this core is in the init process. 
-                core_status_out <= (others => '0');
-
-            else 
-
-            end if;
 
         end if;
 

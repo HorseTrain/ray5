@@ -7,109 +7,52 @@
 --      Stores a collection of registers.
 --------------------------------------------------------------------------------
 
-library IEEE;
-use IEEE.std_logic_1164.all;
-use IEEE.numeric_std.all;
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use work.register_store_pkg.all;
 
 entity register_store is 
 
     generic (
         ------------------------------------------------------------------------
-        -- @brief Width of general purpose registers.
-        -- 
-        -- @note Represented as log2(register_count) for internal indexing ease.
-        --       For example, 5 bits = 2^5 = 32.
+        -- @brief Register data. 
+        --
+        -- @see 
+        --      register_store_pkg.register_store_template_t
         ------------------------------------------------------------------------
-        register_width_bit : integer := 3;
-
-        ------------------------------------------------------------------------
-        -- @brief Number of general-purpose registers (as address bit-width).
-        -- 
-        -- @note Represented as log2(register_count) for internal indexing ease.
-        --       For example, 3 bits = 2^3 = 8 registers.
-        ------------------------------------------------------------------------
-        register_count_bit : integer := 5
+        register_store_template : register_store_template_t := new_register_store_template_t(
+            5, 3
+        )
     );
 
     port (
 
         ------------------------------------------------------------------------
-        -- Inputs.
-        ------------------------------------------------------------------------
-
-        ------------------------------------------------------------------------
-        -- @brief Clock input.
-        ------------------------------------------------------------------------
-        clock_input : in std_logic;
-
-        ------------------------------------------------------------------------
-        -- @brief Reset pin.
-        -- 
-        -- @note 
-        --      If high, this register store will neither accept, nor or output 
-        --      values.
-        ------------------------------------------------------------------------
-        reset : in std_logic := '0';
-
-        ------------------------------------------------------------------------
-        -- @brief Write enable.
+        -- @brief Register store inputs. 
         --
-        -- @description 
-        --      When high, and on a rising clock edge, `write_value` will be 
-        --      written into the register with index `index`.
+        -- @see 
+        --      register_store_pkg.register_store_inputs_t
         ------------------------------------------------------------------------
-        write_enable : in std_logic;
+        inputs : in register_store_inputs_t(
+            write_value (0 to (register_store_template.register_width - 1)),
+            index (0 to (register_store_template.register_count_bit - 1))
+        );
 
         ------------------------------------------------------------------------
-        -- @brief Value to be written into register store.
+        -- @brief Register store inputs. 
         --
-        -- @description
-        --      When on a rising clock edge, and `write_enable` is high, this 
-        --      value will be written into the register with index 
-        --      `index`.
+        -- @see 
+        --      register_store_pkg.register_store_outputs_t
         ------------------------------------------------------------------------
-        write_value : in unsigned (0 to ((2 ** register_width_bit) - 1));
-
-        ------------------------------------------------------------------------
-        -- @brief Register index.
-        --
-        -- @description
-        --      Index of the register store is working with.
-        ------------------------------------------------------------------------
-        index : in unsigned (0 to (register_count_bit - 1));
-
-        ------------------------------------------------------------------------
-        -- Outputs.
-        ------------------------------------------------------------------------
-
-        ------------------------------------------------------------------------
-        -- @brief Value going out of register store.
-        ------------------------------------------------------------------------
-        value_out : out unsigned (0 to ((2 ** register_width_bit) - 1));
-
-        ------------------------------------------------------------------------
-        -- @brief Ready pin.
-        --
-        -- @note 
-        --      High -> Register store is ready.
-        --      Low -> Register store is not ready.
-        ------------------------------------------------------------------------
-        ready : out std_logic
+        outputs : out register_store_outputs_t(
+            value_out(0 to (register_store_template.register_width - 1))
+        )
     );
 
 end entity;
 
 architecture rtl of register_store is 
-
-    ----------------------------------------------------------------------------
-    -- @brief Width of general purpose registers.
-    ----------------------------------------------------------------------------
-    constant register_width : integer := 2** register_width_bit;
-
-    ----------------------------------------------------------------------------
-    -- @brief Number of general purpose registers.
-    ----------------------------------------------------------------------------
-    constant register_count : integer := 2** register_count_bit;    
 
     ----------------------------------------------------------------------------
     -- Register store state machine values.
@@ -123,7 +66,7 @@ architecture rtl of register_store is
     ----------------------------------------------------------------------------
     -- @brief Type of register index. 
     ----------------------------------------------------------------------------
-    subtype register_index_t is unsigned (0 to (register_count_bit - 1));
+    subtype register_index_t is unsigned (0 to (register_store_template.register_count_bit - 1));
 
     ----------------------------------------------------------------------------
     -- @brief Unready state.
@@ -158,7 +101,7 @@ architecture rtl of register_store is
     ----------------------------------------------------------------------------
     -- @brief Register store type.
     ----------------------------------------------------------------------------
-    type register_store_t is array (0 to (register_count - 1)) of unsigned (0 to (register_width - 1));
+    type register_store_t is array (0 to (register_store_template.register_count - 1)) of unsigned (0 to (register_store_template.register_width - 1));
 
     ----------------------------------------------------------------------------
     -- @brief Register store.
@@ -183,22 +126,22 @@ begin
     ----------------------------------------------------------------------------
     -- Output the ready state of this register store.
     ----------------------------------------------------------------------------
-    ready <= '1' when (state = STATE_ACCEPT_IO) else '0';
+    outputs.ready <= '1' when (state = STATE_ACCEPT_IO) else '0';
 
     ----------------------------------------------------------------------------
     -- Value being sent out.
     ----------------------------------------------------------------------------
-    value_out <= register_store(to_integer(index));
+    outputs.value_out <= register_store(to_integer(inputs.index));
 
-    process (clock_input) 
+    process (inputs.clock_input) 
     begin
-        if rising_edge(clock_input) then
+        if rising_edge(inputs.clock_input) then
 
             if state = STATE_NOT_READY then
 
                 -- Have the register store not ready for one clock cycle.
 
-                if reset = '0' then
+                if inputs.reset = '0' then
                     -- We do not want to enter a normal state if the reset pin 
                     -- is high.
                     state <= STATE_ACCEPT_IO;
@@ -206,16 +149,16 @@ begin
 
             elsif state = STATE_ACCEPT_IO then
 
-                if reset = '1' then
+                if inputs.reset = '1' then
 
                     -- Begin reset procedure if reset pin is high.
                     state <= STATE_RESTART;
                     reset_idx <= (others => '0');
 
-                elsif write_enable = '1' then
+                elsif inputs.write_enable = '1' then
 
                     -- Store the input.
-                    register_store( to_integer(index) ) <= write_value;
+                    register_store( to_integer(inputs.index) ) <= inputs.write_value;
                 end if;
 
             -- Reset logic 
@@ -224,7 +167,7 @@ begin
                 register_store(to_integer(reset_idx)) <= (others => '0');
                 reset_idx <= reset_idx + "001";
 
-                if reset_idx = (to_unsigned(register_count - 1, 3)) then
+                if reset_idx = (to_unsigned(register_store_template.register_count - 1, 3)) then
                     state <= STATE_NOT_READY;
                 end if;
 
