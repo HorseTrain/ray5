@@ -39,6 +39,17 @@ begin
 
     clock_input <= not clock_input after TEST_BENCH_CLOCK_PERIOD;
 
+    stim_proc : process
+    begin
+
+        -- TODO:
+        -- Test 
+        --      Register store init 
+        --      Register store reset 
+        --      Register store read/write
+
+    end process;
+
     register_test : entity work.register_store 
     generic map (
         register_store_pkg => register_store_type
