@@ -33,21 +33,7 @@ architecture tb of test_register_store is
         register_count_bit => 3
     );
 
-    signal register_store_bus : register_store_type.register_store_bus_t := (
-        inputs => (
-            clock_input => '0',
-            reset => '0',
-            write_enable => '0',
-
-            index => (others => '0'),
-            write_value => (others => '0')
-        ),
-
-        outputs => (
-            ready => '0',
-            value_out => (others => '0')
-        )
-    );
+    signal register_store_bus : register_store_type.register_store_bus_t := register_store_type.new_register_store_bus_t;
 
 begin
 

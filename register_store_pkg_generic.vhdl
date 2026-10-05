@@ -118,4 +118,38 @@ package register_store_type_p is
 
     end record register_store_bus_t;
 
+    ----------------------------------------------------------------------------
+    -- @brief Return a register bus with all zero values.
+    ----------------------------------------------------------------------------
+    function new_register_store_bus_t return register_store_bus_t;
+
 end package;
+
+package body register_store_type_p is 
+
+    ----------------------------------------------------------------------------
+    -- @see register_store_type_p.new_register_store_bus_t
+    ----------------------------------------------------------------------------
+    function new_register_store_bus_t return register_store_bus_t is 
+    
+        variable result : register_store_bus_t := (
+            inputs => (
+                clock_input => '0',
+                reset => '0',
+                write_enable => '0',
+
+                index => (others => '0'),
+                write_value => (others => '0')
+            ),
+
+            outputs => (
+                ready => '0',
+                value_out => (others => '0')
+            )
+        );
+
+    begin
+        return result;
+    end function;
+
+end package body register_store_type_p;
