@@ -42,11 +42,87 @@ begin
     stim_proc : process
     begin
 
-        -- TODO:
-        -- Test 
-        --      Register store init 
-        --      Register store reset 
-        --      Register store read/write
+        ------------------------------------------------------------------------
+        -- Register store initialization test. 
+        --
+        -- This tests ensures after one clock cycle, the register store will 
+        -- signal its ready for use.
+        ------------------------------------------------------------------------
+
+        -- Allow one clock iteration to pass.
+        wait for TEST_BENCH_ITERATION;
+
+        -- Terminate tests if the register store has not properly initialized. 
+        if register_store_bus.outputs.ready = '1' then
+            report "Register store initialization pass.";
+        else 
+            report "Register store initialization failed." severity error;
+            stop;
+        end if;
+
+        -- Allow one clock iteration to pass before the next test. 
+        wait for TEST_BENCH_ITERATION;
+
+        ------------------------------------------------------------------------
+        -- Register store reset test. 
+        --
+        -- This test ensures the reset input functions as intended.
+        ------------------------------------------------------------------------
+
+        -- We first must set the reset pin to high.
+        register_store_bus.inputs.reset <= '1';
+
+        -- We must allow at least one clock cycle to pass to allow the register 
+        -- store to switch into its reset state. 
+        wait for TEST_BENCH_ITERATION;
+
+        -- A full reset of the register store takes 
+        -- (register_count * TEST_BENCH_ITERATION) clock iterations.
+        for i in 0 to (register_store_type.register_count - 1) loop
+
+            -- When the register store is resetting, it may not be used, so we 
+            -- need to ensure the ready bit is low.
+            if register_store_bus.outputs.ready = '1' then 
+                report "Register store reset failed." severity error;
+                stop;
+            end if;
+
+            wait for TEST_BENCH_ITERATION;
+
+        end loop;
+
+        -- Wait for at least one clock cycle so the register store may advance 
+        -- its internal state.
+        wait for TEST_BENCH_ITERATION;
+
+        -- At this point, the reset pin is still high. The register store may 
+        -- not transition into a usable state until the reset pin is low.
+        if register_store_bus.outputs.ready = '1' then
+            report "Register store reset failed." severity error;
+            stop;
+        end if;
+
+        -- Wait one clock iteration.
+        wait for TEST_BENCH_ITERATION;
+
+        -- Now we may set the reset pin low.
+        register_store_bus.inputs.reset <= '0';
+
+        -- Wait another clock iteration.
+        wait for TEST_BENCH_ITERATION;
+
+        -- The register store should be ready for further use.
+        if register_store_bus.outputs.ready = '0' then
+            report "Register store reset failed." severity error;
+            stop;
+        end if;
+
+        -- Now we must test every value in the register store, and ensure its 
+        -- zero.
+
+        report "Register store test complete!";
+
+        stop;
 
     end process;
 
