@@ -1,0 +1,3 @@
+-- This command will set all vhdl files to 2008.
+--
+-- set_property file_type {VHDL 2008} [get_files -filter {file_type == VHDL}]

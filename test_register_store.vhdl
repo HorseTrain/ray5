@@ -30,7 +30,7 @@ architecture tb of test_register_store is
     generic map 
     (
         register_width_bit => 5,
-        register_count_bit => 3
+        register_count_bit => 4
     );
 
     signal register_store_bus : register_store_type.register_store_bus_t := register_store_type.new_register_store_bus_t;
@@ -171,7 +171,7 @@ begin
             register_store_bus.inputs.index <= to_unsigned(i, register_count_bit);
 
             -- Set the value for the bus.
-            register_store_bus.inputs.write_value <= to_unsigned((i * 20) + 10, register_width);
+            register_store_bus.inputs.write_value <= to_unsigned((i * 314) + 10, register_width);
 
             wait for TEST_BENCH_ITERATION;
 
@@ -191,7 +191,7 @@ begin
             -- We must allow some time for the new register to be outputted. 
             wait for TEST_BENCH_ITERATION;
 
-            if not (register_store_bus.outputs.value_out = to_unsigned((i * 20) + 10, register_store_type.register_width)) then
+            if not (register_store_bus.outputs.value_out = to_unsigned((i * 314) + 10, register_store_type.register_width)) then
                 report "Register store read/write test failed." severity error;
                 stop;
             end if;
