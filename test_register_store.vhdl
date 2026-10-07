@@ -35,6 +35,22 @@ architecture tb of test_register_store is
 
     signal register_store_bus : register_store_type.register_store_bus_t := register_store_type.new_register_store_bus_t;
 
+    ----------------------------------------------------------------------------
+    -- @brief Redefinitions.
+    ----------------------------------------------------------------------------
+
+    -- Register count bit.
+    constant register_count_bit : integer := register_store_type.register_count_bit;
+    
+    -- Register count.
+    constant register_count : integer := register_store_type.register_count;
+
+    -- Register width bit.
+    constant register_width_bit : integer := register_store_type.register_width_bit;
+    
+    -- Register width.
+    constant register_width : integer := register_store_type.register_width;
+
 begin
 
     clock_input <= not clock_input after TEST_BENCH_CLOCK_PERIOD;
@@ -119,13 +135,80 @@ begin
 
         -- Now we must test every value in the register store, and ensure its 
         -- zero.
+        for i in 0 to (register_store_type.register_count - 1) loop
 
-        report "Register store test complete!";
+            -- Set the register index to the index to test. 
+            register_store_bus.inputs.index <= to_unsigned(i, register_count_bit);
+
+            if not ( register_store_bus.outputs.value_out = to_unsigned(0, register_store_type.register_width)) then
+                report "Register store reset failed." severity error;
+                stop;
+            end if;
+
+            wait for TEST_BENCH_ITERATION;
+
+        end loop;
+
+        report "Register store reset test complete!";
+
+
+        ------------------------------------------------------------------------
+        -- Register store read/write test.
+        --
+        -- This tests the register store read/write feature.
+        ------------------------------------------------------------------------
+        
+        -- Now, we write a value to each register, and test its output.
+        wait for TEST_BENCH_ITERATION;
+
+        -- Set write high.
+        register_store_bus.inputs.write_enable <= '1';
+
+        -- Loop through all our registers, and write a value.
+        for i in 0 to (register_store_type.register_count - 1) loop
+
+            -- Set the register index to the index to set.
+            register_store_bus.inputs.index <= to_unsigned(i, register_count_bit);
+
+            -- Set the value for the bus.
+            register_store_bus.inputs.write_value <= to_unsigned((i * 20) + 10, register_width);
+
+            wait for TEST_BENCH_ITERATION;
+
+        end loop;
+
+        -- Loop through all our registers again and read a value.
+        wait for TEST_BENCH_ITERATION;
+
+        -- Set write low.
+        register_store_bus.inputs.write_enable <= '0';
+
+        for i in 0 to (register_store_type.register_count - 1) loop
+
+            -- Set the register index to the index to set.
+            register_store_bus.inputs.index <= to_unsigned(i, register_count_bit);
+
+            -- We must allow some time for the new register to be outputted. 
+            wait for TEST_BENCH_ITERATION;
+
+            if not (register_store_bus.outputs.value_out = to_unsigned((i * 20) + 10, register_store_type.register_width)) then
+                report "Register store read/write test failed." severity error;
+                stop;
+            end if;
+
+        end loop;
+
+        ------------------------------------------------------------------------
+        -- Test bench complete. 
+        ------------------------------------------------------------------------
+
+        report "Register store store test complete."
 
         stop;
 
     end process;
 
+    -- Register store instantiation.
     register_test : entity work.register_store 
     generic map (
         register_store_pkg => register_store_type
@@ -136,6 +219,7 @@ begin
         outputs => register_store_bus.outputs
     );
 
+    -- Map the external clock to the register store bus.
     register_store_bus.inputs.clock_input <= clock_input;
 
 end architecture;

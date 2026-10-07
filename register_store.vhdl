@@ -151,9 +151,9 @@ begin
             elsif state = STATE_RESTART then
 
                 register_store(to_integer(reset_idx)) <= (others => '0');
-                reset_idx <= reset_idx + "001";
+                reset_idx <= reset_idx + to_unsigned(1, register_store_pkg.register_count_bit);
 
-                if reset_idx = (to_unsigned(register_store_pkg.register_count - 1, 3)) then
+                if reset_idx = (to_unsigned(register_store_pkg.register_count - 1, register_store_pkg.register_count_bit)) then
                     state <= STATE_NOT_READY;
                 end if;
 
