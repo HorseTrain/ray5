@@ -202,7 +202,7 @@ begin
         -- Test bench complete. 
         ------------------------------------------------------------------------
 
-        report "Register store store test complete."
+        report "Register store store test complete.";
 
         stop;
 
