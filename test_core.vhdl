@@ -10,39 +10,40 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
-
+use std.env.all; 
 use work.test_bench_globals.all;
 
-entity test_core_init is 
+entity test_core is 
 end entity;
 
-architecture tb of test_core_init is 
+architecture tb of test_core is 
 
     ----------------------------------------------------------------------------
     -- @brief Clock input.
     ----------------------------------------------------------------------------
     signal clock_input : std_logic := '0';
 
-    ----------------------------------------------------------------------------
-    -- @brief Core status.
-    ----------------------------------------------------------------------------
-    signal core_status : unsigned (0 to 2) := (others => '0');
-
 begin
 
     clock_input <= not clock_input after TEST_BENCH_CLOCK_PERIOD;
 
-    core_test : entity work.core 
-    generic map (
-        register_width_bit => 3, 
-        register_count_bit => 5
-    )
-    
-    port map (
-        clock_input => clock_input,
+    stim_proc : process 
+    begin
+        ------------------------------------------------------------------------
+        -- Core initialization test.
+        --
+        -- This test ensures the core will report an initialized state (eventually lol)
+        ------------------------------------------------------------------------
 
-        -- Allows test bench to view core status.
-        core_status_out => core_status
+        wait;
+
+    end process;
+
+    core : entity work.core 
+    port map (
+        clock_input => clock_input
+
+        -- Core status 
     );
 
 end architecture;

@@ -5,6 +5,10 @@
 -- 
 -- @description 
 --      Stores a collection of registers.
+--
+-- @note 
+--      It is important to define `ready` and `write_enabled` or else the 
+--      register store may not properly initiate. 
 --------------------------------------------------------------------------------
 
 library ieee;

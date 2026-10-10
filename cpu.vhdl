@@ -30,6 +30,9 @@ end entity;
 
 architecture rtl of cpu is 
 
+    ----------------------------------------------------------------------------
+    -- @brief LED test counter.
+    ----------------------------------------------------------------------------
     signal led_test : unsigned (0 to 31) := (others => '0');
 
 begin

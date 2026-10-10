@@ -10,26 +10,10 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
+use work.ray5_globals_p.all;
+use work.core_p.all;
 
 entity core is
-
-    generic (
-        ------------------------------------------------------------------------
-        -- @brief Width of general purpose registers.
-        -- 
-        -- @note Represented as log2(register_count) for internal indexing ease.
-        --       For example, 5 bits = 2^5 = 32.
-        ------------------------------------------------------------------------
-        register_width_bit : integer := 5;
-
-        ------------------------------------------------------------------------
-        -- @brief Number of general-purpose registers (as address bit-width).
-        -- 
-        -- @note Represented as log2(register_count) for internal indexing ease.
-        --       For example, 3 bits = 2^3 = 8 registers.
-        ------------------------------------------------------------------------
-        register_count_bit : integer := 3
-    );
 
     port (
 
@@ -48,15 +32,6 @@ entity core is
 
         ------------------------------------------------------------------------
         -- @brief Core status.
-        -- 
-        -- @description 
-        --      `1xx` -> Unrecoverable failure.
-        --      `000` -> Init state.
-        --      `001` -> Unblocked, currently executing.
-        --      `010` -> Blocked.
-        --                  Generally, this used to signal this core is waiting 
-        --                  on memory, however it may also mean the core is 
-        --                  waiting on an outside signal.
         ------------------------------------------------------------------------
         core_status_out : out unsigned (0 to 2) := (others => '0')
     );
@@ -64,36 +39,72 @@ entity core is
 end;
         
 architecture rtl of core is 
+        
+    ----------------------------------------------------------------------------
+    -- @brief Status of this core.
+    ----------------------------------------------------------------------------
+    signal core_state : core_state_t := CORE_STATE_INITIALIZING;
 
     ----------------------------------------------------------------------------
-    -- @brief Width of general purpose registers.
+    -- @brief Bus for main register store.
     ----------------------------------------------------------------------------
-    constant register_width : integer := 2** register_width_bit;
+    signal gp_register_bus : register_store_type.register_store_bus_t;
 
-    ----------------------------------------------------------------------------
-    -- @brief Number of general purpose registers.
-    ----------------------------------------------------------------------------
-    constant register_count : integer := 2** register_count_bit;
-
-    ----------------------------------------------------------------------------
-    -- @brief Initilization state of core. 
-    --
-    -- @note 
-    --      `0` -> Core is not ready for use.
-    --      `1` -> Core is fully initialized, and ready for use.
-    ----------------------------------------------------------------------------
-    signal core_initialized : std_logic := '0';
-
-    ----------------------------------------------------------------------------
-    -- General purpose register store signals.
-    ----------------------------------------------------------------------------
 begin
 
+    -- Temporary (Will be removed.)
+    gp_register_bus.inputs.write_enable <= '0';
+    gp_register_bus.inputs.index <= (others => '0');
+    gp_register_bus.inputs.reset <= '0';
+
+    -- Feed the clock input to the register store.
+    gp_register_bus.inputs.clock_input <= clock_input;
+
+    -- Instance of the general purpose register store.
+    general_purpose_registers : entity work.register_store
+    generic map (
+        register_store_pkg => register_store_type
+    )
+    port map (
+        inputs => gp_register_bus.inputs,
+        outputs => gp_register_bus.outputs
+    );
+
+    -- Main clocked process for core.
     process (clock_input) 
     begin
 
-        -- All core activity occurs on the rising edge.
         if rising_edge(clock_input) then
+
+            -- Main state machine of this core.
+            case core_state is 
+
+                when CORE_STATE_INITIALIZING => 
+
+                    -- Signal to the outside world this core is not ready.
+                    core_status_out <= CORE_STATUS_OUT_INIT_STATE;
+
+                    -- Currently the only check to move on.
+                    if gp_register_bus.outputs.ready then
+
+                        -- Core is ready, begin fetching instructions.
+                        core_state <= CORE_STATE_FETCH;
+                    end if;
+
+                when CORE_STATE_FETCH => 
+
+                    -- Signal to the outside world this core is executing.
+                    core_status_out <= CORE_STATUS_OUT_UNBLOCKED;
+
+                    
+
+                when others => 
+
+                    -- Undefined core state, consider this an unrecoverable error.
+                    core_status_out <= "100";
+
+            end case;
+
 
         end if;
 
