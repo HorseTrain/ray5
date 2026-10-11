@@ -41,6 +41,21 @@ package register_store_type_p is
     ----------------------------------------------------------------------------
     constant register_count : integer := (2 ** register_count_bit);
 
+    ----------------------------------------------------------------------------
+    -- @brief Register type. 
+    ----------------------------------------------------------------------------
+    subtype register_t is unsigned (0 to (register_width - 1));
+
+    ----------------------------------------------------------------------------
+    -- @brief Register index type. 
+    ----------------------------------------------------------------------------
+    subtype register_index_t is unsigned (0 to (register_count_bit - 1));
+
+    ----------------------------------------------------------------------------
+    -- @brief Register array type. 
+    ----------------------------------------------------------------------------
+    type register_collection_t is array (0 to (register_count - 1)) of register_t;
+
     type register_store_inputs_t is record 
 
         ------------------------------------------------------------------------
@@ -123,9 +138,35 @@ package register_store_type_p is
     ----------------------------------------------------------------------------
     function new_register_store_bus_t return register_store_bus_t;
 
+    ----------------------------------------------------------------------------
+    -- @brief Return a register index from an integer. 
+    ----------------------------------------------------------------------------
+    function to_register_index (index : integer) return register_index_t;
+
+    ----------------------------------------------------------------------------
+    -- @brief Return a register value from an integer. 
+    ----------------------------------------------------------------------------
+    function to_register_value(value : integer) return register_t;
+
 end package;
 
 package body register_store_type_p is 
+
+    ----------------------------------------------------------------------------
+    -- @see register_store_type_p.to_register_index
+    ----------------------------------------------------------------------------
+    function to_register_index (index : integer) return register_index_t is
+    begin
+        return to_unsigned(index, register_count_bit);
+    end;
+
+    ----------------------------------------------------------------------------
+    -- @see register_store_type_p.to_register_value
+    ----------------------------------------------------------------------------
+    function to_register_value(value : integer) return register_t is
+    begin
+        return to_unsigned(value, register_width);
+    end;
 
     ----------------------------------------------------------------------------
     -- @see register_store_type_p.new_register_store_bus_t

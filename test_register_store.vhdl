@@ -53,7 +53,7 @@ architecture tb of test_register_store is
 
 begin
 
-    clock_input <= not clock_input after TEST_BENCH_CLOCK_PERIOD;
+    clock_input <= not clock_input after TEST_BENCH_CLOCK_PERIOD_HALF;
 
     stim_proc : process
     begin
@@ -66,7 +66,7 @@ begin
         ------------------------------------------------------------------------
 
         -- Allow one clock iteration to pass.
-        wait for TEST_BENCH_ITERATION;
+        wait for TEST_BENCH_CLOCK_PERIOD;
 
         -- Terminate tests if the register store has not properly initialized. 
         if register_store_bus.outputs.ready = '1' then
@@ -77,7 +77,7 @@ begin
         end if;
 
         -- Allow one clock iteration to pass before the next test. 
-        wait for TEST_BENCH_ITERATION;
+        wait for TEST_BENCH_CLOCK_PERIOD;
 
         ------------------------------------------------------------------------
         -- Register store reset test. 
@@ -90,10 +90,10 @@ begin
 
         -- We must allow at least one clock cycle to pass to allow the register 
         -- store to switch into its reset state. 
-        wait for TEST_BENCH_ITERATION;
+        wait for TEST_BENCH_CLOCK_PERIOD;
 
         -- A full reset of the register store takes 
-        -- (register_count * TEST_BENCH_ITERATION) clock iterations.
+        -- (register_count * TEST_BENCH_CLOCK_PERIOD) clock iterations.
         for i in 0 to (register_store_type.register_count - 1) loop
 
             -- When the register store is resetting, it may not be used, so we 
@@ -103,13 +103,13 @@ begin
                 stop;
             end if;
 
-            wait for TEST_BENCH_ITERATION;
+            wait for TEST_BENCH_CLOCK_PERIOD;
 
         end loop;
 
         -- Wait for at least one clock cycle so the register store may advance 
         -- its internal state.
-        wait for TEST_BENCH_ITERATION;
+        wait for TEST_BENCH_CLOCK_PERIOD;
 
         -- At this point, the reset pin is still high. The register store may 
         -- not transition into a usable state until the reset pin is low.
@@ -119,13 +119,13 @@ begin
         end if;
 
         -- Wait one clock iteration.
-        wait for TEST_BENCH_ITERATION;
+        wait for TEST_BENCH_CLOCK_PERIOD;
 
         -- Now we may set the reset pin low.
         register_store_bus.inputs.reset <= '0';
 
         -- Wait another clock iteration.
-        wait for TEST_BENCH_ITERATION;
+        wait for TEST_BENCH_CLOCK_PERIOD;
 
         -- The register store should be ready for further use.
         if register_store_bus.outputs.ready = '0' then
@@ -145,7 +145,7 @@ begin
                 stop;
             end if;
 
-            wait for TEST_BENCH_ITERATION;
+            wait for TEST_BENCH_CLOCK_PERIOD;
 
         end loop;
 
@@ -159,7 +159,7 @@ begin
         ------------------------------------------------------------------------
         
         -- Now, we write a value to each register, and test its output.
-        wait for TEST_BENCH_ITERATION;
+        wait for TEST_BENCH_CLOCK_PERIOD;
 
         -- Set write high.
         register_store_bus.inputs.write_enable <= '1';
@@ -173,12 +173,12 @@ begin
             -- Set the value for the bus.
             register_store_bus.inputs.write_value <= to_unsigned((i * 314) + 10, register_width);
 
-            wait for TEST_BENCH_ITERATION;
+            wait for TEST_BENCH_CLOCK_PERIOD;
 
         end loop;
 
         -- Loop through all our registers again and read a value.
-        wait for TEST_BENCH_ITERATION;
+        wait for TEST_BENCH_CLOCK_PERIOD;
 
         -- Set write low.
         register_store_bus.inputs.write_enable <= '0';
@@ -189,7 +189,7 @@ begin
             register_store_bus.inputs.index <= to_unsigned(i, register_count_bit);
 
             -- We must allow some time for the new register to be outputted. 
-            wait for TEST_BENCH_ITERATION;
+            wait for TEST_BENCH_CLOCK_PERIOD;
 
             if not (register_store_bus.outputs.value_out = to_unsigned((i * 314) + 10, register_store_type.register_width)) then
                 report "Register store read/write test failed." severity error;

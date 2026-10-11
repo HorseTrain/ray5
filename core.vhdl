@@ -16,24 +16,15 @@ use work.core_p.all;
 entity core is
 
     port (
+        ------------------------------------------------------------------------
+        -- @brief Inputs.
+        ------------------------------------------------------------------------
+        inputs : in core_inputs_t;
 
         ------------------------------------------------------------------------
-        -- Inputs.
+        -- @brief Outputs.
         ------------------------------------------------------------------------
-
-        ------------------------------------------------------------------------
-        -- @brief Clock input.
-        ------------------------------------------------------------------------
-        clock_input : in std_logic; 
-
-        ------------------------------------------------------------------------
-        -- Outputs.
-        ------------------------------------------------------------------------
-
-        ------------------------------------------------------------------------
-        -- @brief Core status.
-        ------------------------------------------------------------------------
-        core_status_out : out unsigned (0 to 2) := (others => '0')
+        outputs : out core_outputs_t
     );
 
 end;
@@ -48,17 +39,57 @@ architecture rtl of core is
     ----------------------------------------------------------------------------
     -- @brief Bus for main register store.
     ----------------------------------------------------------------------------
-    signal gp_register_bus : register_store_type.register_store_bus_t;
+    signal register_bus : register_store_type.register_store_bus_t;
 
-begin
+    ----------------------------------------------------------------------------
+    -- @brief Register store init steps. 
+    ----------------------------------------------------------------------------
+    type register_store_init_state_t is (
 
-    -- Temporary (Will be removed.)
-    gp_register_bus.inputs.write_enable <= '0';
-    gp_register_bus.inputs.index <= (others => '0');
-    gp_register_bus.inputs.reset <= '0';
+        ------------------------------------------------------------------------
+        -- Waiting for the register store to signal its ready for IO.
+        -- 
+        -- May take an arbitrary amount of clock cycles. 
+        ------------------------------------------------------------------------
+        REGISTER_STORE_NOT_READY,
+
+        ------------------------------------------------------------------------
+        -- The register store is ready for use, now we must signal it to reset. 
+        -- 
+        -- One clock cycle. 
+        ------------------------------------------------------------------------
+        REGISTER_STORE_SET_RESET,
+
+        ------------------------------------------------------------------------
+        -- The register store is resetting, now we must wait for it to signal 
+        -- its ready for IO.
+        --
+        -- May take an arbitrary amount of clock cycles. 
+        ------------------------------------------------------------------------
+        REGISTER_STORE_RESETTING,
+
+        ------------------------------------------------------------------------
+        -- This init state is complete. 
+        ------------------------------------------------------------------------
+        REGISTER_STORE_READY
+    );
+
+    ----------------------------------------------------------------------------
+    -- @brief Register store init state. 
+    --
+    -- @see `register_store_init_state_t`
+    ----------------------------------------------------------------------------
+    signal register_store_init_state : register_store_init_state_t := REGISTER_STORE_NOT_READY;
+
+    ----------------------------------------------------------------------------
+    -- @brief Program counter cache.
+    ----------------------------------------------------------------------------
+    signal new_program_counter_cache : register_store_type.register_t;
+
+begin    
 
     -- Feed the clock input to the register store.
-    gp_register_bus.inputs.clock_input <= clock_input;
+    register_bus.inputs.clock_input <= inputs.clock_input;
 
     -- Instance of the general purpose register store.
     general_purpose_registers : entity work.register_store
@@ -66,15 +97,15 @@ begin
         register_store_pkg => register_store_type
     )
     port map (
-        inputs => gp_register_bus.inputs,
-        outputs => gp_register_bus.outputs
+        inputs => register_bus.inputs,
+        outputs => register_bus.outputs
     );
 
     -- Main clocked process for core.
-    process (clock_input) 
+    process (inputs.clock_input) 
     begin
 
-        if rising_edge(clock_input) then
+        if rising_edge(inputs.clock_input) then
 
             -- Main state machine of this core.
             case core_state is 
@@ -82,30 +113,98 @@ begin
                 when CORE_STATE_INITIALIZING => 
 
                     -- Signal to the outside world this core is not ready.
-                    core_status_out <= CORE_STATUS_OUT_INIT_STATE;
+                    outputs.core_status_out <= CORE_STATUS_OUT_INIT_STATE;
 
-                    -- Currently the only check to move on.
-                    if gp_register_bus.outputs.ready then
+                    ------------------------------------------------------------
+                    -- Signal to components to begin their initialization process. 
+                    ------------------------------------------------------------
+                    case register_store_init_state is 
+                        when REGISTER_STORE_NOT_READY => 
 
-                        -- Core is ready, begin fetching instructions.
-                        core_state <= CORE_STATE_FETCH;
+                            -- Wait for the register store to signal its ready 
+                            -- before transitioning to next state. 
+                            if register_bus.outputs.ready then 
+                                register_store_init_state <= REGISTER_STORE_SET_RESET;
+                            end if;
+
+                            -- Set initial state for the register store. 
+                            register_bus.inputs.write_enable <= '0';
+                            register_bus.inputs.index <= (others => '0');
+                            register_bus.inputs.write_value <= (others => '0');
+
+                        when REGISTER_STORE_SET_RESET => 
+
+                            -- Set the register store reset pin high.
+
+                            -- This may be done in the previous state?
+                            register_bus.inputs.reset <= '1';
+
+                            register_store_init_state <= REGISTER_STORE_RESETTING;
+
+                        when REGISTER_STORE_RESETTING => 
+
+                            -- Keep reset pin low.
+                            register_bus.inputs.reset <= '0';
+
+                            -- Once the register store is ready, its initialization is complete. 
+                            if register_bus.outputs.ready then 
+                                register_store_init_state <= REGISTER_STORE_READY;
+                            end if;
+
+                        when REGISTER_STORE_READY => 
+
+                            -- Do nothing here. 
+                            null;
+
+                        when others => 
+                            
+                            -- Should never happen.
+                            core_state <= CORE_STATE_ERROR;
+
+                    end case;
+
+                    -- Transition to fetching instructions.
+                    if register_store_init_state = REGISTER_STORE_READY then
+                        core_state <= CORE_STATE_IDLE;
                     end if;
 
-                when CORE_STATE_FETCH => 
+                when CORE_STATE_IDLE => 
 
-                    -- Signal to the outside world this core is executing.
-                    core_status_out <= CORE_STATUS_OUT_UNBLOCKED;
+                    -- Core is in an idle state. 
+                    outputs.core_status_out <= CORE_STATUS_OUT_IDLE;
 
+                    if inputs.set_program_counter = '1' then
+                        -- The core is in a blocked state. 
+                        outputs.core_status_out <= CORE_STATUS_OUT_BLOCKED;
+
+                        -- Cache the input program counter.
+                        new_program_counter_cache <= inputs.new_program_counter;
+
+                        -- Enter set program counter state. 
+                        core_state <= CORE_STATE_SET_PROGRAM_COUNTER;
+
+                    end if;
                     
+                when CORE_STATE_SET_PROGRAM_COUNTER => 
+
+                    -- Signal the register bus to enable writes. 
+                    register_bus.inputs.write_enable <= '1';
+                    
+                    -- Set the register bus index to the program counter. 
+                    register_bus.inputs.index <= PROGRAM_COUNTER_INDEX;
+                    register_bus.inputs.write_value <= new_program_counter_cache;
+
+                    -- The register store will write our new program counter 
+                    -- on the next clock cycle, so we can return back to an idle
+                    -- state. 
+                    core_state <= CORE_STATE_IDLE;
 
                 when others => 
 
                     -- Undefined core state, consider this an unrecoverable error.
-                    core_status_out <= "100";
+                    outputs.core_status_out <= CORE_STATUS_OUT_UNRECOVERABLE_FAILURE;
 
             end case;
-
-
         end if;
 
     end process;

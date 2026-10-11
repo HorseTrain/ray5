@@ -7,84 +7,134 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all; 
+use work.ray5_globals_p.all;
 
 package core_p is 
 
     ----------------------------------------------------------------------------
     -- @brief Output status type.
     ----------------------------------------------------------------------------
-    subtype core_status_out_t is unsigned(0 to 2);
+    type core_status_out_t is (
+
+        -- Unrecoverable failure.
+        CORE_STATUS_OUT_UNRECOVERABLE_FAILURE,
+
+        -- Core is currently initializing all of its systems.
+        CORE_STATUS_OUT_INIT_STATE, 
+
+        -- Core is idle, and waiting for commands.
+        CORE_STATUS_OUT_IDLE,
+
+        -- Core is executing, and currently not waiting on anything.
+        CORE_STATUS_OUT_UNBLOCKED,
+
+        -- Core is currently waiting on something.
+        CORE_STATUS_OUT_BLOCKED
+    );
 
     ----------------------------------------------------------------------------
-    -- @brief Amount of bits a core state needs. 
+    -- @brief States for core state machine.
     ----------------------------------------------------------------------------
-    subtype core_state_t is unsigned(0 to 4);
+    type core_state_t is (
+        -- Core is currently initializing all of its systems.
+        CORE_STATE_INITIALIZING,
 
-    -- Unrecoverable failure.
-    constant CORE_STATUS_OUT_UNRECOVERABLE_FAILURE : core_status_out_t := "100"; 
+        -- Core is idle, and waiting for instruction.
+        CORE_STATE_IDLE,
 
-    -- Core is currently initializing all of its systems.
-    constant CORE_STATUS_OUT_INIT_STATE : core_status_out_t := "000";
+        -- Core is fetching an instruction from memory, and storing it to its local 
+        -- instruction cache.
+        CORE_STATE_FETCH,
+
+        -- Core is decoding the instruction in its cache.
+        CORE_STATE_DECODE,
+
+        -- Core is executing the instruction in its cache.
+        CORE_STATE_EXECUTE,
+
+        -- Core is about to set the program counter. 
+        CORE_STATE_SET_PROGRAM_COUNTER,
+
+        -- Error core state. 
+        CORE_STATE_ERROR
+    );
+
+    ----------------------------------------------------------------------------
+    -- @brief Interrupts table for core.
+    ----------------------------------------------------------------------------
+    type core_interrupt_t is (
+        CORE_INTERRUPT_PROGRAM_COUNTER_SET,
+
+        CORE_INTERRUPT_END
+    );
     
-    -- Core is executing, and currently not waiting on anything.
-    constant CORE_STATUS_OUT_UNBLOCKED : core_status_out_t := "001";
-
-    -- Core is currently waiting on something.
-    constant CORE_STATUS_OUT_BLOCKED : core_status_out_t := "010";
-
     ----------------------------------------------------------------------------
-    -- States for core state machine.
+    -- @brief System registers. 
     ----------------------------------------------------------------------------
-    
-    -- Core is currently initializing all of its systems.
-    constant CORE_STATE_INITIALIZING : core_state_t := "00000";
 
-    -- Core is fetching an instruction from memory, and storing it to its local 
-    -- instruction cache.
-    constant CORE_STATE_FETCH : core_state_t := "00001";
-
-    -- Core is decoding the instruction in its cache.
-    constant CORE_STATE_DECODE : core_state_t := "00010";
-
-    -- Core is executing the instruction in its cache.
-    constant CORE_STATE_EXECUTE : core_state_t := "00011";
+    -- Program counter index. 
+    constant PROGRAM_COUNTER_INDEX : register_store_type.register_index_t := register_store_type.to_register_index(8);
 
     ----------------------------------------------------------------------------
     -- @brief Inputs of a core bus.
     ----------------------------------------------------------------------------
-    type core_inputs is record 
+    type core_inputs_t is record 
 
         ------------------------------------------------------------------------
         -- @brief Clock input for core.
         ------------------------------------------------------------------------
         clock_input : std_logic;
 
+        ------------------------------------------------------------------------
+        -- @brief Set pc pin.
+        --
+        -- @description 
+        --      If high, and the core is in an idling state, 
+        --      `new_program_counter` will be written into the program counter. 
+        --      
+        --      If high and the core is not idling, the core may be placed in 
+        --      an unrecoverable state. 
+        ------------------------------------------------------------------------
+        set_program_counter : std_logic;
+
+        ------------------------------------------------------------------------
+        -- @brief New program counter.
+        -- 
+        -- @see `set_program_counter`
+        --
+        -- @note 
+        --      I am skeptical of having a wire this wide as an input, consider 
+        --      making this a serial interface in the future (this is fine for
+        --      now).
+        ------------------------------------------------------------------------
+        new_program_counter : register_store_type.register_t;        
+
     end record;
 
     ----------------------------------------------------------------------------
     -- @brief Outputs of a core bus.
     ----------------------------------------------------------------------------
-    type core_outputs is record 
+    type core_outputs_t is record 
 
         ------------------------------------------------------------------------
         -- @brief Core status.
         ------------------------------------------------------------------------
         core_status_out : core_status_out_t;
 
-    end record core_outputs;
+    end record;
 
-    type core_bus is record 
-
-        ------------------------------------------------------------------------
-        -- @brief Inputs of a core bus.
-        ------------------------------------------------------------------------
-        inputs : core_inputs;
+    type core_bus_t is record 
 
         ------------------------------------------------------------------------
         -- @brief Inputs of a core bus.
         ------------------------------------------------------------------------
-        outputs : core_outputs;
+        inputs : core_inputs_t;
 
-    end record core_bus;
+        ------------------------------------------------------------------------
+        -- @brief Inputs of a core bus.
+        ------------------------------------------------------------------------
+        outputs : core_outputs_t;
+
+    end record;
 
 end core_p;
