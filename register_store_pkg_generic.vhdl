@@ -31,7 +31,7 @@ package register_store_type_p is
         register_count_bit : integer
     );
 
-    ----------------------------------------------------------------------------
+----------------------------------------------------------------------------
     -- @brief Width of general purpose registers.
     ----------------------------------------------------------------------------
     constant register_width : integer := (2 ** register_width_bit);
@@ -42,6 +42,16 @@ package register_store_type_p is
     constant register_count : integer := (2 ** register_count_bit);
 
     ----------------------------------------------------------------------------
+    -- @brief Size of general purpose registers in bytes (log2).
+    ----------------------------------------------------------------------------
+    constant register_size_bit : integer := (register_width_bit - 3);
+
+    ----------------------------------------------------------------------------
+    -- @brief Number of bytes per general purpose register.
+    ----------------------------------------------------------------------------
+    constant register_byte_count : integer := (2 ** register_size_bit);
+
+    ----------------------------------------------------------------------------
     -- @brief Register type. 
     ----------------------------------------------------------------------------
     subtype register_t is unsigned (0 to (register_width - 1));
@@ -50,6 +60,11 @@ package register_store_type_p is
     -- @brief Register index type. 
     ----------------------------------------------------------------------------
     subtype register_index_t is unsigned (0 to (register_count_bit - 1));
+
+    ----------------------------------------------------------------------------
+    -- @brief Register size type. 
+    ----------------------------------------------------------------------------
+    subtype register_size_t is unsigned (0 to (register_size_bit - 1));
 
     ----------------------------------------------------------------------------
     -- @brief Register array type. 
