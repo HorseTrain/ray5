@@ -1,0 +1,10 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raymond/Desktop/ray5/vivdo/ray5/ray5.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mig_7series_v4_2_ddr_phy_top'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raymond/Desktop/ray5/vivdo/ray5/ray5.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/mig_interface_mig_sim.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mig_interface_mig'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raymond/Desktop/ray5/vivdo/ray5/ray5.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/mig_interface.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mig_interface'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raymond/Desktop/ray5/src/memory_interface.vhdl" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'memory_interface'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/raymond/Desktop/ray5/tests/test_memory_interface.vhdl" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_memory_interface'

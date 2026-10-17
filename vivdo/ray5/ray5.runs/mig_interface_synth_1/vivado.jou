@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Sat Oct 17 14:30:21 2026
+# Process ID         : 2216529
+# Current directory  : /home/raymond/Desktop/ray5/vivdo/ray5/ray5.runs/mig_interface_synth_1
+# Command line       : vivado -log mig_interface.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mig_interface.tcl
+# Log file           : /home/raymond/Desktop/ray5/vivdo/ray5/ray5.runs/mig_interface_synth_1/mig_interface.vds
+# Journal file       : /home/raymond/Desktop/ray5/vivdo/ray5/ray5.runs/mig_interface_synth_1/vivado.jou
+# Running On         : raymond-MS-7C91
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 26.04.1 LTS
+# Processor Detail   : AMD Ryzen 9 5900X 12-Core Processor
+# CPU Frequency      : 4485.418 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 24
+# Host memory        : 65190 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 73780 MB
+# Available Virtual  : 58902 MB
+#-----------------------------------------------------------
+source mig_interface.tcl -notrace
