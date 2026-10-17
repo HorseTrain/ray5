@@ -1,0 +1,7 @@
+vhdl xil_defaultlib  \
+"../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_top.vhd" \
+"../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/mig_interface_mig_sim.vhd" \
+"../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/mig_interface.vhd" \
+
+# Do not sort compile order
+nosort

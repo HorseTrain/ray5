@@ -37,9 +37,9 @@ architecture rtl of memory_interface is
     ----------------------------------------------------------------------------
     type state_name_t is (
 
-        -- Initializing
-        STATE_INITIALIZING,
-
+        -- Mig calibration.
+        MIG_CALIBRATION,
+ 
         -- Idle
         STATE_IDLE
     );
@@ -47,7 +47,7 @@ architecture rtl of memory_interface is
     ----------------------------------------------------------------------------
     -- @brief Current state.
     ----------------------------------------------------------------------------
-    signal state : state_name_t := STATE_INITIALIZING;
+    signal state : state_name_t := MIG_CALIBRATION;
 
     ----------------------------------------------------------------------------
     -- @brief Finished with command signal.
@@ -86,6 +86,24 @@ begin
         if rising_edge(inputs.system_clock) then
 
             case state is 
+
+                when MIG_CALIBRATION => 
+
+                    -- Not much to do here, just wait for memory to finish 
+                    -- calibrating.
+
+                    if app_outputs.app_rdy then 
+                        state <= STATE_IDLE;
+                    end if;
+
+                    outputs.ready <= '0';
+
+                when STATE_IDLE => 
+
+                    -- TODO:
+                    outputs.ready <= '1';
+
+                    null;
 
                 when others => 
 

@@ -1,0 +1,713 @@
+Time resolution is 1 fs
+############# Write Clocks PLLE2_ADV Parameters #############
+
+nCK_PER_CLK      =       2
+CLK_PERIOD       =   10000
+CLKIN1_PERIOD    =  10.000
+DIVCLK_DIVIDE    =       1
+CLKFBOUT_MULT    =      13
+VCO_PERIOD       =   769.0
+CLKOUT0_DIVIDE_F =       2
+CLKOUT1_DIVIDE   =       4
+CLKOUT2_DIVIDE   =      64
+CLKOUT3_DIVIDE   =       8
+CLKOUT0_PERIOD   =    1538
+CLKOUT1_PERIOD   =    3076
+CLKOUT2_PERIOD   =   49216
+CLKOUT3_PERIOD   =    6152
+CLKOUT4_PERIOD   =    6152
+############################################################
+
+############# MMCME2_ADV Parameters #############
+
+MMCM_MULT_F           =           4
+MMCM_VCO_FREQ (MHz)   = 649.000
+MMCM_VCO_PERIOD       = 1540.832
+#################################################
+
+test_memory_interface.memory_interface.mig.u_mig_interface_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : BYTE_LANES_B0 = c BYTE_LANES_B1 = 7 DATA_CTL_B0 = c DATA_CTL_B1 = 0
+test_memory_interface.memory_interface.mig.u_mig_interface_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : HIGHEST_LANE =           7 HIGHEST_LANE_B0 =           4 HIGHEST_LANE_B1 =           3
+test_memory_interface.memory_interface.mig.u_mig_interface_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : HIGHEST_BANK =           2
+test_memory_interface.memory_interface.mig.u_mig_interface_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : FREQ_REF_PERIOD         = 1538.00 
+test_memory_interface.memory_interface.mig.u_mig_interface_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : DDR_TCK                 = 3077 
+test_memory_interface.memory_interface.mig.u_mig_interface_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_S2_TAPS_SIZE         = 12.02 
+test_memory_interface.memory_interface.mig.u_mig_interface_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_CIRC_BUF_EARLY       = 1 
+test_memory_interface.memory_interface.mig.u_mig_interface_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_CIRC_BUF_OFFSET      = 1610.30 
+test_memory_interface.memory_interface.mig.u_mig_interface_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_CIRC_BUF_META_ZONE   = 200.00 
+test_memory_interface.memory_interface.mig.u_mig_interface_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_STG2_FINE_INTR_DLY   = 890.73 
+test_memory_interface.memory_interface.mig.u_mig_interface_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_STG2_COARSE_INTR_DLY = 575.97 
+test_memory_interface.memory_interface.mig.u_mig_interface_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_STG2_INTRINSIC_DELAY = 1466.70 
+test_memory_interface.memory_interface.mig.u_mig_interface_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_CIRC_BUF_DELAY       = 60 
+test_memory_interface.memory_interface.mig.u_mig_interface_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_INTRINSIC_DELAY      = 1466.70 
+test_memory_interface.memory_interface.mig.u_mig_interface_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_DELAY                = 2187.64 
+test_memory_interface.memory_interface.mig.u_mig_interface_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PO_OCLK_DELAY           = 0 
+test_memory_interface.memory_interface.mig.u_mig_interface_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : L_PHY_0_PO_FINE_DELAY   = 60 
+test_memory_interface.memory_interface.mig.u_mig_interface_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PI_STG1_INTRINSIC_DELAY = 0.00 
+test_memory_interface.memory_interface.mig.u_mig_interface_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PI_STG2_INTRINSIC_DELAY = 865.48 
+test_memory_interface.memory_interface.mig.u_mig_interface_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PI_INTRINSIC_DELAY      = 865.48 
+test_memory_interface.memory_interface.mig.u_mig_interface_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PI_MAX_STG2_DELAY       = 756.98 
+test_memory_interface.memory_interface.mig.u_mig_interface_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PI_OFFSET               = 123.00 
+test_memory_interface.memory_interface.mig.u_mig_interface_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : PI_STG2_DELAY           = 123.00 
+test_memory_interface.memory_interface.mig.u_mig_interface_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy :PI_STG2_DELAY_CAND       = 123.00 
+test_memory_interface.memory_interface.mig.u_mig_interface_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : DEFAULT_RCLK_DELAY      = 10 
+test_memory_interface.memory_interface.mig.u_mig_interface_mig.u_memc_ui_top_std.mem_intfc0.ddr_phy_top0.u_ddr_mc_phy_wrapper.u_ddr_mc_phy : RCLK_SELECT_EDGE        = 111 
+WARNING: file design.txt could not be opened
+ *** Warning: The analog data file design.txt for XADC instance test_memory_interface.memory_interface.mig.u_mig_interface_mig.temp_mon_enabled.u_tempmon.xadc_supplied_temperature.XADC_inst was not found. Use the SIM_MONITOR_FILE parameter to specify the analog data file name or use the default name: design.txt.
+
+test_memory_interface.uut_ddr3_model.reset at time 1262407.0 ps WARNING: 200 us is required before RST_N goes inactive.
+test_memory_interface.uut_ddr3_model.cmd_task at time 1300077.0 ps WARNING: 500 us is required after RST_N goes inactive before CKE goes active.
+test_memory_interface.uut_ddr3_model.cmd_task: at time 1567769.0 ps INFO: Load Mode 2
+test_memory_interface.uut_ddr3_model.cmd_task: at time 1567769.0 ps INFO: Load Mode 2 Partial Array Self Refresh = Bank 0-7
+test_memory_interface.uut_ddr3_model.cmd_task: at time 1567769.0 ps INFO: Load Mode 2 CAS Write Latency =           5
+test_memory_interface.uut_ddr3_model.cmd_task: at time 1567769.0 ps INFO: Load Mode 2 Auto Self Refresh = Disabled
+test_memory_interface.uut_ddr3_model.cmd_task: at time 1567769.0 ps INFO: Load Mode 2 Self Refresh Temperature = Normal
+test_memory_interface.uut_ddr3_model.cmd_task: at time 1567769.0 ps INFO: Load Mode 2 Dynamic ODT = Disabled
+test_memory_interface.uut_ddr3_model.cmd_task: at time 2367769.0 ps INFO: Load Mode 3
+test_memory_interface.uut_ddr3_model.cmd_task: at time 2367769.0 ps INFO: Load Mode 3 MultiPurpose Register Select = Pre-defined pattern
+test_memory_interface.uut_ddr3_model.cmd_task: at time 2367769.0 ps INFO: Load Mode 3 MultiPurpose Register Enable = Disabled
+test_memory_interface.uut_ddr3_model.cmd_task: at time 3167769.0 ps INFO: Load Mode 1
+test_memory_interface.uut_ddr3_model.cmd_task: at time 3167769.0 ps INFO: Load Mode 1 DLL Enable = Enabled
+test_memory_interface.uut_ddr3_model.cmd_task: at time 3167769.0 ps INFO: Load Mode 1 Output Drive Strength =          40 Ohm
+test_memory_interface.uut_ddr3_model.cmd_task: at time 3167769.0 ps INFO: Load Mode 1 ODT Rtt =          40 Ohm
+test_memory_interface.uut_ddr3_model.cmd_task: at time 3167769.0 ps INFO: Load Mode 1 Additive Latency = 0
+test_memory_interface.uut_ddr3_model.cmd_task: at time 3167769.0 ps INFO: Load Mode 1 Write Levelization = Disabled
+test_memory_interface.uut_ddr3_model.cmd_task: at time 3167769.0 ps INFO: Load Mode 1 TDQS Enable = Disabled
+test_memory_interface.uut_ddr3_model.cmd_task: at time 3167769.0 ps INFO: Load Mode 1 Qoff = Enabled
+test_memory_interface.uut_ddr3_model.cmd_task: at time 3967769.0 ps INFO: Load Mode 0
+test_memory_interface.uut_ddr3_model.cmd_task: at time 3967769.0 ps INFO: Load Mode 0 Burst Length =  8
+test_memory_interface.uut_ddr3_model.cmd_task: at time 3967769.0 ps INFO: Load Mode 0 Burst Order = Sequential
+test_memory_interface.uut_ddr3_model.cmd_task: at time 3967769.0 ps INFO: Load Mode 0 CAS Latency =           5
+test_memory_interface.uut_ddr3_model.cmd_task: at time 3967769.0 ps INFO: Load Mode 0 DLL Reset = Reset DLL
+test_memory_interface.uut_ddr3_model.cmd_task: at time 3967769.0 ps INFO: Load Mode 0 Write Recovery =           5
+test_memory_interface.uut_ddr3_model.cmd_task: at time 3967769.0 ps INFO: Load Mode 0 Power Down Mode = DLL off
+test_memory_interface.uut_ddr3_model.cmd_task: at time 4767769.0 ps INFO: ZQ        long = 1
+test_memory_interface.uut_ddr3_model.cmd_task: at time 4767769.0 ps INFO: Initialization Sequence is complete
+PHY_INIT: Memory Initialization completed at 6283944.0 ps
+test_memory_interface.uut_ddr3_model.cmd_task: at time 6355462.0 ps INFO: Activate  bank 0 row 0000
+test_memory_interface.uut_ddr3_model.cmd_task: at time 7155462.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.cmd_task: at time 7167769.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 7169308.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7170846.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7172385.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7173923.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7175462.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7177000.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7178538.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7180077.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.cmd_task: at time 7180077.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 7181615.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7183154.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7184692.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7186231.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7187769.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7189308.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7190846.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7192385.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.cmd_task: at time 7192385.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 7193923.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7195462.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7197000.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7198538.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7200077.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7201615.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7203154.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7204692.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.cmd_task: at time 7204692.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 7206231.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7207769.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7209308.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7210846.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7212385.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7213923.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7215462.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7217000.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.cmd_task: at time 7217000.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 7218538.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7220077.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7221615.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7223154.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7224692.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7226231.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7227769.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7229308.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.cmd_task: at time 7229308.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 7230846.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7232385.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7233923.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7235462.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7237000.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7238538.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7240077.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7241615.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.cmd_task: at time 7241615.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 7243154.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7244692.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7246231.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7247769.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7249308.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7250846.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7252385.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7253923.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.cmd_task: at time 7253923.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 7255462.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7257000.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7258538.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7260077.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7261615.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7263154.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7264692.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7266231.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.cmd_task: at time 7266231.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 7267769.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7269308.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7270846.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7272385.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7273923.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7275462.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7277000.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7278538.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.cmd_task: at time 7278538.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 7280077.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7281615.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7283154.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7284692.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7286231.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7287769.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7289308.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7290846.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.cmd_task: at time 7290846.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 7292385.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+PHY_INIT: Phaser_In Phase Locked at 7293175.0 ps
+test_memory_interface.uut_ddr3_model.data_task: at time 7293923.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7295462.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7297000.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7298538.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7300077.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7301615.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7303154.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.cmd_task: at time 7303154.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 7304692.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7306231.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7307769.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7309308.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7310846.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7312385.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7313923.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7315462.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.cmd_task: at time 7315462.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 7317000.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7318538.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7320077.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7321615.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7323154.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7324692.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7326231.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7327769.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.cmd_task: at time 7327769.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 7329308.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7330846.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7332385.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7333923.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7335462.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7337000.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7338538.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7340077.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.cmd_task: at time 7340077.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 7341615.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7343154.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7344692.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7346231.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7347769.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7349308.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7350846.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7352385.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7353923.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7355462.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7357000.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7358538.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7360077.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7361615.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7363154.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 7364692.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.cmd_task: at time 8140077.0 ps INFO: Precharge All
+test_memory_interface.uut_ddr3_model.cmd_task: at time 8140077.0 ps INFO: Precharge bank   0
+test_memory_interface.uut_ddr3_model.cmd_task: at time 8940077.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 9740077.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 10540077.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 11340077.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 12140077.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 12940077.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 13740077.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 14540077.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 15340077.0 ps INFO: Activate  bank 0 row 0000
+test_memory_interface.uut_ddr3_model.cmd_task: at time 16140077.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.cmd_task: at time 16152385.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 16153923.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16155462.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16157000.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16158538.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16160077.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16161615.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16163154.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16164692.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.cmd_task: at time 16164692.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 16166231.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16167769.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16169308.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16170846.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16172385.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16173923.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16175462.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16177000.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.cmd_task: at time 16177000.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 16178538.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16180077.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16181615.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16183154.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16184692.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16186231.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16187769.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16189308.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16190846.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16192385.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16193923.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16195462.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16197000.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16198538.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16200077.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16201615.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.cmd_task: at time 16983154.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.cmd_task: at time 16995462.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 16997000.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 16998538.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17000077.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17001615.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17003154.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17004692.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17006231.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17007769.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.cmd_task: at time 17007769.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 17009308.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17010846.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17012385.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17013923.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17015462.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17017000.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17018538.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17020077.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.cmd_task: at time 17020077.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 17021615.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17023154.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17024692.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17026231.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17027769.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17029308.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17030846.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17032385.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17033923.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17035462.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17037000.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17038538.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17040077.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17041615.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17043154.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17044692.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.cmd_task: at time 17826231.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.cmd_task: at time 17838538.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 17840077.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17841615.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17843154.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17844692.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17846231.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17847769.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17849308.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17850846.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.cmd_task: at time 17850846.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 17852385.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17853923.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17855462.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17857000.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17858538.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17860077.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17861615.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17863154.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.cmd_task: at time 17863154.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 17864692.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17866231.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17867769.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17869308.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17870846.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17872385.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17873923.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17875462.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17877000.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17878538.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17880077.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17881615.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17883154.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17884692.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17886231.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 17887769.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.cmd_task: at time 18669308.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.cmd_task: at time 18681615.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 18683154.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18684692.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18686231.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18687769.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18689308.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18690846.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18692385.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18693923.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.cmd_task: at time 18693923.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 18695462.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18697000.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18698538.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18700077.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18701615.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18703154.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18704692.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18706231.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.cmd_task: at time 18706231.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 18707769.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18709308.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18710846.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18712385.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18713923.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18715462.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18717000.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18718538.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18720077.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18721615.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18723154.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18724692.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18726231.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18727769.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18729308.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = xxxx
+test_memory_interface.uut_ddr3_model.data_task: at time 18730846.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = xxxx
+PHY_INIT: Phaser_In DQSFOUND completed at 18770098.0 ps
+test_memory_interface.uut_ddr3_model.cmd_task: at time 19512385.0 ps INFO: Precharge All
+test_memory_interface.uut_ddr3_model.cmd_task: at time 19512385.0 ps INFO: Precharge bank   0
+test_memory_interface.uut_ddr3_model.cmd_task: at time 20312385.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 21112385.0 ps INFO: Load Mode 1
+test_memory_interface.uut_ddr3_model.cmd_task: at time 21112385.0 ps INFO: Load Mode 1 DLL Enable = Enabled
+test_memory_interface.uut_ddr3_model.cmd_task: at time 21112385.0 ps INFO: Load Mode 1 Output Drive Strength =          40 Ohm
+test_memory_interface.uut_ddr3_model.cmd_task: at time 21112385.0 ps INFO: Load Mode 1 ODT Rtt =          40 Ohm
+test_memory_interface.uut_ddr3_model.cmd_task: at time 21112385.0 ps INFO: Load Mode 1 Additive Latency = 0
+test_memory_interface.uut_ddr3_model.cmd_task: at time 21112385.0 ps INFO: Load Mode 1 Write Levelization = Enabled
+test_memory_interface.uut_ddr3_model.cmd_task: at time 21112385.0 ps INFO: Load Mode 1 TDQS Enable = Disabled
+test_memory_interface.uut_ddr3_model.cmd_task: at time 21112385.0 ps INFO: Load Mode 1 Qoff = Enabled
+test_memory_interface.uut_ddr3_model.main: at time 21253923.0 ps INFO: Sync On Die Termination Rtt_NOM =         40 Ohm
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21541784.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21541784.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21541784.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21541784.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21544861.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21544861.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21544861.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21544861.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21547938.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21547938.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21547938.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21547938.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21551015.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21551015.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21551015.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21551015.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21554092.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21554092.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21554092.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21554092.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21677169.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21677169.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21677169.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21677169.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21680246.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21680246.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21680246.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21680246.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21683323.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21683323.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21683323.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21683323.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21686400.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21686400.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21686400.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21686400.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21689477.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21689477.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21689477.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21689477.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21812554.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21812554.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21812554.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21812554.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21815631.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21815631.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21815631.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21815631.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21818707.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21818707.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21818707.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21818707.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21821784.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21821784.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21821784.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21821784.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21824861.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21824861.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21824861.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21824861.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21947986.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21947986.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21951063.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21951063.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21954140.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21954140.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21957217.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21957217.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21960294.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 21960294.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22083503.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22083503.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22086580.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22086580.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22089669.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22089669.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22092746.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22092746.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22095823.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22095823.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22219020.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22219020.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22222097.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22222097.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22225174.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22225174.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22228251.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22228251.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22231328.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22231328.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22354537.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22354537.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22357614.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22357614.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22360703.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22360703.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22363780.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22363780.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22366857.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22366857.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22490042.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22490042.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22493131.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22493131.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22496208.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22496208.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22499284.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22499284.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22502759.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22502759.0 ps Write Leveling @ DQS ck = 0
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22626276.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22626276.0 ps Write Leveling @ DQS ck = 1
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22626276.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22626276.0 ps Write Leveling @ DQS ck = 1
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22629353.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22629353.0 ps Write Leveling @ DQS ck = 1
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22629353.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22629353.0 ps Write Leveling @ DQS ck = 1
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22632430.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22632430.0 ps Write Leveling @ DQS ck = 1
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22632430.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22632430.0 ps Write Leveling @ DQS ck = 1
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22635507.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22635507.0 ps Write Leveling @ DQS ck = 1
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22635507.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22635507.0 ps Write Leveling @ DQS ck = 1
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22638584.0 ps WARNING: tWLS violation on DQS bit  0 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22638584.0 ps Write Leveling @ DQS ck = 1
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22638584.0 ps WARNING: tWLS violation on DQS bit  1 positive edge.  Indeterminate CK capture is possible.
+test_memory_interface.uut_ddr3_model.dqs_pos_timing_check: at time 22638584.0 ps Write Leveling @ DQS ck = 1
+PHY_INIT: Write Leveling completed at 22647021.0 ps
+test_memory_interface.uut_ddr3_model.main: at time 22700077.0 ps INFO: Sync On Die Termination Rtt_NOM =          0 Ohm
+test_memory_interface.uut_ddr3_model.cmd_task: at time 22730846.0 ps INFO: Load Mode 1
+test_memory_interface.uut_ddr3_model.cmd_task: at time 22730846.0 ps INFO: Load Mode 1 DLL Enable = Enabled
+test_memory_interface.uut_ddr3_model.cmd_task: at time 22730846.0 ps INFO: Load Mode 1 Output Drive Strength =          40 Ohm
+test_memory_interface.uut_ddr3_model.cmd_task: at time 22730846.0 ps INFO: Load Mode 1 ODT Rtt =          40 Ohm
+test_memory_interface.uut_ddr3_model.cmd_task: at time 22730846.0 ps INFO: Load Mode 1 Additive Latency = 0
+test_memory_interface.uut_ddr3_model.cmd_task: at time 22730846.0 ps INFO: Load Mode 1 Write Levelization = Disabled
+test_memory_interface.uut_ddr3_model.cmd_task: at time 22730846.0 ps INFO: Load Mode 1 TDQS Enable = Disabled
+test_memory_interface.uut_ddr3_model.cmd_task: at time 22730846.0 ps INFO: Load Mode 1 Qoff = Enabled
+test_memory_interface.uut_ddr3_model.cmd_task: at time 23530846.0 ps INFO: Load Mode 2
+test_memory_interface.uut_ddr3_model.cmd_task: at time 23530846.0 ps INFO: Load Mode 2 Partial Array Self Refresh = Bank 0-7
+test_memory_interface.uut_ddr3_model.cmd_task: at time 23530846.0 ps INFO: Load Mode 2 CAS Write Latency =           5
+test_memory_interface.uut_ddr3_model.cmd_task: at time 23530846.0 ps INFO: Load Mode 2 Auto Self Refresh = Disabled
+test_memory_interface.uut_ddr3_model.cmd_task: at time 23530846.0 ps INFO: Load Mode 2 Self Refresh Temperature = Normal
+test_memory_interface.uut_ddr3_model.cmd_task: at time 23530846.0 ps INFO: Load Mode 2 Dynamic ODT = Disabled
+test_memory_interface.uut_ddr3_model.cmd_task: at time 25118538.0 ps INFO: Precharge All
+test_memory_interface.uut_ddr3_model.cmd_task: at time 25918538.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 26718538.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 27518538.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 28318538.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 29118538.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 29918538.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 30718538.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 31518538.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 32318538.0 ps INFO: Activate  bank 0 row 0000
+test_memory_interface.uut_ddr3_model.cmd_task: at time 33118538.0 ps INFO: Write     bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.main: at time 33124692.0 ps INFO: Sync On Die Termination Rtt_NOM =         40 Ohm
+test_memory_interface.uut_ddr3_model.cmd_task: at time 33130846.0 ps INFO: Write     bank 0 col 008, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 33135462.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000000 data = 9999
+test_memory_interface.uut_ddr3_model.data_task: at time 33137000.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000001 data = 3333
+test_memory_interface.uut_ddr3_model.data_task: at time 33138538.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000002 data = 7777
+test_memory_interface.uut_ddr3_model.data_task: at time 33140077.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000003 data = eeee
+test_memory_interface.uut_ddr3_model.data_task: at time 33141615.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000004 data = cccc
+test_memory_interface.uut_ddr3_model.data_task: at time 33143154.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000005 data = 9999
+test_memory_interface.uut_ddr3_model.cmd_task: at time 33143154.0 ps INFO: Write     bank 0 col 010, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 33144692.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000006 data = 2222
+test_memory_interface.uut_ddr3_model.data_task: at time 33146231.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000007 data = 4444
+test_memory_interface.uut_ddr3_model.data_task: at time 33147769.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000008 data = bbbb
+test_memory_interface.uut_ddr3_model.data_task: at time 33149308.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000009 data = 1111
+test_memory_interface.uut_ddr3_model.data_task: at time 33150846.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 0000000a data = 7777
+test_memory_interface.uut_ddr3_model.data_task: at time 33152385.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 0000000b data = eeee
+test_memory_interface.uut_ddr3_model.data_task: at time 33153923.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 0000000c data = cccc
+test_memory_interface.uut_ddr3_model.data_task: at time 33155462.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 0000000d data = 9999
+test_memory_interface.uut_ddr3_model.data_task: at time 33157000.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 0000000e data = 2222
+test_memory_interface.uut_ddr3_model.data_task: at time 33158538.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 0000000f data = 4444
+test_memory_interface.uut_ddr3_model.data_task: at time 33160077.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000010 data = bbbb
+test_memory_interface.uut_ddr3_model.data_task: at time 33161615.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000011 data = 1111
+test_memory_interface.uut_ddr3_model.data_task: at time 33163154.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000012 data = 7777
+test_memory_interface.uut_ddr3_model.data_task: at time 33164692.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000013 data = eeee
+test_memory_interface.uut_ddr3_model.data_task: at time 33166231.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000014 data = cccc
+test_memory_interface.uut_ddr3_model.data_task: at time 33167769.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000015 data = 9999
+test_memory_interface.uut_ddr3_model.data_task: at time 33169308.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000016 data = 2222
+test_memory_interface.uut_ddr3_model.data_task: at time 33170846.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000017 data = 4444
+test_memory_interface.uut_ddr3_model.main: at time 33955462.0 ps INFO: Sync On Die Termination Rtt_NOM =          0 Ohm
+test_memory_interface.uut_ddr3_model.cmd_task: at time 34878538.0 ps INFO: Precharge All
+test_memory_interface.uut_ddr3_model.cmd_task: at time 34878538.0 ps INFO: Precharge bank   0
+test_memory_interface.uut_ddr3_model.cmd_task: at time 35678538.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 36478538.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 37278538.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 38078538.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 38878538.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 39678538.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 40478538.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 41278538.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 42078538.0 ps INFO: Activate  bank 0 row 0000
+PHY_INIT: Read Leveling Stage 1 completed at 42923944.0 ps
+PHY_INIT : PRBS/PER_BIT calibration completed at 42923944.0 ps
+PHY_INIT : COMPLEX OCLKDELAY calibration completed at 42923944.0 ps
+test_memory_interface.uut_ddr3_model.cmd_task: at time 44453923.0 ps INFO: Write     bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.main: at time 44460077.0 ps INFO: Sync On Die Termination Rtt_NOM =         40 Ohm
+test_memory_interface.uut_ddr3_model.cmd_task: at time 44466231.0 ps INFO: Write     bank 0 col 008, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 44470846.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000000 data = ffff
+test_memory_interface.uut_ddr3_model.data_task: at time 44472385.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000001 data = 0000
+test_memory_interface.uut_ddr3_model.data_task: at time 44473923.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000002 data = aaaa
+test_memory_interface.uut_ddr3_model.data_task: at time 44475462.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000003 data = 5555
+test_memory_interface.uut_ddr3_model.data_task: at time 44477000.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000004 data = 5555
+test_memory_interface.uut_ddr3_model.data_task: at time 44478538.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000005 data = aaaa
+test_memory_interface.uut_ddr3_model.cmd_task: at time 44478538.0 ps INFO: Write     bank 0 col 010, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 44480077.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000006 data = 9999
+test_memory_interface.uut_ddr3_model.data_task: at time 44481615.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000007 data = 6666
+test_memory_interface.uut_ddr3_model.data_task: at time 44483154.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000008 data = bbbb
+test_memory_interface.uut_ddr3_model.data_task: at time 44484692.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000009 data = 1111
+test_memory_interface.uut_ddr3_model.data_task: at time 44486231.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 0000000a data = eeee
+test_memory_interface.uut_ddr3_model.data_task: at time 44487769.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 0000000b data = 4444
+test_memory_interface.uut_ddr3_model.data_task: at time 44489308.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 0000000c data = 4444
+test_memory_interface.uut_ddr3_model.data_task: at time 44490846.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 0000000d data = eeee
+test_memory_interface.uut_ddr3_model.data_task: at time 44492385.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 0000000e data = dddd
+test_memory_interface.uut_ddr3_model.data_task: at time 44493923.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 0000000f data = 8888
+test_memory_interface.uut_ddr3_model.data_task: at time 44495462.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000010 data = bbbb
+test_memory_interface.uut_ddr3_model.data_task: at time 44497000.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000011 data = 1111
+test_memory_interface.uut_ddr3_model.data_task: at time 44498538.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000012 data = eeee
+test_memory_interface.uut_ddr3_model.data_task: at time 44500077.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000013 data = 4444
+test_memory_interface.uut_ddr3_model.data_task: at time 44501615.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000014 data = 4444
+test_memory_interface.uut_ddr3_model.data_task: at time 44503154.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000015 data = eeee
+test_memory_interface.uut_ddr3_model.data_task: at time 44504692.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000016 data = dddd
+test_memory_interface.uut_ddr3_model.data_task: at time 44506231.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000017 data = 8888
+test_memory_interface.uut_ddr3_model.cmd_task: at time 45284692.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.main: at time 45290846.0 ps INFO: Sync On Die Termination Rtt_NOM =          0 Ohm
+test_memory_interface.uut_ddr3_model.data_task: at time 45298538.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = ffff
+test_memory_interface.uut_ddr3_model.data_task: at time 45300077.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = 0000
+test_memory_interface.uut_ddr3_model.data_task: at time 45301615.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = aaaa
+test_memory_interface.uut_ddr3_model.data_task: at time 45303154.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = 5555
+test_memory_interface.uut_ddr3_model.data_task: at time 45304692.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = 5555
+test_memory_interface.uut_ddr3_model.data_task: at time 45306231.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = aaaa
+test_memory_interface.uut_ddr3_model.data_task: at time 45307769.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = 9999
+test_memory_interface.uut_ddr3_model.data_task: at time 45309308.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = 6666
+test_memory_interface.uut_ddr3_model.cmd_task: at time 46084692.0 ps INFO: Precharge All
+test_memory_interface.uut_ddr3_model.cmd_task: at time 46084692.0 ps INFO: Precharge bank   0
+test_memory_interface.uut_ddr3_model.cmd_task: at time 46884692.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 47684692.0 ps INFO: Activate  bank 0 row 0000
+PHY_INIT: Write Calibration completed at 48536252.0 ps
+test_memory_interface.uut_ddr3_model.cmd_task: at time 49272385.0 ps INFO: Precharge All
+test_memory_interface.uut_ddr3_model.cmd_task: at time 49272385.0 ps INFO: Precharge bank   0
+test_memory_interface.uut_ddr3_model.cmd_task: at time 50072385.0 ps INFO: Load Mode 0
+test_memory_interface.uut_ddr3_model.cmd_task: at time 50072385.0 ps INFO: Load Mode 0 Burst Length =  8
+test_memory_interface.uut_ddr3_model.cmd_task: at time 50072385.0 ps INFO: Load Mode 0 Burst Order = Sequential
+test_memory_interface.uut_ddr3_model.cmd_task: at time 50072385.0 ps INFO: Load Mode 0 CAS Latency =           5
+test_memory_interface.uut_ddr3_model.cmd_task: at time 50072385.0 ps INFO: Load Mode 0 DLL Reset = Normal
+test_memory_interface.uut_ddr3_model.cmd_task: at time 50072385.0 ps INFO: Load Mode 0 Write Recovery =           5
+test_memory_interface.uut_ddr3_model.cmd_task: at time 50072385.0 ps INFO: Load Mode 0 Power Down Mode = DLL off
+test_memory_interface.uut_ddr3_model.cmd_task: at time 50872385.0 ps INFO: Precharge All
+test_memory_interface.uut_ddr3_model.cmd_task: at time 51672385.0 ps INFO: Activate  bank 0 row 0000
+test_memory_interface.uut_ddr3_model.cmd_task: at time 52472385.0 ps INFO: Precharge All
+test_memory_interface.uut_ddr3_model.cmd_task: at time 52472385.0 ps INFO: Precharge bank   0
+test_memory_interface.uut_ddr3_model.cmd_task: at time 53272385.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 54072385.0 ps INFO: Activate  bank 0 row 0000
+test_memory_interface.uut_ddr3_model.cmd_task: at time 54872385.0 ps INFO: Write     bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.main: at time 54878538.0 ps INFO: Sync On Die Termination Rtt_NOM =         40 Ohm
+test_memory_interface.uut_ddr3_model.cmd_task: at time 54884692.0 ps INFO: Write     bank 0 col 008, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 54889308.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000000 data = ffff
+test_memory_interface.uut_ddr3_model.data_task: at time 54890846.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000001 data = 0000
+test_memory_interface.uut_ddr3_model.data_task: at time 54892385.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000002 data = aaaa
+test_memory_interface.uut_ddr3_model.data_task: at time 54893923.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000003 data = 5555
+test_memory_interface.uut_ddr3_model.data_task: at time 54895462.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000004 data = 5555
+test_memory_interface.uut_ddr3_model.data_task: at time 54897000.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000005 data = aaaa
+test_memory_interface.uut_ddr3_model.cmd_task: at time 54897000.0 ps INFO: Write     bank 0 col 010, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 54898538.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000006 data = 9999
+test_memory_interface.uut_ddr3_model.data_task: at time 54900077.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000007 data = 6666
+test_memory_interface.uut_ddr3_model.data_task: at time 54901615.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000008 data = bbbb
+test_memory_interface.uut_ddr3_model.data_task: at time 54903154.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000009 data = 1111
+test_memory_interface.uut_ddr3_model.data_task: at time 54904692.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 0000000a data = eeee
+test_memory_interface.uut_ddr3_model.data_task: at time 54906231.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 0000000b data = 4444
+test_memory_interface.uut_ddr3_model.data_task: at time 54907769.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 0000000c data = 4444
+test_memory_interface.uut_ddr3_model.data_task: at time 54909308.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 0000000d data = eeee
+test_memory_interface.uut_ddr3_model.data_task: at time 54910846.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 0000000e data = dddd
+test_memory_interface.uut_ddr3_model.data_task: at time 54912385.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 0000000f data = 8888
+test_memory_interface.uut_ddr3_model.data_task: at time 54913923.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000010 data = bbbb
+test_memory_interface.uut_ddr3_model.data_task: at time 54915462.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000011 data = 1111
+test_memory_interface.uut_ddr3_model.data_task: at time 54917000.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000012 data = eeee
+test_memory_interface.uut_ddr3_model.data_task: at time 54918538.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000013 data = 4444
+test_memory_interface.uut_ddr3_model.data_task: at time 54920077.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000014 data = 4444
+test_memory_interface.uut_ddr3_model.data_task: at time 54921615.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000015 data = eeee
+test_memory_interface.uut_ddr3_model.data_task: at time 54923154.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000016 data = dddd
+test_memory_interface.uut_ddr3_model.data_task: at time 54924692.0 ps INFO: WRITE @ DQS= bank = 0 row = 0000 col = 00000017 data = 8888
+test_memory_interface.uut_ddr3_model.cmd_task: at time 55703154.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.main: at time 55709308.0 ps INFO: Sync On Die Termination Rtt_NOM =          0 Ohm
+test_memory_interface.uut_ddr3_model.data_task: at time 55717000.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = ffff
+test_memory_interface.uut_ddr3_model.data_task: at time 55718538.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = 0000
+test_memory_interface.uut_ddr3_model.data_task: at time 55720077.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = aaaa
+test_memory_interface.uut_ddr3_model.data_task: at time 55721615.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = 5555
+test_memory_interface.uut_ddr3_model.data_task: at time 55723154.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = 5555
+test_memory_interface.uut_ddr3_model.data_task: at time 55724692.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = aaaa
+test_memory_interface.uut_ddr3_model.data_task: at time 55726231.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = 9999
+test_memory_interface.uut_ddr3_model.data_task: at time 55727769.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = 6666
+test_memory_interface.uut_ddr3_model.cmd_task: at time 56010846.0 ps INFO: Read      bank 0 col 000, auto precharge 0
+test_memory_interface.uut_ddr3_model.data_task: at time 56024692.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000000 data = ffff
+test_memory_interface.uut_ddr3_model.data_task: at time 56026231.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000001 data = 0000
+test_memory_interface.uut_ddr3_model.data_task: at time 56027769.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000002 data = aaaa
+test_memory_interface.uut_ddr3_model.data_task: at time 56029308.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000003 data = 5555
+test_memory_interface.uut_ddr3_model.data_task: at time 56030846.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000004 data = 5555
+test_memory_interface.uut_ddr3_model.data_task: at time 56032385.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000005 data = aaaa
+test_memory_interface.uut_ddr3_model.data_task: at time 56033923.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000006 data = 9999
+test_memory_interface.uut_ddr3_model.data_task: at time 56035462.0 ps INFO: READ @ DQS= bank = 0 row = 0000 col = 00000007 data = 6666
+test_memory_interface.uut_ddr3_model.cmd_task: at time 56810846.0 ps INFO: Precharge All
+test_memory_interface.uut_ddr3_model.cmd_task: at time 56810846.0 ps INFO: Precharge bank   0
+test_memory_interface.uut_ddr3_model.cmd_task: at time 57610846.0 ps INFO: Refresh  
+test_memory_interface.uut_ddr3_model.cmd_task: at time 58410846.0 ps INFO: Activate  bank 0 row 0000
+PHY_INIT: Write Calibration completed at 59360867.0 ps
+test_memory_interface.uut_ddr3_model.cmd_task: at time 59998538.0 ps INFO: Precharge All
+test_memory_interface.uut_ddr3_model.cmd_task: at time 59998538.0 ps INFO: Precharge bank   0
+Note: Memory interface is ready, beginning tests.
+Time: 60785 ns  Iteration: 2  Process: /test_memory_interface/stim_proc  File: /home/raymond/Desktop/ray5/tests/test_memory_interface.vhdl
+$finish called at time : 60785 ns : File "/home/raymond/Desktop/ray5/tests/test_memory_interface.vhdl" Line 95
