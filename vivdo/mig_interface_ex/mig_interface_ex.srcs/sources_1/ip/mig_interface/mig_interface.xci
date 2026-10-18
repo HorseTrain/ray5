@@ -16,7 +16,7 @@
       "model_parameters": {
         "NoOfControllers": [ { "value": "1", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "COMBINED_INTERFACE": [ { "value": "0", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "REFCLK_TYPE": [ { "value": "SINGLE", "resolve_type": "generated", "usage": "all" } ],
+        "REFCLK_TYPE": [ { "value": "NOBUF", "resolve_type": "generated", "usage": "all" } ],
         "MEM_TYPE": [ { "value": "DDR3", "resolve_type": "generated", "usage": "all" } ],
         "TEMP_MON_CONTROL": [ { "value": "INTERNAL", "resolve_type": "generated", "usage": "all" } ],
         "POLARITY": [ { "value": "ACTIVE_LOW", "resolve_type": "generated", "usage": "all" } ],
@@ -1568,5 +1568,5 @@
       }
     }
   },
-  "checksum": "111c529f"
+  "checksum": "b8529df2"
 }

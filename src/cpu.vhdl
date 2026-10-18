@@ -1,9 +1,9 @@
 --------------------------------------------------------------------------------
 -- Copyright (c) 2026 Mataka Studio. All rights reserved.
--- 
+--
 -- @brief CPU.
--- 
--- @description 
+--
+-- @description
 --      Top level ray5 cpu entity.
 --------------------------------------------------------------------------------
 
@@ -11,8 +11,9 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 use work.core_p.all;
+use work.memory_interface_p.all;
 
-entity cpu is 
+entity cpu is
 
     port (
 
@@ -22,22 +23,40 @@ entity cpu is
         CLK100MHZ : in std_logic;
 
         ------------------------------------------------------------------------
-        -- @brief Red heartbeat LED.
+        -- @brief Memory.
         ------------------------------------------------------------------------
-        led0_r : out std_logic
+
+        -- Outs.
+        ddr3_addr           : out std_logic_vector(13 downto 0);
+        ddr3_ba             : out std_logic_vector(2 downto 0);
+        ddr3_ras_n          : out std_logic;
+        ddr3_cas_n          : out std_logic;
+        ddr3_we_n           : out std_logic;
+        ddr3_reset_n        : out std_logic;
+        ddr3_ck_p           : out std_logic_vector(0 downto 0);
+        ddr3_ck_n           : out std_logic_vector(0 downto 0);
+        ddr3_cke            : out std_logic_vector(0 downto 0);
+        ddr3_cs_n           : out std_logic_vector(0 downto 0);
+        ddr3_dm             : out std_logic_vector(1 downto 0);
+        ddr3_odt            : out std_logic_vector(0 downto 0);
+
+        -- In outs.
+        ddr3_dq             : inout std_logic_vector(15 downto 0);
+        ddr3_dqs_p          : inout std_logic_vector(1 downto 0);
+        ddr3_dqs_n          : inout std_logic_vector(1 downto 0);
+        
+        ------------------------------------------------------------------------
+        -- @brief LED's.
+        ------------------------------------------------------------------------
+        -- led0_r              : out std_logic
     );
 
 end entity;
 
-architecture rtl of cpu is 
+architecture rtl of cpu is
 
     ----------------------------------------------------------------------------
-    -- @brief Main clock.
-    ----------------------------------------------------------------------------
-    signal clock_input : std_logic;
-
-    ----------------------------------------------------------------------------
-    -- @brief The amount of core in a CPU. 
+    -- @brief The amount of core in a CPU.
     ----------------------------------------------------------------------------
     constant core_count : integer := 8;
 
@@ -47,7 +66,7 @@ architecture rtl of cpu is
     type core_bus_collection_t is array (0 to (core_count - 1)) of core_bus_t;
 
     ----------------------------------------------------------------------------
-    -- @brief Collection of cure busses. 
+    -- @brief Collection of cure busses.
     ----------------------------------------------------------------------------
     signal core_bus_collection : core_bus_collection_t;
 
@@ -57,7 +76,7 @@ architecture rtl of cpu is
     signal led_test : unsigned (0 to 31) := (others => '0');
 
     ----------------------------------------------------------------------------
-    -- @brief Definition of CPU states. 
+    -- @brief Definition of CPU states.
     ----------------------------------------------------------------------------
     type cpu_state_t is (
 
@@ -67,12 +86,12 @@ architecture rtl of cpu is
         -- Cpu is initializing core 0 to begin execution.
         CPU_STATE_INITIALIZE_CORE_0,
 
-        -- Cpu is in an error state, and needs a restart. 
+        -- Cpu is in an error state, and needs a restart.
         CPU_STATE_ERROR
     );
 
     ----------------------------------------------------------------------------
-    -- @brief Current cpu state. 
+    -- @brief Current cpu state.
     ----------------------------------------------------------------------------
     signal cpu_state : cpu_state_t := CPU_STATE_INITIALIZING;
 
@@ -86,85 +105,187 @@ architecture rtl of cpu is
     -- All ready check.
     signal cores_ready_check : std_logic := '0';
 
+    -- Core ready flag.
+    signal cores_ready : std_logic := '0';
+
+    ----------------------------------------------------------------------------
+    -- @brief Clocks.
+    ----------------------------------------------------------------------------
+
+    -- 100 mhz clock.
+    signal system_clock_100mhz : std_logic := '0';
+
+    -- 200 mhz clock.
+    signal system_clock_200mhz : std_logic := '0';
+
+    -- 400 mhz clock.
+    signal system_clock_400mhz : std_logic := '0';
+
+    -- Main clock.
+    signal clock_input : std_logic := '0';
+
+    ----------------------------------------------------------------------------
+    -- @brief Memory interface bus.
+    ----------------------------------------------------------------------------
+    signal memory_interface_bus : memory_interface_bus_t;
+
+    -- Memory ready flag. 
+    signal memory_ready : std_logic := '0';
+    
+    signal led0_r : std_logic;
+
 begin
 
-    ----------------------------------------------------------------------------
-    -- For now, clock_input will be aliased with `CLK100MHZ`.
-    ----------------------------------------------------------------------------
-    clock_input <= CLK100MHZ;
+    clock_wizzard : entity work.clock_wizzard
+    port map (
+
+        -- Inputs
+        in_100mhz => CLK100MHZ,
+        reset => '0',
+
+        -- Outputs
+        out_100mhz => system_clock_100mhz,
+        out_200mhz => system_clock_200mhz,
+        out_400mhz => system_clock_400mhz
+    );
+
+    clock_input <= system_clock_100mhz;
 
     ----------------------------------------------------------------------------
-    -- Instantiate our cores. 
+    -- Instantiate our cores.
     ----------------------------------------------------------------------------
     cores : for i in 0 to (core_count - 1) generate
     begin
 
-        core_i : entity work.core 
+        core_i : entity work.core
         port map (
             inputs => core_bus_collection(i).inputs,
             outputs => core_bus_collection(i).outputs
         );
 
-        -- Route clock clock into cores. 
+        -- Route clock clock into cores.
         core_bus_collection(i).inputs.clock_input <= clock_input;
 
     end generate;
 
+    ----------------------------------------------------------------------------
+    -- Instantiate memory interface.
+    ----------------------------------------------------------------------------
+
+    -- Wire clocks.
+    memory_interface_bus.inputs.system_clock <= system_clock_100mhz;
+    memory_interface_bus.inputs.reference_clock <= system_clock_200mhz;
+
+    -- Memory interface instance.
+    memory_interface : entity work.memory_interface
+    port map (
+        inputs => memory_interface_bus.inputs,
+        outputs => memory_interface_bus.outputs,
+
+        ddr3_outputs => memory_interface_bus.ddr3_outputs,
+        ddr3_in_outs => memory_interface_bus.ddr3_in_outs
+    );
+
+    -- Wire DDR3 outputs. 
+    ddr3_addr <= memory_interface_bus.ddr3_outputs.ddr3_addr;
+    ddr3_ba <= memory_interface_bus.ddr3_outputs.ddr3_ba;
+    ddr3_ras_n <= memory_interface_bus.ddr3_outputs.ddr3_ras_n;
+    ddr3_cas_n <= memory_interface_bus.ddr3_outputs.ddr3_cas_n;
+    ddr3_we_n <= memory_interface_bus.ddr3_outputs.ddr3_we_n;
+    ddr3_reset_n <= memory_interface_bus.ddr3_outputs.ddr3_reset_n;
+    ddr3_ck_p <= memory_interface_bus.ddr3_outputs.ddr3_ck_p;
+    ddr3_ck_n <= memory_interface_bus.ddr3_outputs.ddr3_ck_n;
+    ddr3_cke <= memory_interface_bus.ddr3_outputs.ddr3_cke;
+    ddr3_cs_n <= memory_interface_bus.ddr3_outputs.ddr3_cs_n;
+    ddr3_dm <= memory_interface_bus.ddr3_outputs.ddr3_dm;
+    ddr3_odt <= memory_interface_bus.ddr3_outputs.ddr3_odt;
+
+    -- Wire DDR3 in/outs.
+    ddr3_dq <= memory_interface_bus.ddr3_in_outs.ddr3_dq;
+    ddr3_dqs_p <= memory_interface_bus.ddr3_in_outs.ddr3_dqs_p;
+    ddr3_dqs_n <= memory_interface_bus.ddr3_in_outs.ddr3_dqs_n;
+
+    ----------------------------------------------------------------------------
+    -- CPU Process.
+    ----------------------------------------------------------------------------
+
     process (clock_input) is
-    begin 
+    begin
 
         if rising_edge(clock_input) then
 
-            -- Oscillate red LED. 
+            -- Oscillate red LED.
             led_test <= led_test + 1;
 
-            case cpu_state is 
+            case cpu_state is
 
-                when CPU_STATE_INITIALIZING => 
+                when CPU_STATE_INITIALIZING =>
 
                     -- Pulse the LED to signal the cpu is initializing.
                     led0_r <= led_test(5);
 
-                    -- Increment the check index. 
-                    cores_ready_check_idx <= cores_ready_check_idx + 1;
 
-                    if cores_ready_check_idx < core_count then
+                    -- Only initiate the cores if they are not ready.
+                    if cores_ready = '0' then
+                        -- Increment the check index.
+                        cores_ready_check_idx <= cores_ready_check_idx + 1;
 
-                        -- If the core being checked 
-                        if not (core_bus_collection(cores_ready_check_idx).outputs.core_status_out = CORE_STATUS_OUT_IDLE) then
-                            
-                            -- If the core is not ready, set the signal low. 
-                            cores_ready_check <= '0';                    
+                        if cores_ready_check_idx < core_count then
+
+                            -- If the core being checked
+                            if not (core_bus_collection(cores_ready_check_idx).outputs.core_status_out = CORE_STATUS_OUT_IDLE) then
+
+                                -- If the core is not ready, set the signal low.
+                                cores_ready_check <= '0';
+                            end if;
+
+                        end if;
+
+                        -- If the core check hits the end reset.
+                        if cores_ready_check_idx = core_count then
+
+                            -- If all the cores are idle, transition to initializing
+                            -- core zero to begin execution.
+                            if cores_ready_check = '1' then
+
+                                cores_ready <= '1';
+
+                            else
+
+                                cores_ready_check_idx <= 0;
+                                cores_ready_check <= '1';
+
+                            end if;
+
+                        end if;
+                    end if;
+
+                    -- Only initiate the memory if it is not ready.
+                    if memory_ready = '0' then
+
+                        if memory_interface_bus.outputs.ready = '1' then
+                            memory_ready <= '1';
                         end if;
 
                     end if;
 
-                    -- If the core check hits the end reset. 
-                    if cores_ready_check_idx = core_count then
+                    if (cores_ready = '1') and (memory_ready = '1') then
 
-                        -- If all the cores are idle, transition to initializing 
-                        -- core zero to begin execution.
-                        if cores_ready_check = '1' then
+                        cpu_state <= CPU_STATE_INITIALIZE_CORE_0;
 
-                            cpu_state <= CPU_STATE_INITIALIZE_CORE_0;
+                    end if;
 
-                        else
-
-                            cores_ready_check_idx <= 0;
-                            cores_ready_check <= '1';
-
-                        end if;
-
-                    end if;          
-                    
-                when CPU_STATE_INITIALIZE_CORE_0 => 
+                when CPU_STATE_INITIALIZE_CORE_0 =>
 
                     -- Set the core0 entry point.
 
+                    -- TODO this is temp.
+                    led0_r <= '1';
 
-                when others => 
 
-                    -- Processor is hung up, and requires a restart. 
+                when others =>
+
+                    -- Processor is hung up, and requires a restart.
                     led0_r <= '1';
 
                     null;

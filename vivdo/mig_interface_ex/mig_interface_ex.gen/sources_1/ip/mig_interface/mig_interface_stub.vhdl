@@ -2,10 +2,10 @@
 -- Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2026.1 (lin64) Build 6511674 Tue Jun 16 11:01:26 MDT 2026
--- Date        : Sat Oct 17 14:32:00 2026
+-- Date        : Sat Oct 17 19:22:01 2026
 -- Host        : raymond-MS-7C91 running 64-bit Ubuntu 26.04.1 LTS
 -- Command     : write_vhdl -force -mode synth_stub
---               /home/raymond/Desktop/ray5/vivdo/ray5/ray5.gen/sources_1/ip/mig_interface/mig_interface_stub.vhdl
+--               /home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface_stub.vhdl
 -- Design      : mig_interface
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7s50csga324-1

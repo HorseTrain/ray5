@@ -711,3 +711,4 @@ test_memory_interface.uut_ddr3_model.cmd_task: at time 59998538.0 ps INFO: Prech
 Note: Memory interface is ready, beginning tests.
 Time: 60785 ns  Iteration: 2  Process: /test_memory_interface/stim_proc  File: /home/raymond/Desktop/ray5/tests/test_memory_interface.vhdl
 $finish called at time : 60785 ns : File "/home/raymond/Desktop/ray5/tests/test_memory_interface.vhdl" Line 95
+INFO: xsimkernel Simulation Memory Usage: 357952 KB (Peak: 413956 KB), Simulation CPU Usage: 39240 ms

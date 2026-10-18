@@ -1,0 +1,151 @@
+** Warning: (vlib-34) Library already exists at "modelsim_lib/work".
+** Warning: (vlib-34) Library already exists at "modelsim_lib/msim".
+** Warning: (vlib-34) Library already exists at "modelsim_lib/msim/xil_defaultlib".
+Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib 
+Modifying modelsim.ini
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 16:37:57 on Oct 17,2026
+vlog -incr -mfcu -work xil_defaultlib "+incdir+../../../../../../../amd/2026.1/data/rsb/busdef" "+incdir+../../../../imports" ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/ecc/mig_7series_v4_2_ecc_dec_fix.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/ecc/mig_7series_v4_2_fi_xor.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/ecc/mig_7series_v4_2_ecc_gen.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/ecc/mig_7series_v4_2_ecc_merge_enc.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/ecc/mig_7series_v4_2_ecc_buf.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/controller/mig_7series_v4_2_arb_select.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/controller/mig_7series_v4_2_rank_mach.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/controller/mig_7series_v4_2_bank_queue.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/controller/mig_7series_v4_2_bank_cntrl.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/controller/mig_7series_v4_2_rank_cntrl.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/controller/mig_7series_v4_2_rank_common.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/controller/mig_7series_v4_2_mc.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/controller/mig_7series_v4_2_col_mach.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/controller/mig_7series_v4_2_bank_common.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/controller/mig_7series_v4_2_round_robin_arb.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/controller/mig_7series_v4_2_bank_compare.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/controller/mig_7series_v4_2_bank_state.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/controller/mig_7series_v4_2_arb_row_col.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/controller/mig_7series_v4_2_arb_mux.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/controller/mig_7series_v4_2_bank_mach.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/ip_top/mig_7series_v4_2_memc_ui_top_std.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/ip_top/mig_7series_v4_2_mem_intfc.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/ui/mig_7series_v4_2_ui_cmd.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/ui/mig_7series_v4_2_ui_top.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/ui/mig_7series_v4_2_ui_wr_data.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/ui/mig_7series_v4_2_ui_rd_data.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_ocd_data.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_wrlvl_off_delay.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_ocd_lim.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_dqs_found_cal_hr.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_of_pre_fifo.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_ocd_cntlr.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_oclkdelay_cal.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_poc_edge_store.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_ocd_po_cntlr.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_poc_tap_base.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_ck_addr_cmd_delay.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_prbs_gen.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_if_post_fifo.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_poc_top.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_wrcal.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_calib_top.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_wrlvl.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_poc_meta.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_init.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_ocd_mux.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_skip_calib_tap.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_ocd_samp.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_rdlvl.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_poc_cc.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_prbs_rdlvl.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_tempmon.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_dqs_found_cal.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_poc_pd.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_ocd_edge.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/clocking/mig_7series_v4_2_iodelay_ctrl.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/clocking/mig_7series_v4_2_clk_ibuf.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/clocking/mig_7series_v4_2_tempmon.v ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/clocking/mig_7series_v4_2_infrastructure.v 
+-- Skipping module mig_7series_v4_2_ecc_dec_fix
+-- Skipping module mig_7series_v4_2_fi_xor
+-- Skipping module mig_7series_v4_2_ecc_gen
+-- Skipping module mig_7series_v4_2_ecc_merge_enc
+-- Skipping module mig_7series_v4_2_ecc_buf
+-- Skipping module mig_7series_v4_2_arb_select
+-- Skipping module mig_7series_v4_2_rank_mach
+-- Skipping module mig_7series_v4_2_bank_queue
+-- Skipping module mig_7series_v4_2_bank_cntrl
+-- Skipping module mig_7series_v4_2_rank_cntrl
+-- Skipping module mig_7series_v4_2_rank_common
+-- Skipping module mig_7series_v4_2_mc
+-- Skipping module mig_7series_v4_2_col_mach
+-- Skipping module mig_7series_v4_2_bank_common
+-- Skipping module mig_7series_v4_2_round_robin_arb
+-- Skipping module mig_7series_v4_2_bank_compare
+-- Skipping module mig_7series_v4_2_bank_state
+-- Skipping module mig_7series_v4_2_arb_row_col
+-- Skipping module mig_7series_v4_2_arb_mux
+-- Skipping module mig_7series_v4_2_bank_mach
+-- Skipping module mig_7series_v4_2_memc_ui_top_std
+-- Skipping module mig_7series_v4_2_mem_intfc
+-- Skipping module mig_7series_v4_2_ui_cmd
+-- Skipping module mig_7series_v4_2_ui_top
+-- Skipping module mig_7series_v4_2_ui_wr_data
+-- Skipping module mig_7series_v4_2_ui_rd_data
+-- Skipping module mig_7series_v4_2_ddr_phy_ocd_data
+-- Skipping module mig_7series_v4_2_ddr_phy_wrlvl_off_delay
+-- Skipping module mig_7series_v4_2_ddr_phy_ocd_lim
+-- Skipping module mig_7series_v4_2_ddr_phy_dqs_found_cal_hr
+-- Skipping module mig_7series_v4_2_ddr_of_pre_fifo
+-- Skipping module mig_7series_v4_2_ddr_phy_ocd_cntlr
+-- Skipping module mig_7series_v4_2_ddr_phy_oclkdelay_cal
+-- Skipping module mig_7series_v4_2_poc_edge_store
+-- Skipping module mig_7series_v4_2_ddr_mc_phy_wrapper
+-- Skipping module mig_7series_v4_2_ddr_phy_ocd_po_cntlr
+-- Skipping module mig_7series_v4_2_poc_tap_base
+-- Skipping module mig_7series_v4_2_ddr_phy_ck_addr_cmd_delay
+-- Skipping module mig_7series_v4_2_ddr_phy_4lanes
+-- Skipping module mig_7series_v4_2_ddr_prbs_gen
+-- Skipping module mig_7series_v4_2_ddr_if_post_fifo
+-- Skipping module mig_7series_v4_2_poc_top
+-- Skipping module mig_7series_v4_2_ddr_phy_wrcal
+-- Skipping module mig_7series_v4_2_ddr_calib_top
+-- Skipping module mig_7series_v4_2_ddr_byte_lane
+-- Skipping module mig_7series_v4_2_ddr_byte_group_io
+-- Skipping module mig_7series_v4_2_ddr_phy_wrlvl
+-- Skipping module mig_7series_v4_2_poc_meta
+-- Skipping module mig_7series_v4_2_ddr_phy_init
+-- Skipping module mig_7series_v4_2_ddr_phy_ocd_mux
+-- Skipping module mig_7series_v4_2_ddr_skip_calib_tap
+-- Skipping module mig_7series_v4_2_ddr_phy_ocd_samp
+-- Skipping module mig_7series_v4_2_ddr_phy_rdlvl
+-- Skipping module mig_7series_v4_2_poc_cc
+-- Skipping module mig_7series_v4_2_ddr_phy_prbs_rdlvl
+-- Skipping module mig_7series_v4_2_ddr_phy_tempmon
+-- Skipping module mig_7series_v4_2_ddr_mc_phy
+-- Skipping module mig_7series_v4_2_ddr_phy_dqs_found_cal
+-- Skipping module mig_7series_v4_2_poc_pd
+-- Skipping module mig_7series_v4_2_ddr_phy_ocd_edge
+-- Skipping module mig_7series_v4_2_iodelay_ctrl
+-- Skipping module mig_7series_v4_2_clk_ibuf
+-- Skipping module mig_7series_v4_2_tempmon
+-- Skipping module mig_7series_v4_2_infrastructure
+
+Top level modules:
+	mig_7series_v4_2_memc_ui_top_std
+	mig_7series_v4_2_ddr_mc_phy_wrapper
+	mig_7series_v4_2_ddr_calib_top
+	mig_7series_v4_2_iodelay_ctrl
+	mig_7series_v4_2_clk_ibuf
+	mig_7series_v4_2_tempmon
+	mig_7series_v4_2_infrastructure
+End time: 16:37:57 on Oct 17,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 16:37:57 on Oct 17,2026
+vcom -93 -work xil_defaultlib ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_top.vhd ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/mig_interface_mig_sim.vhd ../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/mig_interface.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity mig_7series_v4_2_ddr_phy_top
+-- Compiling architecture arch_ddr_phy_top of mig_7series_v4_2_ddr_phy_top
+-- Compiling entity mig_interface_mig
+-- Compiling architecture arch_mig_interface_mig of mig_interface_mig
+-- Compiling entity mig_interface
+-- Compiling architecture arch_mig_interface of mig_interface
+End time: 16:37:57 on Oct 17,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 16:37:58 on Oct 17,2026
+vlog -incr -mfcu -sv -work xil_defaultlib "+incdir+../../../../../../../amd/2026.1/data/rsb/busdef" "+incdir+../../../../imports" ../../../../imports/ddr3_model.sv 
+-- Skipping module ddr3_model
+
+Top level modules:
+	ddr3_model
+End time: 16:37:58 on Oct 17,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 16:37:58 on Oct 17,2026
+vcom -2008 -work xil_defaultlib ../../../../../../src/register_store_pkg_generic.vhdl ../../../../../../src/ray5_globals_pkg.vhdl ../../../../../../tests/test_bench_globals.vhdl ../../../../../../src/register_store.vhdl ../../../../../../tests/test_register_store.vhdl ../../../../../../src/core_pkg.vhdl ../../../../../../src/memory_interface_pkg.vhdl ../../../../../../src/memory_interface.vhdl ../../../../../../tests/test_memory_interface.vhdl 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling package register_store_type_p
+-- Compiling package body register_store_type_p
+-- Loading package register_store_type_p
+-- Loading package ENV
+-- Compiling package ray5_globals_p
+-- Loading package register_store_type_p
+-- Loading package body register_store_type_p
+-- Compiling package test_bench_globals
+-- Compiling entity register_store
+-- Compiling architecture rtl of register_store
+-- Loading package test_bench_globals
+-- Compiling entity test_register_store
+-- Compiling architecture tb of test_register_store
+-- Loading entity register_store
+-- Loading package ray5_globals_p
+-- Compiling package core_p
+-- Compiling package memory_interface_p
+-- Loading package memory_interface_p
+-- Compiling entity memory_interface
+-- Compiling architecture rtl of memory_interface
+-- Loading entity mig_interface
+-- Loading package core_p
+-- Compiling entity test_memory_interface
+-- Compiling architecture tb of test_memory_interface
+-- Loading entity memory_interface
+End time: 16:37:58 on Oct 17,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+Start time: 16:37:58 on Oct 17,2026
+vlog -work xil_defaultlib glbl.v 
+-- Compiling module glbl
+
+Top level modules:
+	glbl
+End time: 16:37:58 on Oct 17,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0

@@ -1,5 +1,5 @@
 # compile verilog/system verilog design source files
-verilog xil_defaultlib  --include "../../../../../../../amd/2026.1/data/rsb/busdef" --include "../../../../imports" \
+verilog xil_defaultlib  --include "../../../../../../../amd/2026.1/data/rsb/busdef" --include "../../../../imports" --include "../../../../mig_interface_ex.ip_user_files/ipstatic" \
 "../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/ecc/mig_7series_v4_2_ecc_dec_fix.v" \
 "../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/ecc/mig_7series_v4_2_fi_xor.v" \
 "../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/ecc/mig_7series_v4_2_ecc_gen.v" \
@@ -65,7 +65,7 @@ verilog xil_defaultlib  --include "../../../../../../../amd/2026.1/data/rsb/busd
 "../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/clocking/mig_7series_v4_2_tempmon.v" \
 "../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/clocking/mig_7series_v4_2_infrastructure.v" \
 
-sv xil_defaultlib  --include "../../../../../../../amd/2026.1/data/rsb/busdef" --include "../../../../imports" \
+sv xil_defaultlib  --include "../../../../../../../amd/2026.1/data/rsb/busdef" --include "../../../../imports" --include "../../../../mig_interface_ex.ip_user_files/ipstatic" \
 "../../../../imports/ddr3_model.sv" \
 
 # compile glbl module

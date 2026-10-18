@@ -4,11 +4,19 @@ onerror {quit -force}
 transcript on
 
 vlib work
+vlib riviera/xpm
 vlib riviera/xil_defaultlib
 
+vmap xpm riviera/xpm
 vmap xil_defaultlib riviera/xil_defaultlib
 
-vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../../../../amd/2026.1/data/rsb/busdef" -l xil_defaultlib \
+vlog -work xpm  -incr "+incdir+../../../../../../../amd/2026.1/data/rsb/busdef" -l xpm -l xil_defaultlib \
+"/home/raymond/Desktop/amd/2026.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
+
+vcom -work xpm -93  -incr \
+"/home/raymond/Desktop/amd/2026.1/data/ip/xpm/xpm_VCOMP.vhd" \
+
+vlog -work xil_defaultlib  -incr -v2k5 "+incdir+../../../../../../../amd/2026.1/data/rsb/busdef" -l xpm -l xil_defaultlib \
 "../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/ecc/mig_7series_v4_2_ecc_dec_fix.v" \
 "../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/ecc/mig_7series_v4_2_fi_xor.v" \
 "../../../../mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/ecc/mig_7series_v4_2_ecc_gen.v" \

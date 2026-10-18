@@ -418,7 +418,7 @@ entity mig_interface_mig is
    SYSCLK_TYPE           : string  := "SINGLE_ENDED";
                                      -- System clock type DIFFERENTIAL, SINGLE_ENDED,
                                      -- NO_BUFFER
-   REFCLK_TYPE           : string  := "SINGLE_ENDED";
+   REFCLK_TYPE           : string  := "NO_BUFFER";
                                      -- Reference clock type DIFFERENTIAL, SINGLE_ENDED
                                      -- NO_BUFFER, USE_SYSTEM_CLOCK
    SYS_RST_PORT          : string  := "FALSE";

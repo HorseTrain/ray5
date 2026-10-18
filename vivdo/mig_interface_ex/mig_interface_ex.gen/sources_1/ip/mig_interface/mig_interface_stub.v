@@ -2,10 +2,10 @@
 // Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2026.1 (lin64) Build 6511674 Tue Jun 16 11:01:26 MDT 2026
-// Date        : Sat Oct 17 14:32:00 2026
+// Date        : Sat Oct 17 19:22:00 2026
 // Host        : raymond-MS-7C91 running 64-bit Ubuntu 26.04.1 LTS
 // Command     : write_verilog -force -mode synth_stub
-//               /home/raymond/Desktop/ray5/vivdo/ray5/ray5.gen/sources_1/ip/mig_interface/mig_interface_stub.v
+//               /home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface_stub.v
 // Design      : mig_interface
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7s50csga324-1
@@ -20,8 +20,9 @@ module mig_interface(ddr3_dq, ddr3_dqs_p, ddr3_dqs_n, ddr3_addr,
   app_wdf_wren, app_rd_data, app_rd_data_end, app_rd_data_valid, app_rdy, app_wdf_rdy, 
   app_sr_req, app_ref_req, app_zq_req, app_sr_active, app_ref_ack, app_zq_ack, ui_clk, 
   ui_clk_sync_rst, init_calib_complete, sys_clk_i, clk_ref_i, device_temp, sys_rst)
-/* synthesis syn_black_box black_box_pad_pin="ddr3_dq[15:0],ddr3_dqs_p[1:0],ddr3_dqs_n[1:0],ddr3_addr[13:0],ddr3_ba[2:0],ddr3_ras_n,ddr3_cas_n,ddr3_we_n,ddr3_reset_n,ddr3_ck_p[0:0],ddr3_ck_n[0:0],ddr3_cke[0:0],ddr3_cs_n[0:0],ddr3_dm[1:0],ddr3_odt[0:0],app_addr[27:0],app_cmd[2:0],app_en,app_wdf_data[63:0],app_wdf_end,app_wdf_mask[7:0],app_wdf_wren,app_rd_data[63:0],app_rd_data_end,app_rd_data_valid,app_rdy,app_wdf_rdy,app_sr_req,app_ref_req,app_zq_req,app_sr_active,app_ref_ack,app_zq_ack,ui_clk_sync_rst,init_calib_complete,sys_clk_i,clk_ref_i,device_temp[11:0],sys_rst" */
-/* synthesis syn_force_seq_prim="ui_clk" */;
+/* synthesis syn_black_box black_box_pad_pin="ddr3_dq[15:0],ddr3_dqs_p[1:0],ddr3_dqs_n[1:0],ddr3_addr[13:0],ddr3_ba[2:0],ddr3_ras_n,ddr3_cas_n,ddr3_we_n,ddr3_reset_n,ddr3_ck_p[0:0],ddr3_ck_n[0:0],ddr3_cke[0:0],ddr3_cs_n[0:0],ddr3_dm[1:0],ddr3_odt[0:0],app_addr[27:0],app_cmd[2:0],app_en,app_wdf_data[63:0],app_wdf_end,app_wdf_mask[7:0],app_wdf_wren,app_rd_data[63:0],app_rd_data_end,app_rd_data_valid,app_rdy,app_wdf_rdy,app_sr_req,app_ref_req,app_zq_req,app_sr_active,app_ref_ack,app_zq_ack,ui_clk_sync_rst,init_calib_complete,sys_clk_i,device_temp[11:0],sys_rst" */
+/* synthesis syn_force_seq_prim="ui_clk" */
+/* synthesis syn_force_seq_prim="clk_ref_i" */;
   inout [15:0]ddr3_dq;
   inout [1:0]ddr3_dqs_p;
   inout [1:0]ddr3_dqs_n;
@@ -59,7 +60,7 @@ module mig_interface(ddr3_dq, ddr3_dqs_p, ddr3_dqs_n, ddr3_addr,
   output ui_clk_sync_rst;
   output init_calib_complete;
   input sys_clk_i;
-  input clk_ref_i;
+  input clk_ref_i /* synthesis syn_isclock = 1 */;
   output [11:0]device_temp;
   input sys_rst;
 endmodule
