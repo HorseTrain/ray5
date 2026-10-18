@@ -1,0 +1,211 @@
+--------------------------------------------------------------------------------
+-- Copyright (c) 2026 Mataka Studio. All rights reserved.
+-- 
+-- @brief Register store.
+-- 
+-- @description 
+--      Stores a collection of registers.
+--------------------------------------------------------------------------------
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+package register_store_type_p is 
+
+    generic (
+        ------------------------------------------------------------------------
+        -- @brief Width of general purpose registers.
+        -- 
+        -- @note Represented as log2(register_count) for internal indexing ease.
+        --       For example, 5 bits = 2^5 = 32.
+        ------------------------------------------------------------------------
+        register_width_bit : integer;
+
+        ------------------------------------------------------------------------
+        -- @brief Number of general-purpose registers (as address bit-width).
+        -- 
+        -- @note Represented as log2(register_count) for internal indexing ease.
+        --       For example, 3 bits = 2^3 = 8 registers.
+        ------------------------------------------------------------------------
+        register_count_bit : integer
+    );
+
+----------------------------------------------------------------------------
+    -- @brief Width of general purpose registers.
+    ----------------------------------------------------------------------------
+    constant register_width : integer := (2 ** register_width_bit);
+
+    ----------------------------------------------------------------------------
+    -- @brief Number of general purpose registers.
+    ----------------------------------------------------------------------------
+    constant register_count : integer := (2 ** register_count_bit);
+
+    ----------------------------------------------------------------------------
+    -- @brief Size of general purpose registers in bytes (log2).
+    ----------------------------------------------------------------------------
+    constant register_size_bit : integer := (register_width_bit - 3);
+
+    ----------------------------------------------------------------------------
+    -- @brief Number of bytes per general purpose register.
+    ----------------------------------------------------------------------------
+    constant register_byte_count : integer := (2 ** register_size_bit);
+
+    ----------------------------------------------------------------------------
+    -- @brief Register type. 
+    ----------------------------------------------------------------------------
+    subtype register_t is unsigned (0 to (register_width - 1));
+
+    ----------------------------------------------------------------------------
+    -- @brief Register index type. 
+    ----------------------------------------------------------------------------
+    subtype register_index_t is unsigned (0 to (register_count_bit - 1));
+
+    ----------------------------------------------------------------------------
+    -- @brief Register size type. 
+    ----------------------------------------------------------------------------
+    subtype register_size_t is unsigned (0 to (register_size_bit - 1));
+
+    ----------------------------------------------------------------------------
+    -- @brief Register array type. 
+    ----------------------------------------------------------------------------
+    type register_collection_t is array (0 to (register_count - 1)) of register_t;
+
+    type register_store_inputs_t is record 
+
+        ------------------------------------------------------------------------
+        -- @brief Clock input.
+        ------------------------------------------------------------------------
+        clock_input : std_logic;
+
+        ------------------------------------------------------------------------
+        -- @brief Reset pin.
+        -- 
+        -- @note 
+        --      If high, this register store will neither accept, nor or output 
+        --      values.
+        ------------------------------------------------------------------------
+        reset : std_logic;
+
+        ------------------------------------------------------------------------
+        -- @brief Write enable.
+        --
+        -- @description 
+        --      When high, and on a rising clock edge, `write_value` will be 
+        --      written into the register with index `index`.
+        ------------------------------------------------------------------------
+        write_enable : std_logic;
+
+        ------------------------------------------------------------------------
+        -- @brief Value to be written into register store.
+        --
+        -- @description
+        --      When on a rising clock edge, and `write_enable` is high, this 
+        --      value will be written into the register with index 
+        --      `index`.
+        ------------------------------------------------------------------------
+        write_value : unsigned (0 to (register_width - 1));
+
+        ------------------------------------------------------------------------
+        -- @brief Register index.
+        --
+        -- @description
+        --      Index of the register store is working with.
+        ------------------------------------------------------------------------
+        index : unsigned (0 to (register_count_bit - 1));
+
+    end record register_store_inputs_t;
+
+    type register_store_outputs_t is record 
+
+        ------------------------------------------------------------------------
+        -- @brief Value going out of register store.
+        ------------------------------------------------------------------------
+        value_out : unsigned (0 to (register_width - 1));
+
+        ------------------------------------------------------------------------
+        -- @brief Ready pin.
+        --
+        -- @note 
+        --      High -> Register store is ready.
+        --      Low -> Register store is not ready.
+        ------------------------------------------------------------------------
+        ready : std_logic;
+
+    end record register_store_outputs_t;
+
+    type register_store_bus_t is record 
+
+        ------------------------------------------------------------------------
+        -- @brief Inputs.
+        ------------------------------------------------------------------------
+        inputs : register_store_inputs_t;
+
+        ------------------------------------------------------------------------
+        -- @brief Outputs.
+        ------------------------------------------------------------------------
+        outputs : register_store_outputs_t;
+
+    end record register_store_bus_t;
+
+    ----------------------------------------------------------------------------
+    -- @brief Return a register bus with all zero values.
+    ----------------------------------------------------------------------------
+    function new_register_store_bus_t return register_store_bus_t;
+
+    ----------------------------------------------------------------------------
+    -- @brief Return a register index from an integer. 
+    ----------------------------------------------------------------------------
+    function to_register_index (index : integer) return register_index_t;
+
+    ----------------------------------------------------------------------------
+    -- @brief Return a register value from an integer. 
+    ----------------------------------------------------------------------------
+    function to_register_value(value : integer) return register_t;
+
+end package;
+
+package body register_store_type_p is 
+
+    ----------------------------------------------------------------------------
+    -- @see register_store_type_p.to_register_index
+    ----------------------------------------------------------------------------
+    function to_register_index (index : integer) return register_index_t is
+    begin
+        return to_unsigned(index, register_count_bit);
+    end;
+
+    ----------------------------------------------------------------------------
+    -- @see register_store_type_p.to_register_value
+    ----------------------------------------------------------------------------
+    function to_register_value(value : integer) return register_t is
+    begin
+        return to_unsigned(value, register_width);
+    end;
+
+    ----------------------------------------------------------------------------
+    -- @see register_store_type_p.new_register_store_bus_t
+    ----------------------------------------------------------------------------
+    function new_register_store_bus_t return register_store_bus_t is 
+    
+        variable result : register_store_bus_t := (
+            inputs => (
+                clock_input => '0',
+                reset => '0',
+                write_enable => '0',
+
+                index => (others => '0'),
+                write_value => (others => '0')
+            ),
+
+            outputs => (
+                ready => '0',
+                value_out => (others => '0')
+            )
+        );
+
+    begin
+        return result;
+    end function;
+
+end package body register_store_type_p;
