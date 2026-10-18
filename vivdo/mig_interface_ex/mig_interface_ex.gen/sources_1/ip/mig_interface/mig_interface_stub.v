@@ -2,7 +2,7 @@
 // Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2026.1 (lin64) Build 6511674 Tue Jun 16 11:01:26 MDT 2026
-// Date        : Sat Oct 17 19:22:00 2026
+// Date        : Sat Oct 17 21:47:13 2026
 // Host        : raymond-MS-7C91 running 64-bit Ubuntu 26.04.1 LTS
 // Command     : write_verilog -force -mode synth_stub
 //               /home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface_stub.v

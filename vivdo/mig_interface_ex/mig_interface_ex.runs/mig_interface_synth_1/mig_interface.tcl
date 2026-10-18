@@ -56,14 +56,10 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "mig_interface_synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 6
 set_param xicom.use_bs_reader 1
 set_param general.usePosixSpawnForFork 1
 set_param simulator.modelsimInstallPath /home/raymond/Desktop/modelsim/modelsim_ase/bin
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }

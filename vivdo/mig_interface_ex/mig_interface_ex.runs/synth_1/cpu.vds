@@ -4,8 +4,8 @@ INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detect
 # SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
 # IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
 # SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
-# Start of session at: Sat Oct 17 19:37:25 2026
-# Process ID         : 774307
+# Start of session at: Sat Oct 17 21:47:46 2026
+# Process ID         : 3838037
 # Current directory  : /home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/synth_1
 # Command line       : vivado -log cpu.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cpu.tcl
 # Log file           : /home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/synth_1/cpu.vds
@@ -14,13 +14,13 @@ INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detect
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 26.04.1 LTS
 # Processor Detail   : AMD Ryzen 9 5900X 12-Core Processor
-# CPU Frequency      : 4674.853 MHz
+# CPU Frequency      : 4597.374 MHz
 # CPU Physical cores : 12
 # CPU Logical cores  : 24
 # Host memory        : 65190 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 73780 MB
-# Available Virtual  : 57580 MB
+# Available Virtual  : 53235 MB
 #-----------------------------------------------------------
 source cpu.tcl -notrace
 Command: synth_design -top cpu -part xc7s50csga324-1
@@ -31,12 +31,12 @@ INFO: [Device 21-403] Loading part xc7s50csga324-1
 INFO: [Designutils 20-5008] Incremental synthesis strategy default
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 776917
+INFO: [Synth 8-7075] Helper process launched with PID 3840710
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2393.418 ; gain = 517.031 ; free physical = 17042 ; free virtual = 53443
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2393.793 ; gain = 517.367 ; free physical = 12645 ; free virtual = 49305
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'cpu' [/home/raymond/Desktop/ray5/src/cpu.vhdl:56]
-INFO: [Synth 8-638] synthesizing module 'clock_wizzard' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/synth_1/.Xil/Vivado-774307-raymond-MS-7C91/realtime/clock_wizzard_stub.vhdl:20]
+INFO: [Synth 8-638] synthesizing module 'cpu' [/home/raymond/Desktop/ray5/src/cpu.vhdl:57]
+INFO: [Synth 8-638] synthesizing module 'clock_wizzard' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/synth_1/.Xil/Vivado-3838037-raymond-MS-7C91/realtime/clock_wizzard_stub.vhdl:20]
 INFO: [Synth 8-638] synthesizing module 'core' [/home/raymond/Desktop/ray5/src/core.vhdl:32]
 INFO: [Synth 8-638] synthesizing module 'register_store' [/home/raymond/Desktop/ray5/src/register_store.vhdl:45]
 INFO: [Synth 8-256] done synthesizing module 'register_store' (0#1) [/home/raymond/Desktop/ray5/src/register_store.vhdl:45]
@@ -44,38 +44,31 @@ INFO: [Synth 8-226] default block is never used [/home/raymond/Desktop/ray5/src/
 INFO: [Synth 8-256] done synthesizing module 'core' (0#1) [/home/raymond/Desktop/ray5/src/core.vhdl:32]
 INFO: [Synth 8-638] synthesizing module 'memory_interface' [/home/raymond/Desktop/ray5/src/memory_interface.vhdl:31]
 INFO: [Synth 8-226] default block is never used [/home/raymond/Desktop/ray5/src/memory_interface.vhdl:86]
-INFO: [Synth 8-638] synthesizing module 'mig_interface' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/synth_1/.Xil/Vivado-774307-raymond-MS-7C91/realtime/mig_interface_stub.vhdl:52]
+INFO: [Synth 8-638] synthesizing module 'mig_interface' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/synth_1/.Xil/Vivado-3838037-raymond-MS-7C91/realtime/mig_interface_stub.vhdl:52]
 INFO: [Synth 8-256] done synthesizing module 'memory_interface' (0#1) [/home/raymond/Desktop/ray5/src/memory_interface.vhdl:31]
-INFO: [Synth 8-256] done synthesizing module 'cpu' (0#1) [/home/raymond/Desktop/ray5/src/cpu.vhdl:56]
+INFO: [Synth 8-256] done synthesizing module 'cpu' (0#1) [/home/raymond/Desktop/ray5/src/cpu.vhdl:57]
 WARNING: [Synth 8-3848] Net outputs[value] in module/entity memory_interface does not have driver. [/home/raymond/Desktop/ray5/src/memory_interface.vhdl:20]
-WARNING: [Synth 8-6014] Unused sequential element led_test_reg was removed.  [/home/raymond/Desktop/ray5/src/cpu.vhdl:218]
-WARNING: [Synth 8-6014] Unused sequential element led0_r_reg was removed.  [/home/raymond/Desktop/ray5/src/cpu.vhdl:225]
-WARNING: [Synth 8-6014] Unused sequential element cores_ready_check_idx_reg was removed.  [/home/raymond/Desktop/ray5/src/cpu.vhdl:231]
-WARNING: [Synth 8-6014] Unused sequential element cores_ready_check_reg was removed.  [/home/raymond/Desktop/ray5/src/cpu.vhdl:239]
-WARNING: [Synth 8-6014] Unused sequential element cores_ready_reg was removed.  [/home/raymond/Desktop/ray5/src/cpu.vhdl:229]
-WARNING: [Synth 8-6014] Unused sequential element memory_ready_reg was removed.  [/home/raymond/Desktop/ray5/src/cpu.vhdl:264]
-WARNING: [Synth 8-6014] Unused sequential element cpu_state_reg was removed.  [/home/raymond/Desktop/ray5/src/cpu.vhdl:220]
-WARNING: [Synth 8-3848] Net memory_interface_bus[inputs][address] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:130]
-WARNING: [Synth 8-3848] Net memory_interface_bus[inputs][command] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:130]
-WARNING: [Synth 8-3848] Net memory_interface_bus[inputs][value] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:130]
-WARNING: [Synth 8-3848] Net memory_interface_bus[inputs][size] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:130]
-WARNING: [Synth 8-3848] Net memory_interface_bus[inputs][start_command] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:130]
-WARNING: [Synth 8-3848] Net core_bus_collection[0][inputs][set_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
-WARNING: [Synth 8-3848] Net core_bus_collection[0][inputs][new_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
-WARNING: [Synth 8-3848] Net core_bus_collection[1][inputs][set_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
-WARNING: [Synth 8-3848] Net core_bus_collection[1][inputs][new_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
-WARNING: [Synth 8-3848] Net core_bus_collection[2][inputs][set_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
-WARNING: [Synth 8-3848] Net core_bus_collection[2][inputs][new_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
-WARNING: [Synth 8-3848] Net core_bus_collection[3][inputs][set_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
-WARNING: [Synth 8-3848] Net core_bus_collection[3][inputs][new_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
-WARNING: [Synth 8-3848] Net core_bus_collection[4][inputs][set_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
-WARNING: [Synth 8-3848] Net core_bus_collection[4][inputs][new_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
-WARNING: [Synth 8-3848] Net core_bus_collection[5][inputs][set_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
-WARNING: [Synth 8-3848] Net core_bus_collection[5][inputs][new_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
-WARNING: [Synth 8-3848] Net core_bus_collection[6][inputs][set_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
-WARNING: [Synth 8-3848] Net core_bus_collection[6][inputs][new_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
-WARNING: [Synth 8-3848] Net core_bus_collection[7][inputs][set_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
-WARNING: [Synth 8-3848] Net core_bus_collection[7][inputs][new_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
+WARNING: [Synth 8-3848] Net memory_interface_bus[inputs][address] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:142]
+WARNING: [Synth 8-3848] Net memory_interface_bus[inputs][command] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:142]
+WARNING: [Synth 8-3848] Net memory_interface_bus[inputs][value] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:142]
+WARNING: [Synth 8-3848] Net memory_interface_bus[inputs][size] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:142]
+WARNING: [Synth 8-3848] Net memory_interface_bus[inputs][start_command] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:142]
+WARNING: [Synth 8-3848] Net core_bus_collection[0][inputs][set_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:72]
+WARNING: [Synth 8-3848] Net core_bus_collection[0][inputs][new_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:72]
+WARNING: [Synth 8-3848] Net core_bus_collection[1][inputs][set_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:72]
+WARNING: [Synth 8-3848] Net core_bus_collection[1][inputs][new_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:72]
+WARNING: [Synth 8-3848] Net core_bus_collection[2][inputs][set_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:72]
+WARNING: [Synth 8-3848] Net core_bus_collection[2][inputs][new_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:72]
+WARNING: [Synth 8-3848] Net core_bus_collection[3][inputs][set_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:72]
+WARNING: [Synth 8-3848] Net core_bus_collection[3][inputs][new_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:72]
+WARNING: [Synth 8-3848] Net core_bus_collection[4][inputs][set_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:72]
+WARNING: [Synth 8-3848] Net core_bus_collection[4][inputs][new_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:72]
+WARNING: [Synth 8-3848] Net core_bus_collection[5][inputs][set_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:72]
+WARNING: [Synth 8-3848] Net core_bus_collection[5][inputs][new_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:72]
+WARNING: [Synth 8-3848] Net core_bus_collection[6][inputs][set_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:72]
+WARNING: [Synth 8-3848] Net core_bus_collection[6][inputs][new_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:72]
+WARNING: [Synth 8-3848] Net core_bus_collection[7][inputs][set_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:72]
+WARNING: [Synth 8-3848] Net core_bus_collection[7][inputs][new_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:72]
 WARNING: [Synth 8-7129] Port outputs[value][0] in module memory_interface is either unconnected or has no load
 WARNING: [Synth 8-7129] Port outputs[value][1] in module memory_interface is either unconnected or has no load
 WARNING: [Synth 8-7129] Port outputs[value][2] in module memory_interface is either unconnected or has no load
@@ -178,18 +171,18 @@ WARNING: [Synth 8-7129] Port inputs[address][34] in module memory_interface is e
 WARNING: [Synth 8-7129] Port inputs[address][35] in module memory_interface is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2484.387 ; gain = 608.000 ; free physical = 16959 ; free virtual = 53362
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2485.730 ; gain = 609.305 ; free physical = 12513 ; free virtual = 49173
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2493.293 ; gain = 616.906 ; free physical = 16963 ; free virtual = 53366
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2494.637 ; gain = 618.211 ; free physical = 12517 ; free virtual = 49177
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2493.293 ; gain = 616.906 ; free physical = 16963 ; free virtual = 53366
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2494.637 ; gain = 618.211 ; free physical = 12517 ; free virtual = 49177
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2493.293 ; gain = 0.000 ; free physical = 16953 ; free virtual = 53356
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2494.637 ; gain = 0.000 ; free physical = 12517 ; free virtual = 49177
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -199,31 +192,134 @@ Finished Parsing XDC File [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig
 Parsing XDC File [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/mig_interface_in_context.xdc] for cell 'memory_interface/mig'
 Finished Parsing XDC File [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/mig_interface_in_context.xdc] for cell 'memory_interface/mig'
 Parsing XDC File [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'CLK12MHZ'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:7]
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:13]
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:14]
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:15]
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:16]
+WARNING: [Vivado 12-584] No ports matched 'led0_g'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:20]
+WARNING: [Vivado 12-584] No ports matched 'led0_b'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:21]
+WARNING: [Vivado 12-584] No ports matched 'led1_r'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:22]
+WARNING: [Vivado 12-584] No ports matched 'led1_g'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:23]
+WARNING: [Vivado 12-584] No ports matched 'led1_b'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:24]
+WARNING: [Vivado 12-584] No ports matched 'led[0]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:27]
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:28]
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:29]
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:30]
+WARNING: [Vivado 12-584] No ports matched 'btn[0]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:33]
+WARNING: [Vivado 12-584] No ports matched 'btn[1]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:34]
+WARNING: [Vivado 12-584] No ports matched 'btn[2]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:35]
+WARNING: [Vivado 12-584] No ports matched 'btn[3]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:36]
+WARNING: [Vivado 12-584] No ports matched 'ja[0]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:39]
+WARNING: [Vivado 12-584] No ports matched 'ja[1]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:40]
+WARNING: [Vivado 12-584] No ports matched 'ja[2]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:41]
+WARNING: [Vivado 12-584] No ports matched 'ja[3]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:42]
+WARNING: [Vivado 12-584] No ports matched 'ja[4]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:43]
+WARNING: [Vivado 12-584] No ports matched 'ja[5]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:44]
+WARNING: [Vivado 12-584] No ports matched 'ja[6]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:45]
+WARNING: [Vivado 12-584] No ports matched 'ja[7]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:46]
+WARNING: [Vivado 12-584] No ports matched 'jb[0]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:49]
+WARNING: [Vivado 12-584] No ports matched 'jb[1]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:50]
+WARNING: [Vivado 12-584] No ports matched 'jb[2]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:51]
+WARNING: [Vivado 12-584] No ports matched 'jb[3]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:52]
+WARNING: [Vivado 12-584] No ports matched 'jb[4]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:53]
+WARNING: [Vivado 12-584] No ports matched 'jb[5]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:54]
+WARNING: [Vivado 12-584] No ports matched 'jb[6]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:55]
+WARNING: [Vivado 12-584] No ports matched 'jb[7]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:56]
+WARNING: [Vivado 12-584] No ports matched 'jc[0]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:59]
+WARNING: [Vivado 12-584] No ports matched 'jc[1]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:60]
+WARNING: [Vivado 12-584] No ports matched 'jc[2]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:61]
+WARNING: [Vivado 12-584] No ports matched 'jc[3]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:62]
+WARNING: [Vivado 12-584] No ports matched 'jc[4]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:63]
+WARNING: [Vivado 12-584] No ports matched 'jc[5]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:64]
+WARNING: [Vivado 12-584] No ports matched 'jc[6]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:65]
+WARNING: [Vivado 12-584] No ports matched 'jc[7]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:66]
+WARNING: [Vivado 12-584] No ports matched 'jd[0]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:69]
+WARNING: [Vivado 12-584] No ports matched 'jd[1]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:70]
+WARNING: [Vivado 12-584] No ports matched 'jd[2]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:71]
+WARNING: [Vivado 12-584] No ports matched 'jd[3]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:72]
+WARNING: [Vivado 12-584] No ports matched 'jd[4]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:73]
+WARNING: [Vivado 12-584] No ports matched 'jd[5]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:74]
+WARNING: [Vivado 12-584] No ports matched 'jd[6]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:75]
+WARNING: [Vivado 12-584] No ports matched 'jd[7]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:76]
+WARNING: [Vivado 12-584] No ports matched 'uart_rxd_out'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:79]
+WARNING: [Vivado 12-584] No ports matched 'uart_txd_in'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:80]
+WARNING: [Vivado 12-584] No ports matched 'ck_io0'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:83]
+WARNING: [Vivado 12-584] No ports matched 'ck_io1'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:84]
+WARNING: [Vivado 12-584] No ports matched 'ck_io2'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:85]
+WARNING: [Vivado 12-584] No ports matched 'ck_io3'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:86]
+WARNING: [Vivado 12-584] No ports matched 'ck_io4'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:87]
+WARNING: [Vivado 12-584] No ports matched 'ck_io5'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:88]
+WARNING: [Vivado 12-584] No ports matched 'ck_io6'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:89]
+WARNING: [Vivado 12-584] No ports matched 'ck_io7'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:90]
+WARNING: [Vivado 12-584] No ports matched 'ck_io8'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:91]
+WARNING: [Vivado 12-584] No ports matched 'ck_io9'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:92]
+WARNING: [Vivado 12-584] No ports matched 'ck_io10_ss'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:96]
+WARNING: [Vivado 12-584] No ports matched 'ck_io11_mosi'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:97]
+WARNING: [Vivado 12-584] No ports matched 'ck_io12_miso'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:98]
+WARNING: [Vivado 12-584] No ports matched 'ck_io13_sck'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:99]
+WARNING: [Vivado 12-584] No ports matched 'ck_io26'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:103]
+WARNING: [Vivado 12-584] No ports matched 'ck_io27'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:104]
+WARNING: [Vivado 12-584] No ports matched 'ck_io28'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:105]
+WARNING: [Vivado 12-584] No ports matched 'ck_io29'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:106]
+WARNING: [Vivado 12-584] No ports matched 'ck_io30'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:107]
+WARNING: [Vivado 12-584] No ports matched 'ck_io31'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:108]
+WARNING: [Vivado 12-584] No ports matched 'ck_io32'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:109]
+WARNING: [Vivado 12-584] No ports matched 'ck_io33'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:110]
+WARNING: [Vivado 12-584] No ports matched 'ck_io34'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:111]
+WARNING: [Vivado 12-584] No ports matched 'ck_io35'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:112]
+WARNING: [Vivado 12-584] No ports matched 'ck_io36'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:113]
+WARNING: [Vivado 12-584] No ports matched 'ck_io37'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:114]
+WARNING: [Vivado 12-584] No ports matched 'ck_io38'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:115]
+WARNING: [Vivado 12-584] No ports matched 'ck_io39'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:116]
+WARNING: [Vivado 12-584] No ports matched 'ck_io40'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:117]
+WARNING: [Vivado 12-584] No ports matched 'ck_io41'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:118]
+WARNING: [Vivado 12-584] No ports matched 'vp_in'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:121]
+WARNING: [Vivado 12-584] No ports matched 'vn_in'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:122]
+WARNING: [Vivado 12-584] No ports matched 'vaux0_p'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:128]
+WARNING: [Vivado 12-584] No ports matched 'vaux0_n'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:129]
+WARNING: [Vivado 12-584] No ports matched 'vaux1_p'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:130]
+WARNING: [Vivado 12-584] No ports matched 'vaux1_n'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:131]
+WARNING: [Vivado 12-584] No ports matched 'vaux9_p'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:132]
+WARNING: [Vivado 12-584] No ports matched 'vaux9_n'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:133]
+WARNING: [Vivado 12-584] No ports matched 'vaux2_p'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:134]
+WARNING: [Vivado 12-584] No ports matched 'vaux2_n'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:135]
+WARNING: [Vivado 12-584] No ports matched 'vaux10_p'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:136]
+WARNING: [Vivado 12-584] No ports matched 'vaux10_n'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:137]
+WARNING: [Vivado 12-584] No ports matched 'vaux11_p'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:138]
+WARNING: [Vivado 12-584] No ports matched 'vaux11_n'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:139]
+WARNING: [Vivado 12-584] No ports matched 'ck_a0'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:142]
+WARNING: [Vivado 12-584] No ports matched 'ck_a1'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:143]
+WARNING: [Vivado 12-584] No ports matched 'ck_a2'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:144]
+WARNING: [Vivado 12-584] No ports matched 'ck_a3'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:145]
+INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:145]
+WARNING: [Vivado 12-507] No nets matched 'clock_wizzard/inst/in_100mhz_clock_wizzard'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:197]
 Finished Parsing XDC File [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/cpu_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cpu_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/cpu_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2589.062 ; gain = 0.000 ; free physical = 16875 ; free virtual = 53277
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2589.375 ; gain = 0.000 ; free physical = 12531 ; free virtual = 49191
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2589.098 ; gain = 0.000 ; free physical = 16869 ; free virtual = 53271
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2589.410 ; gain = 0.000 ; free physical = 12531 ; free virtual = 49191
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2589.098 ; gain = 712.711 ; free physical = 16739 ; free virtual = 53143
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2589.410 ; gain = 712.984 ; free physical = 12586 ; free virtual = 49246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2597.066 ; gain = 720.680 ; free physical = 16739 ; free virtual = 53143
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2597.379 ; gain = 720.953 ; free physical = 12583 ; free virtual = 49240
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2597.066 ; gain = 720.680 ; free physical = 16739 ; free virtual = 53142
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2597.379 ; gain = 720.953 ; free physical = 12582 ; free virtual = 49242
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'register_store'
 INFO: [Synth 8-802] inferred FSM for state register 'register_store_init_state_reg' in module 'core'
@@ -258,7 +354,7 @@ core_state_set_program_counter |                              100 |             
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'core_state_reg' using encoding 'one-hot' in module 'core'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2597.066 ; gain = 720.680 ; free physical = 16728 ; free virtual = 53134
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2597.379 ; gain = 720.953 ; free physical = 12587 ; free virtual = 49248
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'cores[0].core_i' (core) to 'cores[1].core_i'
 INFO: [Synth 8-223] decloning instance 'cores[0].core_i' (core) to 'cores[2].core_i'
@@ -272,22 +368,23 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input    4 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 3     
 +---Registers : 
 	               64 Bit    Registers := 2     
-	                4 Bit    Registers := 2     
+	                4 Bit    Registers := 3     
 	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 4     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
 +---Muxes : 
 	   2 Input   64 Bit        Muxes := 2     
 	   3 Input   64 Bit        Muxes := 1     
 	   4 Input   64 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 2     
 	   2 Input    3 Bit        Muxes := 1     
 	   4 Input    3 Bit        Muxes := 2     
 	   4 Input    2 Bit        Muxes := 2     
 	   2 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 8     
+	   2 Input    1 Bit        Muxes := 27    
 	   4 Input    1 Bit        Muxes := 12    
 	   3 Input    1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
@@ -306,31 +403,26 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-6014] Unused sequential element cores[0].core_i/general_purpose_registers/register_collection_reg was removed. 
-WARNING: [Synth 8-3332] Sequential element (cores[0].core_i/general_purpose_registers/FSM_sequential_state_reg[1]) is unused and will be removed from module cpu.
-WARNING: [Synth 8-3332] Sequential element (cores[0].core_i/general_purpose_registers/FSM_sequential_state_reg[0]) is unused and will be removed from module cpu.
-WARNING: [Synth 8-3332] Sequential element (cores[0].core_i/FSM_onehot_core_state_reg[2]) is unused and will be removed from module cpu.
-WARNING: [Synth 8-3332] Sequential element (cores[0].core_i/FSM_onehot_core_state_reg[1]) is unused and will be removed from module cpu.
-WARNING: [Synth 8-3332] Sequential element (cores[0].core_i/FSM_onehot_core_state_reg[0]) is unused and will be removed from module cpu.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2597.066 ; gain = 720.680 ; free physical = 16632 ; free virtual = 53041
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2597.379 ; gain = 720.953 ; free physical = 12555 ; free virtual = 49221
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2672.066 ; gain = 795.680 ; free physical = 16855 ; free virtual = 53270
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2683.379 ; gain = 806.953 ; free physical = 12544 ; free virtual = 49210
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2672.066 ; gain = 795.680 ; free physical = 16855 ; free virtual = 53270
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2712.426 ; gain = 836.000 ; free physical = 12500 ; free virtual = 49167
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2681.082 ; gain = 804.695 ; free physical = 16846 ; free virtual = 53262
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2713.434 ; gain = 837.008 ; free physical = 12493 ; free virtual = 49160
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -348,37 +440,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2886.895 ; gain = 1010.508 ; free physical = 16319 ; free virtual = 52790
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2900.246 ; gain = 1023.820 ; free physical = 12311 ; free virtual = 48977
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2886.895 ; gain = 1010.508 ; free physical = 16319 ; free virtual = 52790
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2900.246 ; gain = 1023.820 ; free physical = 12311 ; free virtual = 48977
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2886.895 ; gain = 1010.508 ; free physical = 16320 ; free virtual = 52791
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2900.246 ; gain = 1023.820 ; free physical = 12311 ; free virtual = 48977
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2886.895 ; gain = 1010.508 ; free physical = 16319 ; free virtual = 52790
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2900.246 ; gain = 1023.820 ; free physical = 12311 ; free virtual = 48977
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2886.895 ; gain = 1010.508 ; free physical = 16319 ; free virtual = 52790
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2900.246 ; gain = 1023.820 ; free physical = 12311 ; free virtual = 48977
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2886.895 ; gain = 1010.508 ; free physical = 16319 ; free virtual = 52790
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2900.246 ; gain = 1023.820 ; free physical = 12311 ; free virtual = 48977
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -398,28 +490,40 @@ Report Cell Usage:
 +------+--------------+------+
 |1     |clock_wizzard |     1|
 |2     |mig_interface |     1|
+|3     |CARRY4        |    15|
+|4     |LUT1          |     3|
+|5     |LUT2          |     7|
+|6     |LUT3          |     8|
+|7     |LUT4          |     6|
+|8     |LUT5          |     7|
+|9     |LUT6          |     8|
+|10    |FDRE          |    82|
+|11    |OBUF          |     1|
 +------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2886.895 ; gain = 1010.508 ; free physical = 16319 ; free virtual = 52790
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2900.246 ; gain = 1023.820 ; free physical = 12311 ; free virtual = 48977
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2886.895 ; gain = 914.703 ; free physical = 16297 ; free virtual = 52768
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2886.902 ; gain = 1010.508 ; free physical = 16297 ; free virtual = 52768
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2900.246 ; gain = 929.047 ; free physical = 12311 ; free virtual = 48977
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2900.254 ; gain = 1023.820 ; free physical = 12311 ; free virtual = 48977
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2886.902 ; gain = 0.000 ; free physical = 16297 ; free virtual = 52768
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2900.254 ; gain = 0.000 ; free physical = 12311 ; free virtual = 48970
+INFO: [Netlist 29-17] Analyzing 15 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2886.902 ; gain = 0.000 ; free physical = 16338 ; free virtual = 52808
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2956.273 ; gain = 0.000 ; free physical = 12474 ; free virtual = 49140
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: ea50da8b
+Synth Design complete | Checksum: 63daa009
 INFO: [Common 17-83] Releasing license: Vivado_Synthesis
-40 Infos, 136 Warnings, 0 Critical Warnings and 0 Errors encountered.
+43 Infos, 226 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:20 . Memory (MB): peak = 2886.930 ; gain = 1154.855 ; free physical = 16327 ; free virtual = 52797
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1943.510; main = 1943.510; forked = 275.049
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3636.004; main = 2886.898; forked = 1038.934
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:20 . Memory (MB): peak = 2956.309 ; gain = 1224.227 ; free physical = 12483 ; free virtual = 49149
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1955.115; main = 1955.115; forked = 274.961
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3636.316; main = 2956.277; forked = 1038.934
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2980.285 ; gain = 0.000 ; free physical = 12462 ; free virtual = 49128
 INFO: [Common 17-1381] The checkpoint '/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/synth_1/cpu.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file cpu_utilization_synth.rpt -pb cpu_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Oct 17 19:37:49 2026...
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 17 21:48:10 2026...

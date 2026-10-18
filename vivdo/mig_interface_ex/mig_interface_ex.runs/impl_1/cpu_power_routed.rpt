@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2026.1 (lin64) Build 6511674 Tue Jun 16 11:01:26 MDT 2026
-| Date             : Sat Oct 17 19:38:51 2026
+| Date             : Sat Oct 17 21:49:05 2026
 | Host             : raymond-MS-7C91 running 64-bit Ubuntu 26.04.1 LTS
 | Command          : report_power -file cpu_power_routed.rpt -pb cpu_power_summary_routed.pb -rpx cpu_power_routed.rpx
 | Design           : cpu
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.885        |
+| Total On-Chip Power (W)  | 0.829        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.813        |
-| Device Static (W)        | 0.072        |
+| Dynamic (W)              | 0.755        |
+| Device Static (W)        | 0.075        |
 | Effective TJA (C/W)      | 4.9          |
-| Max Ambient (C)          | 80.6         |
-| Junction Temperature (C) | 29.4         |
+| Max Ambient (C)          | 80.9         |
+| Junction Temperature (C) | 29.1         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,23 +52,23 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.028 |       31 |       --- |             --- |
-| Slice Logic              |     0.016 |     7022 |       --- |             --- |
-|   LUT as Logic           |     0.015 |     3065 |     32600 |            9.40 |
-|   LUT as Distributed RAM |    <0.001 |      212 |      9600 |            2.21 |
-|   Register               |    <0.001 |     2555 |     65200 |            3.92 |
-|   CARRY4                 |    <0.001 |       98 |      8150 |            1.20 |
-|   LUT as Shift Register  |    <0.001 |       13 |      9600 |            0.14 |
-|   F7/F8 Muxes            |    <0.001 |        1 |     32600 |           <0.01 |
-|   Others                 |     0.000 |      113 |       --- |             --- |
-| Signals                  |     0.019 |     5624 |       --- |             --- |
+| Clocks                   |     0.028 |       29 |       --- |             --- |
+| Slice Logic              |     0.016 |     6991 |       --- |             --- |
+|   LUT as Logic           |     0.014 |     3005 |     32600 |            9.22 |
+|   Register               |    <0.001 |     2562 |     65200 |            3.93 |
+|   LUT as Distributed RAM |    <0.001 |      210 |      9600 |            2.19 |
+|   CARRY4                 |    <0.001 |      113 |      8150 |            1.39 |
+|   LUT as Shift Register  |    <0.001 |       12 |      9600 |            0.13 |
+|   F7/F8 Muxes            |    <0.001 |        3 |     32600 |           <0.01 |
+|   Others                 |     0.000 |      110 |       --- |             --- |
+| Signals                  |     0.019 |     5605 |       --- |             --- |
 | MMCM                     |     0.184 |        2 |         5 |           40.00 |
 | PLL                      |     0.115 |        1 |         5 |           20.00 |
-| I/O                      |     0.274 |       49 |       210 |           23.33 |
-| PHASER                   |     0.173 |       18 |       --- |             --- |
+| I/O                      |     0.275 |       50 |       210 |           23.81 |
+| PHASER                   |     0.114 |       14 |       --- |             --- |
 | XADC                     |     0.004 |        1 |       --- |             --- |
-| Static Power             |     0.072 |          |           |                 |
-| Total                    |     0.885 |          |           |                 |
+| Static Power             |     0.075 |          |           |                 |
+| Total                    |     0.829 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,9 +78,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.127 |       0.116 |      0.011 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.309 |       0.296 |      0.013 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.116 |       0.105 |      0.011 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.282 |       0.269 |      0.013 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -140,16 +140,14 @@ Table of Contents
 | iserdes_clkdiv_2                                                                                                                                            | memory_interface/mig/u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clkdiv            |            12.3 |
 | iserdes_clkdiv_3                                                                                                                                            | memory_interface/mig/u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/iserdes_clkdiv            |            12.3 |
 | mem_refclk_1                                                                                                                                                | memory_interface/mig/u_mig_interface_mig/u_ddr3_infrastructure/mem_refclk                                                                                                                                        |             3.1 |
-| oserdes_clk_5                                                                                                                                               | memory_interface/mig/u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk               |             3.1 |
-| oserdes_clk_6                                                                                                                                               | memory_interface/mig/u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk               |             3.1 |
-| oserdes_clk_7                                                                                                                                               | memory_interface/mig/u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clk               |             3.1 |
-| oserdes_clk_8                                                                                                                                               | memory_interface/mig/u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk               |             3.1 |
-| oserdes_clk_9                                                                                                                                               | memory_interface/mig/u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk               |             3.1 |
-| oserdes_clkdiv_5                                                                                                                                            | memory_interface/mig/u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clkdiv            |             6.2 |
-| oserdes_clkdiv_6                                                                                                                                            | memory_interface/mig/u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clkdiv            |             6.2 |
-| oserdes_clkdiv_7                                                                                                                                            | memory_interface/mig/u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clkdiv            |             6.2 |
-| oserdes_clkdiv_8                                                                                                                                            | memory_interface/mig/u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clkdiv            |             6.2 |
-| oserdes_clkdiv_9                                                                                                                                            | memory_interface/mig/u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clkdiv            |             6.2 |
+| oserdes_clk_4                                                                                                                                               | memory_interface/mig/u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clk               |             3.1 |
+| oserdes_clk_5                                                                                                                                               | memory_interface/mig/u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clk               |             3.1 |
+| oserdes_clk_6                                                                                                                                               | memory_interface/mig/u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clk               |             3.1 |
+| oserdes_clk_7                                                                                                                                               | memory_interface/mig/u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clk               |             3.1 |
+| oserdes_clkdiv_4                                                                                                                                            | memory_interface/mig/u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_A.ddr_byte_lane_A/oserdes_clkdiv            |             6.2 |
+| oserdes_clkdiv_5                                                                                                                                            | memory_interface/mig/u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_B.ddr_byte_lane_B/oserdes_clkdiv            |             6.2 |
+| oserdes_clkdiv_6                                                                                                                                            | memory_interface/mig/u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/oserdes_clkdiv            |             6.2 |
+| oserdes_clkdiv_7                                                                                                                                            | memory_interface/mig/u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/oserdes_clkdiv            |             6.2 |
 | out_100mhz_clock_wizzard                                                                                                                                    | clock_wizzard/inst/out_100mhz                                                                                                                                                                                    |            10.0 |
 | out_100mhz_clock_wizzard                                                                                                                                    | clock_wizzard/inst/out_100mhz_clock_wizzard                                                                                                                                                                      |            10.0 |
 | out_100mhz_clock_wizzard_1                                                                                                                                  | clock_wizzard/inst/out_100mhz                                                                                                                                                                                    |            10.0 |
@@ -174,12 +172,12 @@ Table of Contents
 +---------------------------+-----------+
 | Name                      | Power (W) |
 +---------------------------+-----------+
-| cpu                       |     0.813 |
+| cpu                       |     0.755 |
 |   clock_wizzard           |     0.097 |
 |     inst                  |     0.097 |
-|   memory_interface        |     0.716 |
-|     mig                   |     0.716 |
-|       u_mig_interface_mig |     0.715 |
+|   memory_interface        |     0.656 |
+|     mig                   |     0.656 |
+|       u_mig_interface_mig |     0.654 |
 +---------------------------+-----------+
 
 

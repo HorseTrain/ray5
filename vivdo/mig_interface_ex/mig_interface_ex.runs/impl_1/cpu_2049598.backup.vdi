@@ -1,0 +1,1126 @@
+INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detected. Your current license is active and will expire on 23-sep-2027.
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Sat Oct 17 20:34:32 2026
+# Process ID         : 2049598
+# Current directory  : /home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/impl_1
+# Command line       : vivado -log cpu.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source cpu.tcl -notrace
+# Log file           : /home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/impl_1/cpu.vdi
+# Journal file       : /home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/impl_1/vivado.jou
+# Running On         : raymond-MS-7C91
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 26.04.1 LTS
+# Processor Detail   : AMD Ryzen 9 5900X 12-Core Processor
+# CPU Frequency      : 4599.742 MHz
+# CPU Physical cores : 12
+# CPU Logical cores  : 24
+# Host memory        : 65190 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 73780 MB
+# Available Virtual  : 53813 MB
+#-----------------------------------------------------------
+source cpu.tcl -notrace
+Command: link_design -top cpu -part xc7s50csga324-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Project 1-5699] Read binary netlist with skipMacroContent - 1
+INFO: [Project 1-454] Reading design checkpoint '/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/clock_wizzard/clock_wizzard.dcp' for cell 'clock_wizzard'
+INFO: [Project 1-454] Reading design checkpoint '/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface.dcp' for cell 'memory_interface/mig'
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1898.988 ; gain = 0.000 ; free physical = 14294 ; free virtual = 50811
+INFO: [Netlist 29-17] Analyzing 224 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2026.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-32] Removing redundant IBUF since it is not being driven by a top-level port. memory_interface/mig/u_mig_interface_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'memory_interface/mig/sys_clk_i' is not directly connected to top level port. 'IBUF_LOW_PWR' is ignored for synthesis but preserved for implementation.
+Parsing XDC File [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/clock_wizzard/clock_wizzard_board.xdc] for cell 'clock_wizzard/inst'
+Finished Parsing XDC File [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/clock_wizzard/clock_wizzard_board.xdc] for cell 'clock_wizzard/inst'
+Parsing XDC File [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/clock_wizzard/clock_wizzard.xdc] for cell 'clock_wizzard/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/clock_wizzard/clock_wizzard.xdc:54]
+INFO: [Timing 38-2] Deriving generated clocks [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/clock_wizzard/clock_wizzard.xdc:54]
+Finished Parsing XDC File [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/clock_wizzard/clock_wizzard.xdc] for cell 'clock_wizzard/inst'
+Parsing XDC File [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/constraints/mig_interface.xdc] for cell 'memory_interface/mig'
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'IOSTANDARD', because the property does not exist for objects of type 'pin'. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/constraints/mig_interface.xdc:264]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+CRITICAL WARNING: [Netlist 29-160] Cannot set property 'PACKAGE_PIN', because the property does not exist for objects of type 'pin'. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/constraints/mig_interface.xdc:265]
+Resolution: Modify the set_property command to apply the property on the correct object type. Since the property is being applied as a scoped constraint, ensure the proper connectivity of the object port objects can be translated into pin objects. This could be due to the insertion of IO Buffers between the top level terminal and cell pin. If the goal is to apply constraints that will migrate to top level ports it is required that IO Buffers manually be instanced.
+Finished Parsing XDC File [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/constraints/mig_interface.xdc] for cell 'memory_interface/mig'
+Parsing XDC File [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'CLK12MHZ'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:7]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:7]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led0_r'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led0_g'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led0_b'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led1_r'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led1_g'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led1_b'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[0]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[1]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[2]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btn[0]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btn[1]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btn[2]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btn[3]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ja[0]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ja[1]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ja[2]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ja[3]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ja[4]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ja[5]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ja[6]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ja[7]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jb[0]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jb[1]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jb[2]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jb[3]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jb[4]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jb[5]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jb[6]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jb[7]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jc[0]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jc[1]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jc[2]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jc[3]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jc[4]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jc[5]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jc[6]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jc[7]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jd[0]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jd[1]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jd[2]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jd[3]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jd[4]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jd[5]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jd[6]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'jd[7]'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'uart_rxd_out'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:79]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:79]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'uart_txd_in'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:80]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:80]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io0'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io1'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io2'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io3'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io4'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io5'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io6'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:89]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:89]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io7'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io8'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io9'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io10_ss'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:96]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:96]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io11_mosi'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:97]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:97]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io12_miso'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:98]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:98]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io13_sck'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:99]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:99]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io26'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io27'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:104]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:104]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io28'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:105]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io29'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:106]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:106]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io30'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:107]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:107]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io31'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:108]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:108]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io32'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io33'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:110]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:110]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io34'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:111]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:111]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io35'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:112]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:112]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io36'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:113]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:113]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io37'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:114]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:114]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io38'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:115]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:115]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io39'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:116]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:116]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io40'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:117]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:117]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_io41'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:118]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:118]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vp_in'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:121]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:121]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vn_in'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:122]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:122]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vaux0_p'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:128]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:128]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vaux0_n'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:129]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:129]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vaux1_p'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:130]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:130]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vaux1_n'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:131]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:131]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vaux9_p'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:132]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:132]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vaux9_n'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:133]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:133]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vaux2_p'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:134]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:134]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vaux2_n'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:135]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:135]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vaux10_p'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:136]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:136]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vaux10_n'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:137]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:137]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vaux11_p'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:138]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:138]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'vaux11_n'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:139]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:139]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_a0'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:142]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:142]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_a1'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:143]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:143]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ck_a2'. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:144]
+INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:144]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:144]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+INFO: [Common 17-14] Message 'Common 17-55' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc:144]
+Finished Parsing XDC File [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2546.406 ; gain = 0.000 ; free physical = 13804 ; free virtual = 50320
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 82 instances were transformed.
+  IBUFDS_INTERMDISABLE => IBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT(x2)): 2 instances
+  IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT(x2), INV, OBUFTDS(x2)): 2 instances
+  IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
+  OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
+  OBUFTDS => OBUFTDS_DUAL_BUF (INV, OBUFTDS(x2)): 2 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 53 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 6 instances
+
+14 Infos, 102 Warnings, 102 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2546.441 ; gain = 805.609 ; free physical = 13804 ; free virtual = 50320
+Command: opt_design
+Attempting to get a license for feature 'Vivado_Implementation' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Vivado_Implementation' and/or device 'xc7s50'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.37 . Memory (MB): peak = 2546.441 ; gain = 0.000 ; free physical = 13759 ; free virtual = 50275
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+Ending Cache Timing Information Task | Checksum: 2b1cdfc05
+
+Time (s): cpu = 00:00:00.39 ; elapsed = 00:00:00.14 . Memory (MB): peak = 2593.219 ; gain = 46.777 ; free physical = 13759 ; free virtual = 50274
+
+Starting Logic Optimization Task
+
+Phase 1 Initialization
+
+Phase 1.1 Core Generation And Design Setup
+Phase 1.1 Core Generation And Design Setup | Checksum: 2b1cdfc05
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2984.109 ; gain = 0.000 ; free physical = 13361 ; free virtual = 49876
+
+Phase 1.2 Setup Constraints And Sort Netlist
+Phase 1.2 Setup Constraints And Sort Netlist | Checksum: 2b1cdfc05
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2984.109 ; gain = 0.000 ; free physical = 13360 ; free virtual = 49876
+Phase 1 Initialization | Checksum: 2b1cdfc05
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2984.109 ; gain = 0.000 ; free physical = 13360 ; free virtual = 49876
+
+Phase 2 Timer Update And Timing Data Collection
+
+Phase 2.1 Detect if minReqCache needed
+Phase 2.1 Detect if minReqCache needed | Checksum: 2b1cdfc05
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2984.109 ; gain = 0.000 ; free physical = 13360 ; free virtual = 49876
+
+Phase 2.2 Timer Update
+Phase 2.2 Timer Update | Checksum: 2b1cdfc05
+
+Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2984.109 ; gain = 0.000 ; free physical = 13361 ; free virtual = 49877
+
+Phase 2.3 Timing Data Collection
+Phase 2.3 Timing Data Collection | Checksum: 2b1cdfc05
+
+Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2984.109 ; gain = 0.000 ; free physical = 13361 ; free virtual = 49877
+Phase 2 Timer Update And Timing Data Collection | Checksum: 2b1cdfc05
+
+Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2984.109 ; gain = 0.000 ; free physical = 13361 ; free virtual = 49877
+
+Phase 3 Retarget
+INFO: [Opt 31-1851] Number of loadless carry chains removed were: 0
+INFO: [Opt 31-1834] Total Chains To Be Transformed Were: 0 AND Number of Transformed insts Created are: 0
+INFO: [Opt 31-1566] Pulled 4 inverters resulting in an inversion of 20 pins
+INFO: [Opt 31-138] Pushed 7 inverter(s) to 11 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 3 Retarget | Checksum: 26f262041
+
+Time (s): cpu = 00:00:00.34 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2984.109 ; gain = 0.000 ; free physical = 13357 ; free virtual = 49872
+Retarget | Checksum: 26f262041
+INFO: [Opt 31-389] Phase Retarget created 99 cells and removed 176 cells
+INFO: [Opt 31-1021] In phase Retarget, 20 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Constant propagation
+INFO: [Opt 31-138] Pushed 2 inverter(s) to 2 load pin(s).
+Phase 4 Constant propagation | Checksum: 2d7483e02
+
+Time (s): cpu = 00:00:00.41 ; elapsed = 00:00:00.23 . Memory (MB): peak = 2984.109 ; gain = 0.000 ; free physical = 13356 ; free virtual = 49872
+Constant propagation | Checksum: 2d7483e02
+INFO: [Opt 31-389] Phase Constant propagation created 51 cells and removed 385 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 5 Sweep
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2984.109 ; gain = 0.000 ; free physical = 13356 ; free virtual = 49872
+INFO: [Constraints 18-11670] Building netlist checker database with flags, 0x8
+Done building netlist checker database: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2984.109 ; gain = 0.000 ; free physical = 13356 ; free virtual = 49872
+Phase 5 Sweep | Checksum: 2aa76333c
+
+Time (s): cpu = 00:00:00.49 ; elapsed = 00:00:00.3 . Memory (MB): peak = 2984.109 ; gain = 0.000 ; free physical = 13357 ; free virtual = 49873
+Sweep | Checksum: 2aa76333c
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 136 cells
+
+Phase 6 BUFG optimization
+Phase 6 BUFG optimization | Checksum: 2aa76333c
+
+Time (s): cpu = 00:00:00.55 ; elapsed = 00:00:00.34 . Memory (MB): peak = 3016.125 ; gain = 32.016 ; free physical = 13355 ; free virtual = 49871
+BUFG optimization | Checksum: 2aa76333c
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 7 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 7 Shift Register Optimization | Checksum: 2aa76333c
+
+Time (s): cpu = 00:00:00.55 ; elapsed = 00:00:00.34 . Memory (MB): peak = 3016.125 ; gain = 32.016 ; free physical = 13355 ; free virtual = 49871
+Shift Register Optimization | Checksum: 2aa76333c
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 8 Post Processing Netlist
+INFO: [Opt 31-1566] Pulled 1 inverters resulting in an inversion of 3 pins
+Phase 8 Post Processing Netlist | Checksum: 3017d85ff
+
+Time (s): cpu = 00:00:00.56 ; elapsed = 00:00:00.35 . Memory (MB): peak = 3016.125 ; gain = 32.016 ; free physical = 13355 ; free virtual = 49871
+Post Processing Netlist | Checksum: 3017d85ff
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 1 cells
+
+Phase 9 Finalization
+
+Phase 9.1 Finalizing Design Cores and Updating Shapes
+Phase 9.1 Finalizing Design Cores and Updating Shapes | Checksum: 29fc7efeb
+
+Time (s): cpu = 00:00:00.65 ; elapsed = 00:00:00.4 . Memory (MB): peak = 3016.125 ; gain = 32.016 ; free physical = 13355 ; free virtual = 49871
+
+Phase 9.2 Verifying Netlist Connectivity
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3016.125 ; gain = 0.000 ; free physical = 13355 ; free virtual = 49871
+Phase 9.2 Verifying Netlist Connectivity | Checksum: 29fc7efeb
+
+Time (s): cpu = 00:00:00.65 ; elapsed = 00:00:00.41 . Memory (MB): peak = 3016.125 ; gain = 32.016 ; free physical = 13355 ; free virtual = 49871
+Phase 9 Finalization | Checksum: 29fc7efeb
+
+Time (s): cpu = 00:00:00.65 ; elapsed = 00:00:00.41 . Memory (MB): peak = 3016.125 ; gain = 32.016 ; free physical = 13355 ; free virtual = 49871
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |              99  |             176  |                                             20  |
+|  Constant propagation         |              51  |             385  |                                              1  |
+|  Sweep                        |               0  |             136  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               1  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+Ending Logic Optimization Task | Checksum: 29fc7efeb
+
+Time (s): cpu = 00:00:00.66 ; elapsed = 00:00:00.41 . Memory (MB): peak = 3016.125 ; gain = 32.016 ; free physical = 13355 ; free virtual = 49871
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 29fc7efeb
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3016.125 ; gain = 0.000 ; free physical = 13361 ; free virtual = 49877
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 29fc7efeb
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3016.125 ; gain = 0.000 ; free physical = 13361 ; free virtual = 49877
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3016.125 ; gain = 0.000 ; free physical = 13361 ; free virtual = 49877
+INFO: [Common 17-83] Releasing license: Vivado_Implementation
+40 Infos, 102 Warnings, 102 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+INFO: [Vivado 12-24828] Executing command : report_drc -file cpu_drc_opted.rpt -pb cpu_drc_opted.pb -rpx cpu_drc_opted.rpx
+Command: report_drc -file cpu_drc_opted.rpt -pb cpu_drc_opted.pb -rpx cpu_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/impl_1/cpu_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3016.125 ; gain = 0.000 ; free physical = 13369 ; free virtual = 49880
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3016.125 ; gain = 0.000 ; free physical = 13369 ; free virtual = 49880
+Writing XDEF routing.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3016.125 ; gain = 0.000 ; free physical = 13369 ; free virtual = 49881
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3016.125 ; gain = 0.000 ; free physical = 13369 ; free virtual = 49881
+Wrote PlaceStorage: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3016.125 ; gain = 0.000 ; free physical = 13369 ; free virtual = 49882
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3016.125 ; gain = 0.000 ; free physical = 13369 ; free virtual = 49882
+Wrote Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3016.125 ; gain = 0.000 ; free physical = 13369 ; free virtual = 49882
+Write Physdb Complete: Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3016.125 ; gain = 0.000 ; free physical = 13369 ; free virtual = 49882
+INFO: [Common 17-1381] The checkpoint '/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/impl_1/cpu_opt.dcp' has been generated.
+Command: place_design
+Attempting to get a license for feature 'Vivado_Implementation' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Vivado_Implementation' and/or device 'xc7s50'
+INFO: [Common 17-83] Releasing license: Vivado_Implementation
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 8 CPUs
+
+Starting Placer Task
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3016.125 ; gain = 0.000 ; free physical = 13339 ; free virtual = 49856
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 22340aa3c
+
+Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3016.125 ; gain = 0.000 ; free physical = 13339 ; free virtual = 49856
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3016.125 ; gain = 0.000 ; free physical = 13339 ; free virtual = 49856
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1ae690e07
+
+Time (s): cpu = 00:00:00.55 ; elapsed = 00:00:00.28 . Memory (MB): peak = 3016.125 ; gain = 0.000 ; free physical = 13307 ; free virtual = 49825
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 27f209e0d
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.86 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13295 ; free virtual = 49813
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 27f209e0d
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.87 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13295 ; free virtual = 49812
+Phase 1 Placer Initialization | Checksum: 27f209e0d
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.87 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13295 ; free virtual = 49812
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 1d6ba543f
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13350 ; free virtual = 49867
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 2077e7a06
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13333 ; free virtual = 49850
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: 2077e7a06
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13331 ; free virtual = 49849
+
+Phase 2.4 Global Place Phase1
+Phase 2.4 Global Place Phase1 | Checksum: 1b625699d
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:03 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13281 ; free virtual = 49798
+
+Phase 2.5 Global Place Phase2
+
+Phase 2.5.1 UpdateTiming Before Physical Synthesis
+Phase 2.5.1 UpdateTiming Before Physical Synthesis | Checksum: 2664ecb1e
+
+Time (s): cpu = 00:00:09 ; elapsed = 00:00:03 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13270 ; free virtual = 49787
+
+Phase 2.5.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 43 LUTNM shape to break, 202 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 39, two critical 4, total 43, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 132 nets or LUTs. Breaked 43 LUTs, combined 89 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1402] Pass 1: Identified 1 candidate cell for Shift Register optimization.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 1 net or cell. Created 1 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13257 ; free virtual = 49775
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13255 ; free virtual = 49773
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |           43  |             89  |                   132  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            1  |              0  |                     1  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |           44  |             89  |                   133  |           0  |           9  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.5.2 Physical Synthesis In Placer | Checksum: 2da3e1db9
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:03 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13225 ; free virtual = 49743
+Phase 2.5 Global Place Phase2 | Checksum: 23e162304
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13231 ; free virtual = 49748
+Phase 2 Global Placement | Checksum: 23e162304
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:04 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13231 ; free virtual = 49748
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 22607dc63
+
+Time (s): cpu = 00:00:11 ; elapsed = 00:00:04 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13209 ; free virtual = 49727
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 29f5f2757
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:04 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13210 ; free virtual = 49721
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 2eafef790
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:04 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13213 ; free virtual = 49724
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 2bc4dc86c
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:04 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13214 ; free virtual = 49725
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 29d4784ec
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13228 ; free virtual = 49745
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 32389e533
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13247 ; free virtual = 49764
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 37ceb77dc
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13257 ; free virtual = 49775
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 2c3ed3ebb
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13256 ; free virtual = 49774
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 2cc8ea2d2
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:07 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13277 ; free virtual = 49794
+Phase 3 Detail Placement | Checksum: 2cc8ea2d2
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:07 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13277 ; free virtual = 49794
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 18be7e51b
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 8 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-0.456 | TNS=-1.677 |
+Phase 1 Physical Synthesis Initialization | Checksum: c0a4bd3c
+
+Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13287 ; free virtual = 49805
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to netlist editing failed: 0.
+Ending Physical Synthesis Task | Checksum: 1fce32a08
+
+Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13287 ; free virtual = 49805
+Phase 4.1.1.1 BUFG Insertion | Checksum: 18be7e51b
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:07 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13287 ; free virtual = 49805
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=0.502. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 1e81d7ab0
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:15 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13353 ; free virtual = 49871
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:15 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13353 ; free virtual = 49871
+Phase 4.1 Post Commit Optimization | Checksum: 1e81d7ab0
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:15 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13353 ; free virtual = 49871
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 1e81d7ab0
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:15 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13353 ; free virtual = 49871
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                1x1|
+|___________|___________________|___________________|
+|      South|                1x1|                1x1|
+|___________|___________________|___________________|
+|       East|                1x1|                1x1|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 1e81d7ab0
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:15 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13353 ; free virtual = 49870
+Phase 4.3 Placer Reporting | Checksum: 1e81d7ab0
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:15 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13353 ; free virtual = 49870
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13353 ; free virtual = 49870
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:15 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13353 ; free virtual = 49870
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 1bec894de
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:15 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13353 ; free virtual = 49870
+Ending Placer Task | Checksum: 18bcae2cc
+
+Time (s): cpu = 00:00:27 ; elapsed = 00:00:15 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13353 ; free virtual = 49870
+79 Infos, 102 Warnings, 102 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:16 . Memory (MB): peak = 3055.168 ; gain = 39.043 ; free physical = 13353 ; free virtual = 49870
+INFO: [Vivado 12-24838] Running report commands "report_control_sets, report_io, report_utilization" in parallel.
+Running report generation with 3 threads.
+INFO: [Vivado 12-24828] Executing command : report_control_sets -verbose -file cpu_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.13 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13338 ; free virtual = 49856
+INFO: [Vivado 12-24828] Executing command : report_io -file cpu_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.19 ; elapsed = 00:00:00.18 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13335 ; free virtual = 49853
+INFO: [Vivado 12-24828] Executing command : report_utilization -file cpu_utilization_placed.rpt -pb cpu_utilization_placed.pb
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13339 ; free virtual = 49857
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13339 ; free virtual = 49857
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13338 ; free virtual = 49857
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13338 ; free virtual = 49857
+Wrote PlaceStorage: Time (s): cpu = 00:00:00.34 ; elapsed = 00:00:00.1 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13341 ; free virtual = 49865
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13341 ; free virtual = 49866
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13341 ; free virtual = 49867
+Write Physdb Complete: Time (s): cpu = 00:00:00.42 ; elapsed = 00:00:00.12 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13341 ; free virtual = 49867
+INFO: [Common 17-1381] The checkpoint '/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/impl_1/cpu_placed.dcp' has been generated.
+Command: phys_opt_design
+Attempting to get a license for feature 'Vivado_Implementation' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Vivado_Implementation' and/or device 'xc7s50'
+
+Starting Initial Update Timing Task
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.25 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13369 ; free virtual = 49883
+INFO: [Vivado_Tcl 4-2279] Estimated Timing Summary | WNS= 0.502 | TNS= 0.000 | 
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. All physical synthesis setup optimizations will be skipped.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Vivado_Implementation
+90 Infos, 102 Warnings, 102 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13365 ; free virtual = 49878
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13364 ; free virtual = 49878
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13364 ; free virtual = 49878
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13365 ; free virtual = 49879
+Wrote PlaceStorage: Time (s): cpu = 00:00:00.32 ; elapsed = 00:00:00.1 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13370 ; free virtual = 49893
+Wrote Netlist Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13369 ; free virtual = 49893
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13369 ; free virtual = 49894
+Write Physdb Complete: Time (s): cpu = 00:00:00.4 ; elapsed = 00:00:00.12 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13369 ; free virtual = 49894
+INFO: [Common 17-1381] The checkpoint '/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/impl_1/cpu_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Vivado_Implementation' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Vivado_Implementation' and/or device 'xc7s50'
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 8 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: 33cd60bf ConstDB: 0 ShapeSum: ad6c4ed7 RouteDB: aa913336
+Post Restoration Checksum: NetGraph: 534f5dc2 | NumContArr: 4ff924c5 | Constraints: c2a8fa9d | Timing: c2a8fa9d
+Phase 1 Build RT Design | Checksum: 2289a77c1
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13447 ; free virtual = 49969
+
+Phase 2 Router Initialization
+
+Phase 2.1 Fix Topology Constraints
+Phase 2.1 Fix Topology Constraints | Checksum: 2289a77c1
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13447 ; free virtual = 49969
+
+Phase 2.2 Pre Route Cleanup
+Phase 2.2 Pre Route Cleanup | Checksum: 2289a77c1
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13447 ; free virtual = 49969
+ Number of Nodes with overlaps = 0
+
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 1c4544634
+
+Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13438 ; free virtual = 49960
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.499  | TNS=0.000  | WHS=-2.360 | THS=-154.270|
+
+
+Phase 2.4 Soft Constraint Pins - Fast Budgeting
+Phase 2.4 Soft Constraint Pins - Fast Budgeting | Checksum: 1c3c5a733
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13448 ; free virtual = 49970
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 5492
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 5492
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 200181872
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13449 ; free virtual = 49971
+
+Phase 3 Global Routing
+Phase 3 Global Routing | Checksum: 200181872
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13449 ; free virtual = 49971
+
+Phase 4 Initial Routing
+
+Phase 4.1 Initial Net Routing Pass
+Phase 4.1 Initial Net Routing Pass | Checksum: 1fea6a5e7
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13434 ; free virtual = 49957
+Phase 4 Initial Routing | Checksum: 1fea6a5e7
+
+Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13434 ; free virtual = 49957
+
+Phase 5 Rip-up And Reroute
+
+Phase 5.1 Global Iteration 0
+ Number of Nodes with overlaps = 1872
+ Number of Nodes with overlaps = 725
+ Number of Nodes with overlaps = 296
+ Number of Nodes with overlaps = 73
+ Number of Nodes with overlaps = 77
+ Number of Nodes with overlaps = 26
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-0.376 | TNS=-0.376 | WHS=N/A    | THS=N/A    |
+
+Phase 5.1 Global Iteration 0 | Checksum: 1471caa7c
+
+Time (s): cpu = 00:00:26 ; elapsed = 00:00:15 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13401 ; free virtual = 49924
+
+Phase 5.2 Global Iteration 1
+ Number of Nodes with overlaps = 379
+ Number of Nodes with overlaps = 158
+ Number of Nodes with overlaps = 37
+ Number of Nodes with overlaps = 17
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 8
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.016  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.2 Global Iteration 1 | Checksum: 274abdade
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:18 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13389 ; free virtual = 49912
+
+Phase 5.3 Global Iteration 2
+ Number of Nodes with overlaps = 267
+ Number of Nodes with overlaps = 134
+ Number of Nodes with overlaps = 80
+ Number of Nodes with overlaps = 55
+ Number of Nodes with overlaps = 19
+ Number of Nodes with overlaps = 17
+ Number of Nodes with overlaps = 11
+ Number of Nodes with overlaps = 10
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 7
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.098  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 5.3 Global Iteration 2 | Checksum: 1b9ebac6b
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:22 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13419 ; free virtual = 49942
+Phase 5 Rip-up And Reroute | Checksum: 1b9ebac6b
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:22 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13419 ; free virtual = 49942
+
+Phase 6 Delay and Skew Optimization
+
+Phase 6.1 Delay CleanUp
+Phase 6.1 Delay CleanUp | Checksum: 1b9ebac6b
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:22 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13419 ; free virtual = 49942
+
+Phase 6.2 Clock Skew Optimization
+Phase 6.2 Clock Skew Optimization | Checksum: 1b9ebac6b
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:22 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13421 ; free virtual = 49943
+Phase 6 Delay and Skew Optimization | Checksum: 1b9ebac6b
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:22 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13421 ; free virtual = 49944
+
+Phase 7 Post Hold Fix
+
+Phase 7.1 Hold Fix Iter
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=0.191  | TNS=0.000  | WHS=-0.758 | THS=-3.918 |
+
+Phase 7.1 Hold Fix Iter | Checksum: 251c707c4
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:22 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13423 ; free virtual = 49946
+
+Phase 7.2 Non Free Resource Hold Fix Iter
+Phase 7.2 Non Free Resource Hold Fix Iter | Checksum: 266ce079a
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:22 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13423 ; free virtual = 49946
+Phase 7 Post Hold Fix | Checksum: 266ce079a
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:22 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13423 ; free virtual = 49946
+
+Phase 8 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 1.82381 %
+  Global Horizontal Routing Utilization  = 2.06299 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 8 Route finalize | Checksum: 266ce079a
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:22 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13423 ; free virtual = 49946
+
+Phase 9 Verifying routed nets
+
+ Verification completed successfully
+Phase 9 Verifying routed nets | Checksum: 266ce079a
+
+Time (s): cpu = 00:00:37 ; elapsed = 00:00:22 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13424 ; free virtual = 49946
+
+Phase 10 Depositing Routes
+Phase 10 Depositing Routes | Checksum: 260b058d9
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:22 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13439 ; free virtual = 49961
+
+Phase 11 Post Process Routing
+Phase 11 Post Process Routing | Checksum: 260b058d9
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:22 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13439 ; free virtual = 49961
+
+Phase 12 Post Router Timing
+
+Phase 12.1 Update Timing
+Phase 12.1 Update Timing | Checksum: 260b058d9
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:23 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13439 ; free virtual = 49961
+INFO: [Route 35-57] Estimated Timing Summary | WNS=0.191  | TNS=0.000  | WHS=0.056  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 12 Post Router Timing | Checksum: 260b058d9
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:23 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13439 ; free virtual = 49961
+Total Elapsed time in route_design: 22.54 secs
+
+Phase 13 Post-Route Event Processing
+Phase 13 Post-Route Event Processing | Checksum: 21f1bac8d
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:23 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13439 ; free virtual = 49961
+INFO: [Route 35-16] Router Completed Successfully
+Ending Routing Task | Checksum: 21f1bac8d
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:23 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13439 ; free virtual = 49961
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Vivado_Implementation
+103 Infos, 102 Warnings, 102 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:23 . Memory (MB): peak = 3055.168 ; gain = 0.000 ; free physical = 13439 ; free virtual = 49961
+INFO: [Vivado 12-24828] Executing command : report_drc -file cpu_drc_routed.rpt -pb cpu_drc_routed.pb -rpx cpu_drc_routed.rpx
+Command: report_drc -file cpu_drc_routed.rpt -pb cpu_drc_routed.pb -rpx cpu_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/impl_1/cpu_drc_routed.rpt.
+report_drc completed successfully
+INFO: [Vivado 12-24828] Executing command : report_methodology -file cpu_methodology_drc_routed.rpt -pb cpu_methodology_drc_routed.pb -rpx cpu_methodology_drc_routed.rpx
+Command: report_methodology -file cpu_methodology_drc_routed.rpt -pb cpu_methodology_drc_routed.pb -rpx cpu_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 8 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file /home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/impl_1/cpu_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [Vivado 12-24828] Executing command : report_timing_summary -max_paths 10 -routable_nets -report_unconstrained -file cpu_timing_summary_routed.rpt -pb cpu_timing_summary_routed.pb -rpx cpu_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Vivado 12-24838] Running report commands "report_bus_skew, report_incremental_reuse, report_route_status" in parallel.
+Running report generation with 3 threads.
+INFO: [Vivado 12-24828] Executing command : report_incremental_reuse -file cpu_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [Vivado 12-24828] Executing command : report_route_status -file cpu_route_status.rpt -pb cpu_route_status.pb
+INFO: [Vivado 12-24828] Executing command : report_bus_skew -warn_on_violation -file cpu_bus_skew_routed.rpt -pb cpu_bus_skew_routed.pb -rpx cpu_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Vivado 12-24828] Executing command : report_power -file cpu_power_routed.rpt -pb cpu_power_summary_routed.pb -rpx cpu_power_routed.rpx
+Command: report_power -file cpu_power_routed.rpt -pb cpu_power_summary_routed.pb -rpx cpu_power_routed.rpx
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+123 Infos, 102 Warnings, 102 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [Vivado 12-24828] Executing command : report_clock_utilization -file cpu_clock_utilization_routed.rpt
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Wrote PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3071.230 ; gain = 0.000 ; free physical = 13401 ; free virtual = 49934
+Wrote PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3071.230 ; gain = 0.000 ; free physical = 13401 ; free virtual = 49934
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3071.230 ; gain = 0.000 ; free physical = 13401 ; free virtual = 49935
+Writing XDEF routing special nets.
+Wrote RouteStorage: Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.05 . Memory (MB): peak = 3071.230 ; gain = 0.000 ; free physical = 13397 ; free virtual = 49933
+Wrote PlaceStorage: Time (s): cpu = 00:00:00.28 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3071.230 ; gain = 0.000 ; free physical = 13375 ; free virtual = 49915
+Wrote Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3071.230 ; gain = 0.000 ; free physical = 13373 ; free virtual = 49914
+Wrote Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3071.230 ; gain = 0.000 ; free physical = 13373 ; free virtual = 49914
+Write Physdb Complete: Time (s): cpu = 00:00:00.5 ; elapsed = 00:00:00.16 . Memory (MB): peak = 3071.230 ; gain = 0.000 ; free physical = 13373 ; free virtual = 49914
+INFO: [Common 17-1381] The checkpoint '/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/impl_1/cpu_routed.dcp' has been generated.
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 17 20:35:30 2026...

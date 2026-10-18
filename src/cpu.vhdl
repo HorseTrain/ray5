@@ -12,6 +12,7 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 use work.core_p.all;
 use work.memory_interface_p.all;
+use work.ray5_globals_p.all;
 
 entity cpu is
 
@@ -43,12 +44,12 @@ entity cpu is
         -- In outs.
         ddr3_dq             : inout std_logic_vector(15 downto 0);
         ddr3_dqs_p          : inout std_logic_vector(1 downto 0);
-        ddr3_dqs_n          : inout std_logic_vector(1 downto 0)
+        ddr3_dqs_n          : inout std_logic_vector(1 downto 0);
         
         ------------------------------------------------------------------------
         -- @brief LED's.
         ------------------------------------------------------------------------
-        -- led0_r              : out std_logic
+        led0_r              : out std_logic
     );
 
 end entity;
@@ -96,6 +97,17 @@ architecture rtl of cpu is
     signal cpu_state : cpu_state_t := CPU_STATE_INITIALIZING;
 
     ----------------------------------------------------------------------------
+    -- @brief Initiation timer. 
+    ----------------------------------------------------------------------------
+    constant INIT_TIME_PERIODS : integer := BASE_CLOCK_RATE * 5;
+
+    -- Init timer. 
+    signal init_timer : integer range 0 to INIT_TIME_PERIODS := 0;
+
+    -- Minimum initiation time passed. 
+    signal init_time_ready : std_logic := '0';
+
+    ----------------------------------------------------------------------------
     -- @brief Core initialization signals.
     ----------------------------------------------------------------------------
 
@@ -132,7 +144,7 @@ architecture rtl of cpu is
     -- Memory ready flag. 
     signal memory_ready : std_logic := '0';
     
-    signal led0_r : std_logic;
+    -- signal led0_r : std_logic;
 
 begin
 
@@ -224,7 +236,6 @@ begin
                     -- Pulse the LED to signal the cpu is initializing.
                     led0_r <= led_test(5);
 
-
                     -- Only initiate the cores if they are not ready.
                     if cores_ready = '0' then
                         -- Increment the check index.
@@ -269,7 +280,23 @@ begin
 
                     end if;
 
-                    if (cores_ready = '1') and (memory_ready = '1') then
+                    -- Only leave init state after a few seconds.
+                    if init_time_ready = '0' then
+
+                        init_timer <= init_timer + 1;
+
+                        if init_timer = INIT_TIME_PERIODS then
+                            init_time_ready <= '1';
+                        end if;
+
+                    end if;
+
+                    -- Check all conditions to transition.
+                    if 
+                        (cores_ready = '1') and 
+                        (memory_ready = '1') and 
+                        (init_time_ready = '1') 
+                    then
 
                         cpu_state <= CPU_STATE_INITIALIZE_CORE_0;
 
@@ -280,7 +307,7 @@ begin
                     -- Set the core0 entry point.
 
                     -- TODO this is temp.
-                    led0_r <= '1';
+                    led0_r <= led_test(6);
 
 
                 when others =>

@@ -61,17 +61,15 @@ Memory Options:
 
 
 Bank Selections:
-	Bank: 14
-		Byte Group T1:	Address/Ctrl-0
-		Byte Group T2:	Address/Ctrl-1
-		Byte Group T3:	Address/Ctrl-2
-	Bank: 15
+	Bank: 34
 		Byte Group T0:	DQ[0-7]
 		Byte Group T1:	DQ[8-15]
+		Byte Group T2:	Address/Ctrl-0
+		Byte Group T3:	Address/Ctrl-1
 
 System_Clock: 
 	SignalName: sys_clk_i
-		PadLocation: R14(MRCC_P)  Bank: 14
+		PadLocation: R2(MRCC_P)  Bank: 34
 
 System_Control: 
 	SignalName: sys_rst

@@ -147,7 +147,7 @@ entity mig_interface_mig is
                                      -- USE_ODT_PORT = 0, RTT_NOM = "DISABLED", RTT_WR = "60/120".
                                      -- This configuration allows to save ODT pin mapping from FPGA.
                                      -- The user can tie the ODT input of DRAM to HIGH.
-   PHY_CONTROL_MASTER_BANK : integer := 1;
+   PHY_CONTROL_MASTER_BANK : integer := 0;
                                      -- The bank index where master PHY_CONTROL resides,
                                      -- equal to the PLL residing bank
    MEM_DENSITY             : string  := "2Gb";
@@ -294,9 +294,9 @@ entity mig_interface_mig is
    -- Do not change any of these parameters directly by editing the RTL.
    -- Any changes required should be done through GUI and the design regenerated.
    --***************************************************************************
-   BYTE_LANES_B0         : std_logic_vector(3 downto 0) := "1100";
+   BYTE_LANES_B0         : std_logic_vector(3 downto 0) := "1111";
                                      -- Byte lanes used in an IO column.
-   BYTE_LANES_B1         : std_logic_vector(3 downto 0) := "0111";
+   BYTE_LANES_B1         : std_logic_vector(3 downto 0) := "0000";
                                      -- Byte lanes used in an IO column.
    BYTE_LANES_B2         : std_logic_vector(3 downto 0) := "0000";
                                      -- Byte lanes used in an IO column.
@@ -329,28 +329,28 @@ entity mig_interface_mig is
                                      -- or control Byte lane. '1' in a bit
                                      -- position indicates a data byte lane and
                                      -- a '0' indicates a control byte lane
-   PHY_0_BITLANES        : std_logic_vector(47 downto 0) := X"3FE3FE000000";
-   PHY_1_BITLANES        : std_logic_vector(47 downto 0) := X"000FFFCFF200";
+   PHY_0_BITLANES        : std_logic_vector(47 downto 0) := X"3FE3FDFFFBFF";
+   PHY_1_BITLANES        : std_logic_vector(47 downto 0) := X"000000000000";
    PHY_2_BITLANES        : std_logic_vector(47 downto 0) := X"000000000000";
 
    -- control/address/data pin mapping parameters
    CK_BYTE_MAP
-     : std_logic_vector(143 downto 0) := X"000000000000000000000000000000000010";
+     : std_logic_vector(143 downto 0) := X"000000000000000000000000000000000000";
    ADDR_MAP
-     : std_logic_vector(191 downto 0) := X"00000012912812712612B12A125124123122121120117116";
-   BANK_MAP   : std_logic_vector(35 downto 0) := X"11B11A115";
-   CAS_MAP    : std_logic_vector(11 downto 0) := X"113";
+     : std_logic_vector(191 downto 0) := X"00000000000200400900700100500600301001201401101A";
+   BANK_MAP   : std_logic_vector(35 downto 0) := X"01B017013";
+   CAS_MAP    : std_logic_vector(11 downto 0) := X"015";
    CKE_ODT_BYTE_MAP : std_logic_vector(7 downto 0) := X"00";
-   CKE_MAP    : std_logic_vector(95 downto 0) := X"000000000000000000000110";
-   ODT_MAP    : std_logic_vector(95 downto 0) := X"000000000000000000000109";
-   CS_MAP     : std_logic_vector(119 downto 0) := X"000000000000000000000000000111";
+   CKE_MAP    : std_logic_vector(95 downto 0) := X"000000000000000000000018";
+   ODT_MAP    : std_logic_vector(95 downto 0) := X"000000000000000000000008";
+   CS_MAP     : std_logic_vector(119 downto 0) := X"000000000000000000000000000019";
    PARITY_MAP : std_logic_vector(11 downto 0) := X"000";
-   RAS_MAP    : std_logic_vector(11 downto 0) := X"114";
-   WE_MAP     : std_logic_vector(11 downto 0) := X"112";
+   RAS_MAP    : std_logic_vector(11 downto 0) := X"016";
+   WE_MAP     : std_logic_vector(11 downto 0) := X"00B";
    DQS_BYTE_MAP
      : std_logic_vector(143 downto 0) := X"000000000000000000000000000000000203";
-   DATA0_MAP  : std_logic_vector(95 downto 0) := X"031032033034035036037038";
-   DATA1_MAP  : std_logic_vector(95 downto 0) := X"021022023024025026027028";
+   DATA0_MAP  : std_logic_vector(95 downto 0) := X"034033032035031038037036";
+   DATA1_MAP  : std_logic_vector(95 downto 0) := X"023027022028025026020024";
    DATA2_MAP  : std_logic_vector(95 downto 0) := X"000000000000000000000000";
    DATA3_MAP  : std_logic_vector(95 downto 0) := X"000000000000000000000000";
    DATA4_MAP  : std_logic_vector(95 downto 0) := X"000000000000000000000000";

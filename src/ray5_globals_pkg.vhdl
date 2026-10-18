@@ -37,4 +37,9 @@ package ray5_globals_p is
         register_count_bit => 4
     );
 
+    ----------------------------------------------------------------------------
+    -- @brief 100mhz base clock rate. 
+    ----------------------------------------------------------------------------
+    constant BASE_CLOCK_RATE : integer := 100000000;
+
 end package;

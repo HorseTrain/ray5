@@ -57,6 +57,7 @@ if {$::dispatch::connected} {
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 6
+set_param xicom.use_bs_reader 1
 set_param general.usePosixSpawnForFork 1
 set_param simulator.modelsimInstallPath /home/raymond/Desktop/modelsim/modelsim_ase/bin
 OPTRACE "Creating in-memory project" START { }

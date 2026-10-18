@@ -8,8 +8,8 @@ INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detect
 # SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
 # IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
 # SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
-# Start of session at: Sat Oct 17 19:20:24 2026
-# Process ID         : 282552
+# Start of session at: Sat Oct 17 21:45:35 2026
+# Process ID         : 3790728
 # Current directory  : /home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/mig_interface_synth_1
 # Command line       : vivado -log mig_interface.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mig_interface.tcl
 # Log file           : /home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/mig_interface_synth_1/mig_interface.vds
@@ -18,20 +18,20 @@ INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detect
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 26.04.1 LTS
 # Processor Detail   : AMD Ryzen 9 5900X 12-Core Processor
-# CPU Frequency      : 4647.860 MHz
+# CPU Frequency      : 3791.807 MHz
 # CPU Physical cores : 12
 # CPU Logical cores  : 24
 # Host memory        : 65190 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 73780 MB
-# Available Virtual  : 51715 MB
+# Available Virtual  : 52466 MB
 #-----------------------------------------------------------
 
 ****** Vivado v2026.1 (64-bit)
   **** SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
   **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
   **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
-  **** Start of session at: Sat Oct 17 19:20:24 2026
+  **** Start of session at: Sat Oct 17 21:45:35 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -44,9 +44,9 @@ INFO: [Device 21-403] Loading part xc7s50csga324-1
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 284711
+INFO: [Synth 8-7075] Helper process launched with PID 3793036
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2392.246 ; gain = 517.758 ; free physical = 11545 ; free virtual = 47944
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2399.520 ; gain = 522.094 ; free physical = 11987 ; free virtual = 48652
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-10515] begin/end is required for generate-for in this mode of Verilog [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/controller/mig_7series_v4_2_arb_row_col.v:253]
 INFO: [Synth 8-638] synthesizing module 'mig_interface' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/mig_interface.vhd:119]
@@ -241,7 +241,7 @@ INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_infrastructure' 
 	Parameter ECC_WIDTH bound to: 0 - type: integer 
 	Parameter ECC_TEST bound to: OFF - type: string 
 	Parameter MC_ERR_ADDR_WIDTH bound to: 28 - type: integer 
-	Parameter MASTER_PHY_CTL bound to: 1 - type: integer 
+	Parameter MASTER_PHY_CTL bound to: 0 - type: integer 
 	Parameter nAL bound to: 0 - type: integer 
 	Parameter nBANK_MACHS bound to: 2 - type: integer 
 	Parameter nCK_PER_CLK bound to: 2 - type: integer 
@@ -285,8 +285,8 @@ INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_infrastructure' 
 	Parameter ADDR_WIDTH bound to: 28 - type: integer 
 	Parameter APP_MASK_WIDTH bound to: 8 - type: integer 
 	Parameter APP_DATA_WIDTH bound to: 64 - type: integer 
-	Parameter BYTE_LANES_B0 bound to: 4'b1100 
-	Parameter BYTE_LANES_B1 bound to: 4'b0111 
+	Parameter BYTE_LANES_B0 bound to: 4'b1111 
+	Parameter BYTE_LANES_B1 bound to: 4'b0000 
 	Parameter BYTE_LANES_B2 bound to: 4'b0000 
 	Parameter BYTE_LANES_B3 bound to: 4'b0000 
 	Parameter BYTE_LANES_B4 bound to: 4'b0000 
@@ -295,24 +295,24 @@ INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_infrastructure' 
 	Parameter DATA_CTL_B2 bound to: 4'b0000 
 	Parameter DATA_CTL_B3 bound to: 4'b0000 
 	Parameter DATA_CTL_B4 bound to: 4'b0000 
-	Parameter PHY_0_BITLANES bound to: 48'b001111111110001111111110000000000000000000000000 
-	Parameter PHY_1_BITLANES bound to: 48'b000000000000111111111111110011111111001000000000 
+	Parameter PHY_0_BITLANES bound to: 48'b001111111110001111111101111111111111101111111111 
+	Parameter PHY_1_BITLANES bound to: 48'b000000000000000000000000000000000000000000000000 
 	Parameter PHY_2_BITLANES bound to: 48'b000000000000000000000000000000000000000000000000 
-	Parameter CK_BYTE_MAP bound to: 144'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000 
-	Parameter ADDR_MAP bound to: 192'b000000000000000000000000000100101001000100101000000100100111000100100110000100101011000100101010000100100101000100100100000100100011000100100010000100100001000100100000000100010111000100010110 
-	Parameter BANK_MAP bound to: 36'b000100011011000100011010000100010101 
-	Parameter CAS_MAP bound to: 12'b000100010011 
+	Parameter CK_BYTE_MAP bound to: 144'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ADDR_MAP bound to: 192'b000000000000000000000000000000000000000000000010000000000100000000001001000000000111000000000001000000000101000000000110000000000011000000010000000000010010000000010100000000010001000000011010 
+	Parameter BANK_MAP bound to: 36'b000000011011000000010111000000010011 
+	Parameter CAS_MAP bound to: 12'b000000010101 
 	Parameter CKE_ODT_BYTE_MAP bound to: 8'b00000000 
-	Parameter CKE_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100010000 
-	Parameter ODT_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100001001 
+	Parameter CKE_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011000 
+	Parameter ODT_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000 
 	Parameter CKE_ODT_AUX bound to: FALSE - type: string 
-	Parameter CS_MAP bound to: 120'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100010001 
+	Parameter CS_MAP bound to: 120'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011001 
 	Parameter PARITY_MAP bound to: 12'b000000000000 
-	Parameter RAS_MAP bound to: 12'b000100010100 
-	Parameter WE_MAP bound to: 12'b000100010010 
+	Parameter RAS_MAP bound to: 12'b000000010110 
+	Parameter WE_MAP bound to: 12'b000000001011 
 	Parameter DQS_BYTE_MAP bound to: 144'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000011 
-	Parameter DATA0_MAP bound to: 96'b000000110001000000110010000000110011000000110100000000110101000000110110000000110111000000111000 
-	Parameter DATA1_MAP bound to: 96'b000000100001000000100010000000100011000000100100000000100101000000100110000000100111000000101000 
+	Parameter DATA0_MAP bound to: 96'b000000110100000000110011000000110010000000110101000000110001000000111000000000110111000000110110 
+	Parameter DATA1_MAP bound to: 96'b000000100011000000100111000000100010000000101000000000100101000000100110000000100000000000100100 
 	Parameter DATA2_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter DATA3_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter DATA4_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -381,7 +381,7 @@ INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_memc_ui_top_std' [/ho
 	Parameter ECC_WIDTH bound to: 0 - type: integer 
 	Parameter ECC_TEST bound to: OFF - type: string 
 	Parameter MC_ERR_ADDR_WIDTH bound to: 28 - type: integer 
-	Parameter MASTER_PHY_CTL bound to: 1 - type: integer 
+	Parameter MASTER_PHY_CTL bound to: 0 - type: integer 
 	Parameter nAL bound to: 0 - type: integer 
 	Parameter nBANK_MACHS bound to: 2 - type: integer 
 	Parameter nCK_PER_CLK bound to: 2 - type: integer 
@@ -425,8 +425,8 @@ INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_memc_ui_top_std' [/ho
 	Parameter ADDR_WIDTH bound to: 28 - type: integer 
 	Parameter APP_MASK_WIDTH bound to: 8 - type: integer 
 	Parameter APP_DATA_WIDTH bound to: 64 - type: integer 
-	Parameter BYTE_LANES_B0 bound to: 4'b1100 
-	Parameter BYTE_LANES_B1 bound to: 4'b0111 
+	Parameter BYTE_LANES_B0 bound to: 4'b1111 
+	Parameter BYTE_LANES_B1 bound to: 4'b0000 
 	Parameter BYTE_LANES_B2 bound to: 4'b0000 
 	Parameter BYTE_LANES_B3 bound to: 4'b0000 
 	Parameter BYTE_LANES_B4 bound to: 4'b0000 
@@ -435,24 +435,24 @@ INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_memc_ui_top_std' [/ho
 	Parameter DATA_CTL_B2 bound to: 4'b0000 
 	Parameter DATA_CTL_B3 bound to: 4'b0000 
 	Parameter DATA_CTL_B4 bound to: 4'b0000 
-	Parameter PHY_0_BITLANES bound to: 48'b001111111110001111111110000000000000000000000000 
-	Parameter PHY_1_BITLANES bound to: 48'b000000000000111111111111110011111111001000000000 
+	Parameter PHY_0_BITLANES bound to: 48'b001111111110001111111101111111111111101111111111 
+	Parameter PHY_1_BITLANES bound to: 48'b000000000000000000000000000000000000000000000000 
 	Parameter PHY_2_BITLANES bound to: 48'b000000000000000000000000000000000000000000000000 
-	Parameter CK_BYTE_MAP bound to: 144'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000 
-	Parameter ADDR_MAP bound to: 192'b000000000000000000000000000100101001000100101000000100100111000100100110000100101011000100101010000100100101000100100100000100100011000100100010000100100001000100100000000100010111000100010110 
-	Parameter BANK_MAP bound to: 36'b000100011011000100011010000100010101 
-	Parameter CAS_MAP bound to: 12'b000100010011 
+	Parameter CK_BYTE_MAP bound to: 144'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ADDR_MAP bound to: 192'b000000000000000000000000000000000000000000000010000000000100000000001001000000000111000000000001000000000101000000000110000000000011000000010000000000010010000000010100000000010001000000011010 
+	Parameter BANK_MAP bound to: 36'b000000011011000000010111000000010011 
+	Parameter CAS_MAP bound to: 12'b000000010101 
 	Parameter CKE_ODT_BYTE_MAP bound to: 8'b00000000 
-	Parameter CKE_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100010000 
-	Parameter ODT_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100001001 
+	Parameter CKE_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011000 
+	Parameter ODT_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000 
 	Parameter CKE_ODT_AUX bound to: FALSE - type: string 
-	Parameter CS_MAP bound to: 120'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100010001 
+	Parameter CS_MAP bound to: 120'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011001 
 	Parameter PARITY_MAP bound to: 12'b000000000000 
-	Parameter RAS_MAP bound to: 12'b000100010100 
-	Parameter WE_MAP bound to: 12'b000100010010 
+	Parameter RAS_MAP bound to: 12'b000000010110 
+	Parameter WE_MAP bound to: 12'b000000001011 
 	Parameter DQS_BYTE_MAP bound to: 144'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000011 
-	Parameter DATA0_MAP bound to: 96'b000000110001000000110010000000110011000000110100000000110101000000110110000000110111000000111000 
-	Parameter DATA1_MAP bound to: 96'b000000100001000000100010000000100011000000100100000000100101000000100110000000100111000000101000 
+	Parameter DATA0_MAP bound to: 96'b000000110100000000110011000000110010000000110101000000110001000000111000000000110111000000110110 
+	Parameter DATA1_MAP bound to: 96'b000000100011000000100111000000100010000000101000000000100101000000100110000000100000000000100100 
 	Parameter DATA2_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter DATA3_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter DATA4_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -574,31 +574,31 @@ INFO: [Synth 8-638] synthesizing module 'mig_7series_v4_2_ddr_phy_top' [/home/ra
 	Parameter DATA_CTL_B2 bound to: 4'b0000 
 	Parameter DATA_CTL_B3 bound to: 4'b0000 
 	Parameter DATA_CTL_B4 bound to: 4'b0000 
-	Parameter BYTE_LANES_B0 bound to: 4'b1100 
-	Parameter BYTE_LANES_B1 bound to: 4'b0111 
+	Parameter BYTE_LANES_B0 bound to: 4'b1111 
+	Parameter BYTE_LANES_B1 bound to: 4'b0000 
 	Parameter BYTE_LANES_B2 bound to: 4'b0000 
 	Parameter BYTE_LANES_B3 bound to: 4'b0000 
 	Parameter BYTE_LANES_B4 bound to: 4'b0000 
-	Parameter PHY_0_BITLANES bound to: 48'b001111111110001111111110000000000000000000000000 
-	Parameter PHY_1_BITLANES bound to: 48'b000000000000111111111111110011111111001000000000 
+	Parameter PHY_0_BITLANES bound to: 48'b001111111110001111111101111111111111101111111111 
+	Parameter PHY_1_BITLANES bound to: 48'b000000000000000000000000000000000000000000000000 
 	Parameter PHY_2_BITLANES bound to: 48'b000000000000000000000000000000000000000000000000 
-	Parameter HIGHEST_BANK bound to: 2 - type: integer 
-	Parameter HIGHEST_LANE bound to: 7 - type: integer 
-	Parameter CK_BYTE_MAP bound to: 144'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000 
-	Parameter ADDR_MAP bound to: 192'b000000000000000000000000000100101001000100101000000100100111000100100110000100101011000100101010000100100101000100100100000100100011000100100010000100100001000100100000000100010111000100010110 
-	Parameter BANK_MAP bound to: 36'b000100011011000100011010000100010101 
-	Parameter CAS_MAP bound to: 12'b000100010011 
+	Parameter HIGHEST_BANK bound to: 1 - type: integer 
+	Parameter HIGHEST_LANE bound to: 4 - type: integer 
+	Parameter CK_BYTE_MAP bound to: 144'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
+	Parameter ADDR_MAP bound to: 192'b000000000000000000000000000000000000000000000010000000000100000000001001000000000111000000000001000000000101000000000110000000000011000000010000000000010010000000010100000000010001000000011010 
+	Parameter BANK_MAP bound to: 36'b000000011011000000010111000000010011 
+	Parameter CAS_MAP bound to: 12'b000000010101 
 	Parameter CKE_ODT_BYTE_MAP bound to: 8'b00000000 
-	Parameter CKE_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100010000 
-	Parameter ODT_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100001001 
+	Parameter CKE_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011000 
+	Parameter ODT_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000 
 	Parameter CKE_ODT_AUX bound to: FALSE - type: string 
-	Parameter CS_MAP bound to: 120'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100010001 
+	Parameter CS_MAP bound to: 120'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000011001 
 	Parameter PARITY_MAP bound to: 12'b000000000000 
-	Parameter RAS_MAP bound to: 12'b000100010100 
-	Parameter WE_MAP bound to: 12'b000100010010 
+	Parameter RAS_MAP bound to: 12'b000000010110 
+	Parameter WE_MAP bound to: 12'b000000001011 
 	Parameter DQS_BYTE_MAP bound to: 144'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000011 
-	Parameter DATA0_MAP bound to: 96'b000000110001000000110010000000110011000000110100000000110101000000110110000000110111000000111000 
-	Parameter DATA1_MAP bound to: 96'b000000100001000000100010000000100011000000100100000000100101000000100110000000100111000000101000 
+	Parameter DATA0_MAP bound to: 96'b000000110100000000110011000000110010000000110101000000110001000000111000000000110111000000110110 
+	Parameter DATA1_MAP bound to: 96'b000000100011000000100111000000100010000000101000000000100101000000100110000000100000000000100100 
 	Parameter DATA2_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter DATA3_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter DATA4_MAP bound to: 96'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
@@ -618,7 +618,7 @@ INFO: [Synth 8-638] synthesizing module 'mig_7series_v4_2_ddr_phy_top' [/home/ra
 	Parameter MASK0_MAP bound to: 108'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000101001000000111001 
 	Parameter MASK1_MAP bound to: 108'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 
 	Parameter SIM_CAL_OPTION bound to: NONE - type: string 
-	Parameter MASTER_PHY_CTL bound to: 1 - type: integer 
+	Parameter MASTER_PHY_CTL bound to: 0 - type: integer 
 	Parameter DRAM_WIDTH bound to: 8 - type: integer 
 	Parameter POC_USE_METASTABLE_SAMP bound to: FALSE - type: string 
 	Parameter PI_DIV2_INCDEC bound to: FALSE - type: string 
@@ -645,34 +645,50 @@ WARNING: [Synth 8-7023] instance 'phy_ctl_pre_fifo_2' of module 'mig_7series_v4_
 INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_mc_phy' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:70]
 INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_phy_4lanes' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:72]
 INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_byte_lane' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:68]
-INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_if_post_fifo' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_if_post_fifo.v:67]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_if_post_fifo.v:109]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_if_post_fifo' (0#1) [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_if_post_fifo.v:67]
 INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_of_pre_fifo__parameterized1' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_of_pre_fifo.v:76]
 INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_of_pre_fifo__parameterized1' (0#1) [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_of_pre_fifo.v:76]
-INFO: [Synth 8-6157] synthesizing module 'PHASER_IN_PHY' [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:133444]
-INFO: [Synth 8-6155] done synthesizing module 'PHASER_IN_PHY' (0#1) [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:133444]
-INFO: [Synth 8-6157] synthesizing module 'IN_FIFO' [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:87440]
-INFO: [Synth 8-6155] done synthesizing module 'IN_FIFO' (0#1) [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:87440]
+INFO: [Synth 8-6157] synthesizing module 'ODDR' [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:117076]
+INFO: [Synth 8-6155] done synthesizing module 'ODDR' (0#1) [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:117076]
+INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:113414]
+INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (0#1) [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:113414]
 INFO: [Synth 8-6157] synthesizing module 'PHASER_OUT_PHY' [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:133581]
 INFO: [Synth 8-6155] done synthesizing module 'PHASER_OUT_PHY' (0#1) [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:133581]
 INFO: [Synth 8-6157] synthesizing module 'OUT_FIFO' [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:117798]
 INFO: [Synth 8-6155] done synthesizing module 'OUT_FIFO' (0#1) [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:117798]
 INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_byte_group_io' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:68]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2' [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:117683]
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2' (0#1) [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:117683]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_byte_group_io' (0#1) [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_byte_lane' (0#1) [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:68]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_byte_lane__parameterized0' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:68]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_byte_group_io__parameterized0' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_byte_group_io__parameterized0' (0#1) [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_byte_lane__parameterized0' (0#1) [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:68]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_byte_lane__parameterized1' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:68]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_if_post_fifo' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_if_post_fifo.v:67]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_if_post_fifo.v:109]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_if_post_fifo' (0#1) [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_if_post_fifo.v:67]
+INFO: [Synth 8-6157] synthesizing module 'PHASER_IN_PHY' [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:133444]
+INFO: [Synth 8-6155] done synthesizing module 'PHASER_IN_PHY' (0#1) [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:133444]
+INFO: [Synth 8-6157] synthesizing module 'IN_FIFO' [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:87440]
+INFO: [Synth 8-6155] done synthesizing module 'IN_FIFO' (0#1) [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:87440]
+INFO: [Synth 8-6157] synthesizing module 'PHASER_OUT_PHY__parameterized0' [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:133581]
+INFO: [Synth 8-6155] done synthesizing module 'PHASER_OUT_PHY__parameterized0' (0#1) [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:133581]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_byte_group_io__parameterized1' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:68]
 INFO: [Synth 8-6157] synthesizing module 'IDELAYE2' [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:85051]
 INFO: [Synth 8-6155] done synthesizing module 'IDELAYE2' (0#1) [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:85051]
 INFO: [Synth 8-6157] synthesizing module 'ISERDESE2' [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:90214]
 INFO: [Synth 8-6155] done synthesizing module 'ISERDESE2' (0#1) [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:90214]
-INFO: [Synth 8-6157] synthesizing module 'OSERDESE2' [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:117683]
-INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2' (0#1) [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:117683]
 INFO: [Synth 8-6157] synthesizing module 'OSERDESE2__parameterized0' [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:117683]
 INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2__parameterized0' (0#1) [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:117683]
-INFO: [Synth 8-6157] synthesizing module 'ODDR' [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:117076]
-INFO: [Synth 8-6155] done synthesizing module 'ODDR' (0#1) [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:117076]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_byte_group_io' (0#1) [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_byte_lane' (0#1) [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:68]
-INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_byte_lane__parameterized0' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_byte_lane__parameterized0' (0#1) [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:68]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2__parameterized1' [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:117683]
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2__parameterized1' (0#1) [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:117683]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_byte_group_io__parameterized1' (0#1) [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_byte_lane__parameterized1' (0#1) [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:68]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_byte_lane__parameterized2' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:68]
+INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_byte_group_io__parameterized2' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_byte_group_io__parameterized2' (0#1) [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_byte_lane__parameterized2' (0#1) [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:68]
 INFO: [Synth 8-6157] synthesizing module 'BUFIO' [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:2951]
 INFO: [Synth 8-6155] done synthesizing module 'BUFIO' (0#1) [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:2951]
 INFO: [Synth 8-6157] synthesizing module 'PHY_CONTROL' [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:133672]
@@ -681,42 +697,9 @@ INFO: [Synth 8-226] default block is never used [/home/raymond/Desktop/ray5/vivd
 INFO: [Synth 8-6157] synthesizing module 'PHASER_REF' [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:133656]
 INFO: [Synth 8-6155] done synthesizing module 'PHASER_REF' (0#1) [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:133656]
 INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_phy_4lanes' (0#1) [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:72]
-INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_phy_4lanes__parameterized0' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:72]
-INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_byte_lane__parameterized1' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:68]
-INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:113414]
-INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (0#1) [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:113414]
-INFO: [Synth 8-6157] synthesizing module 'PHASER_OUT_PHY__parameterized0' [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:133581]
-INFO: [Synth 8-6155] done synthesizing module 'PHASER_OUT_PHY__parameterized0' (0#1) [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:133581]
-INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_byte_group_io__parameterized0' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:68]
-INFO: [Synth 8-6157] synthesizing module 'OSERDESE2__parameterized1' [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:117683]
-INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2__parameterized1' (0#1) [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:117683]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_byte_group_io__parameterized0' (0#1) [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_byte_lane__parameterized1' (0#1) [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:68]
-INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_byte_lane__parameterized2' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:68]
-INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_byte_group_io__parameterized1' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_byte_group_io__parameterized1' (0#1) [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_byte_lane__parameterized2' (0#1) [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:68]
-INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_byte_lane__parameterized3' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:68]
-INFO: [Synth 8-6157] synthesizing module 'mig_7series_v4_2_ddr_byte_group_io__parameterized2' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_byte_group_io__parameterized2' (0#1) [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:68]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_byte_lane__parameterized3' (0#1) [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:68]
-INFO: [Synth 8-6157] synthesizing module 'PHY_CONTROL__parameterized0' [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:133672]
-INFO: [Synth 8-6155] done synthesizing module 'PHY_CONTROL__parameterized0' (0#1) [/home/raymond/Desktop/amd/2026.1/Vivado/scripts/rt/data/unisim_comp.v:133672]
-INFO: [Synth 8-226] default block is never used [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:1557]
-INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_phy_4lanes__parameterized0' (0#1) [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:72]
-WARNING: [Synth 8-689] width (240) of port connection 'phy_dout' does not match port width (320) of module 'mig_7series_v4_2_ddr_phy_4lanes__parameterized0' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:1300]
-WARNING: [Synth 8-689] width (240) of port connection 'phy_din' does not match port width (320) of module 'mig_7series_v4_2_ddr_phy_4lanes__parameterized0' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:1328]
-WARNING: [Synth 8-689] width (36) of port connection 'mem_dq_out' does not match port width (48) of module 'mig_7series_v4_2_ddr_phy_4lanes__parameterized0' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:1332]
-WARNING: [Synth 8-689] width (36) of port connection 'mem_dq_ts' does not match port width (48) of module 'mig_7series_v4_2_ddr_phy_4lanes__parameterized0' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:1333]
-WARNING: [Synth 8-689] width (30) of port connection 'mem_dq_in' does not match port width (40) of module 'mig_7series_v4_2_ddr_phy_4lanes__parameterized0' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:1334]
-WARNING: [Synth 8-689] width (3) of port connection 'mem_dqs_out' does not match port width (4) of module 'mig_7series_v4_2_ddr_phy_4lanes__parameterized0' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:1335]
-WARNING: [Synth 8-689] width (3) of port connection 'mem_dqs_ts' does not match port width (4) of module 'mig_7series_v4_2_ddr_phy_4lanes__parameterized0' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:1336]
-WARNING: [Synth 8-689] width (3) of port connection 'mem_dqs_in' does not match port width (4) of module 'mig_7series_v4_2_ddr_phy_4lanes__parameterized0' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:1337]
-WARNING: [Synth 8-689] width (3) of port connection 'pi_phase_locked_lanes' does not match port width (4) of module 'mig_7series_v4_2_ddr_phy_4lanes__parameterized0' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:1376]
-WARNING: [Synth 8-689] width (3) of port connection 'pi_dqs_found_lanes' does not match port width (4) of module 'mig_7series_v4_2_ddr_phy_4lanes__parameterized0' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:1377]
 INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_mc_phy' (0#1) [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:70]
-WARNING: [Synth 8-689] width (12) of port connection 'pi_dqs_found_lanes' does not match port width (7) of module 'mig_7series_v4_2_ddr_mc_phy' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:1671]
-WARNING: [Synth 8-689] width (12) of port connection 'pi_phase_locked_lanes' does not match port width (7) of module 'mig_7series_v4_2_ddr_mc_phy' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:1679]
+WARNING: [Synth 8-689] width (12) of port connection 'pi_dqs_found_lanes' does not match port width (4) of module 'mig_7series_v4_2_ddr_mc_phy' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:1671]
+WARNING: [Synth 8-689] width (12) of port connection 'pi_phase_locked_lanes' does not match port width (4) of module 'mig_7series_v4_2_ddr_mc_phy' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:1679]
 WARNING: [Synth 8-7071] port 'of_data_a_full' of module 'mig_7series_v4_2_ddr_mc_phy' is unconnected for instance 'u_ddr_mc_phy' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:1579]
 WARNING: [Synth 8-7023] instance 'u_ddr_mc_phy' of module 'mig_7series_v4_2_ddr_mc_phy' has 89 connections declared, but only 88 given [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:1579]
 INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_mc_phy_wrapper' (0#1) [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:71]
@@ -725,25 +708,25 @@ INFO: [Synth 8-6155] done synthesizing module 'mig_7series_v4_2_ddr_mc_phy_wrapp
 	Parameter tCK bound to: 3077 - type: integer 
 	Parameter DDR3_VDD_OP_VOLT bound to: 135 - type: string 
 	Parameter CLK_PERIOD bound to: 6154 - type: integer 
-	Parameter N_CTL_LANES bound to: 3 - type: integer 
+	Parameter N_CTL_LANES bound to: 2 - type: integer 
 	Parameter DRAM_TYPE bound to: DDR3 - type: string 
 	Parameter PRBS_WIDTH bound to: 8 - type: integer 
-	Parameter HIGHEST_LANE bound to: 7 - type: integer 
-	Parameter HIGHEST_BANK bound to: 2 - type: integer 
+	Parameter HIGHEST_LANE bound to: 4 - type: integer 
+	Parameter HIGHEST_BANK bound to: 1 - type: integer 
 	Parameter BANK_TYPE bound to: HR_IO - type: string 
 	Parameter DATA_CTL_B0 bound to: 4'b1100 
 	Parameter DATA_CTL_B1 bound to: 4'b0000 
 	Parameter DATA_CTL_B2 bound to: 4'b0000 
 	Parameter DATA_CTL_B3 bound to: 4'b0000 
 	Parameter DATA_CTL_B4 bound to: 4'b0000 
-	Parameter BYTE_LANES_B0 bound to: 4'b1100 
-	Parameter BYTE_LANES_B1 bound to: 4'b0111 
+	Parameter BYTE_LANES_B0 bound to: 4'b1111 
+	Parameter BYTE_LANES_B1 bound to: 4'b0000 
 	Parameter BYTE_LANES_B2 bound to: 4'b0000 
 	Parameter BYTE_LANES_B3 bound to: 4'b0000 
 	Parameter BYTE_LANES_B4 bound to: 4'b0000 
 	Parameter DQS_BYTE_MAP bound to: 144'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000011 
-	Parameter CTL_BYTE_LANE bound to: 8'b00100100 
-	Parameter CTL_BANK bound to: 3'b001 
+	Parameter CTL_BYTE_LANE bound to: 8'b00000100 
+	Parameter CTL_BANK bound to: 3'b000 
 	Parameter SLOT_1_CONFIG bound to: 8'b00000000 
 	Parameter BANK_WIDTH bound to: 3 - type: integer 
 	Parameter CA_MIRROR bound to: OFF - type: string 
@@ -848,64 +831,43 @@ WARNING: [Synth 8-3848] Net grant_pre_r in module/entity mig_7series_v4_2_arb_ro
 WARNING: [Synth 8-3848] Net sending_pre in module/entity mig_7series_v4_2_arb_row_col does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/controller/mig_7series_v4_2_arb_row_col.v:187]
 WARNING: [Synth 8-3848] Net col_mux.col_row_r in module/entity mig_7series_v4_2_arb_select does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/controller/mig_7series_v4_2_arb_select.v:390]
 WARNING: [Synth 8-3936] Found unconnected internal register 'read_fifo.fifo_out_data_r_reg' and it is trimmed from '12' to '7' bits. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/controller/mig_7series_v4_2_col_mach.v:396]
-WARNING: [Synth 8-6014] Unused sequential element fine_delay_r_reg was removed.  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:184]
-WARNING: [Synth 8-3848] Net dummy_i5 in module/entity mig_7series_v4_2_ddr_byte_lane does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:267]
-WARNING: [Synth 8-3848] Net dummy_i6 in module/entity mig_7series_v4_2_ddr_byte_lane does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:268]
-WARNING: [Synth 8-3848] Net dummy_i5 in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized0 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:267]
-WARNING: [Synth 8-3848] Net dummy_i6 in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized0 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:268]
-WARNING: [Synth 8-6014] Unused sequential element A_rst_primitives_reg was removed.  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:736]
-WARNING: [Synth 8-6014] Unused sequential element B_rst_primitives_reg was removed.  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:737]
-WARNING: [Synth 8-6014] Unused sequential element D_rst_primitives_reg was removed.  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:739]
-WARNING: [Synth 8-3848] Net A_pi_dqs_out_of_range in module/entity mig_7series_v4_2_ddr_phy_4lanes does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:420]
-WARNING: [Synth 8-3848] Net B_pi_dqs_out_of_range in module/entity mig_7series_v4_2_ddr_phy_4lanes does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:453]
+WARNING: [Synth 8-3848] Net oserdes_dqts_buf in module/entity mig_7series_v4_2_ddr_byte_group_io does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:142]
+WARNING: [Synth 8-3848] Net oserdes_dqs_buf in module/entity mig_7series_v4_2_ddr_byte_group_io does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:143]
+WARNING: [Synth 8-3848] Net oserdes_dqsts_buf in module/entity mig_7series_v4_2_ddr_byte_group_io does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:144]
+WARNING: [Synth 8-3848] Net iserdes_dout in module/entity mig_7series_v4_2_ddr_byte_group_io does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:91]
+WARNING: [Synth 8-6014] Unused sequential element ififo_rst_reg was removed.  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:305]
+WARNING: [Synth 8-3848] Net rclk in module/entity mig_7series_v4_2_ddr_byte_lane does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:145]
+WARNING: [Synth 8-3848] Net pi_iserdes_rst in module/entity mig_7series_v4_2_ddr_byte_lane does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:191]
+WARNING: [Synth 8-3848] Net pi_fine_overflow in module/entity mig_7series_v4_2_ddr_byte_lane does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:193]
+WARNING: [Synth 8-3848] Net pi_counter_read_val_w in module/entity mig_7series_v4_2_ddr_byte_lane does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:429]
+WARNING: [Synth 8-3848] Net dqs_out_of_range in module/entity mig_7series_v4_2_ddr_byte_lane does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:196]
+WARNING: [Synth 8-3848] Net iserdes_clk in module/entity mig_7series_v4_2_ddr_byte_lane does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:273]
+WARNING: [Synth 8-3848] Net iserdes_clkdiv in module/entity mig_7series_v4_2_ddr_byte_lane does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:274]
 WARNING: [Synth 8-3848] Net oserdes_dqts_buf in module/entity mig_7series_v4_2_ddr_byte_group_io__parameterized0 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:142]
 WARNING: [Synth 8-3848] Net oserdes_dqs_buf in module/entity mig_7series_v4_2_ddr_byte_group_io__parameterized0 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:143]
 WARNING: [Synth 8-3848] Net oserdes_dqsts_buf in module/entity mig_7series_v4_2_ddr_byte_group_io__parameterized0 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:144]
 WARNING: [Synth 8-3848] Net iserdes_dout in module/entity mig_7series_v4_2_ddr_byte_group_io__parameterized0 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:91]
 WARNING: [Synth 8-6014] Unused sequential element ififo_rst_reg was removed.  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:305]
-WARNING: [Synth 8-3848] Net rclk in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized1 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:145]
-WARNING: [Synth 8-3848] Net pi_iserdes_rst in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized1 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:191]
-WARNING: [Synth 8-3848] Net pi_fine_overflow in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized1 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:193]
-WARNING: [Synth 8-3848] Net pi_counter_read_val_w in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized1 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:429]
-WARNING: [Synth 8-3848] Net dqs_out_of_range in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized1 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:196]
-WARNING: [Synth 8-3848] Net iserdes_clk in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized1 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:273]
-WARNING: [Synth 8-3848] Net iserdes_clkdiv in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized1 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:274]
-WARNING: [Synth 8-3848] Net oserdes_dqts_buf in module/entity mig_7series_v4_2_ddr_byte_group_io__parameterized1 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:142]
-WARNING: [Synth 8-3848] Net oserdes_dqs_buf in module/entity mig_7series_v4_2_ddr_byte_group_io__parameterized1 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:143]
-WARNING: [Synth 8-3848] Net oserdes_dqsts_buf in module/entity mig_7series_v4_2_ddr_byte_group_io__parameterized1 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:144]
-WARNING: [Synth 8-3848] Net iserdes_dout in module/entity mig_7series_v4_2_ddr_byte_group_io__parameterized1 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:91]
-WARNING: [Synth 8-6014] Unused sequential element ififo_rst_reg was removed.  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:305]
-WARNING: [Synth 8-3848] Net rclk in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized2 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:145]
-WARNING: [Synth 8-3848] Net pi_iserdes_rst in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized2 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:191]
-WARNING: [Synth 8-3848] Net pi_fine_overflow in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized2 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:193]
-WARNING: [Synth 8-3848] Net pi_counter_read_val_w in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized2 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:429]
-WARNING: [Synth 8-3848] Net dqs_out_of_range in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized2 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:196]
-WARNING: [Synth 8-3848] Net iserdes_clk in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized2 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:273]
-WARNING: [Synth 8-3848] Net iserdes_clkdiv in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized2 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:274]
-WARNING: [Synth 8-3848] Net oserdes_dqts_buf in module/entity mig_7series_v4_2_ddr_byte_group_io__parameterized2 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:142]
-WARNING: [Synth 8-3848] Net oserdes_dqs_buf in module/entity mig_7series_v4_2_ddr_byte_group_io__parameterized2 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:143]
-WARNING: [Synth 8-3848] Net oserdes_dqsts_buf in module/entity mig_7series_v4_2_ddr_byte_group_io__parameterized2 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:144]
-WARNING: [Synth 8-3848] Net iserdes_dout in module/entity mig_7series_v4_2_ddr_byte_group_io__parameterized2 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:91]
-WARNING: [Synth 8-6014] Unused sequential element ififo_rst_reg was removed.  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:305]
-WARNING: [Synth 8-3848] Net rclk in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized3 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:145]
-WARNING: [Synth 8-3848] Net pi_iserdes_rst in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized3 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:191]
-WARNING: [Synth 8-3848] Net pi_fine_overflow in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized3 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:193]
-WARNING: [Synth 8-3848] Net pi_counter_read_val_w in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized3 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:429]
-WARNING: [Synth 8-3848] Net dqs_out_of_range in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized3 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:196]
-WARNING: [Synth 8-3848] Net iserdes_clk in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized3 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:273]
-WARNING: [Synth 8-3848] Net iserdes_clkdiv in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized3 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:274]
-WARNING: [Synth 8-6014] Unused sequential element D_rst_primitives_reg was removed.  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:739]
+WARNING: [Synth 8-3848] Net rclk in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized0 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:145]
+WARNING: [Synth 8-3848] Net pi_iserdes_rst in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized0 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:191]
+WARNING: [Synth 8-3848] Net pi_fine_overflow in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized0 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:193]
+WARNING: [Synth 8-3848] Net pi_counter_read_val_w in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized0 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:429]
+WARNING: [Synth 8-3848] Net dqs_out_of_range in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized0 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:196]
+WARNING: [Synth 8-3848] Net iserdes_clk in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized0 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:273]
+WARNING: [Synth 8-3848] Net iserdes_clkdiv in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized0 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:274]
+WARNING: [Synth 8-6014] Unused sequential element fine_delay_r_reg was removed.  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:184]
+WARNING: [Synth 8-3848] Net dummy_i5 in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized1 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:267]
+WARNING: [Synth 8-3848] Net dummy_i6 in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized1 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:268]
+WARNING: [Synth 8-6014] Unused sequential element fine_delay_r_reg was removed.  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_group_io.v:184]
+WARNING: [Synth 8-3848] Net dummy_i5 in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized2 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:267]
+WARNING: [Synth 8-3848] Net dummy_i6 in module/entity mig_7series_v4_2_ddr_byte_lane__parameterized2 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_byte_lane.v:268]
 WARNING: [Synth 8-6014] Unused sequential element B_rst_primitives_reg was removed.  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:737]
 WARNING: [Synth 8-6014] Unused sequential element C_rst_primitives_reg was removed.  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:738]
-WARNING: [Synth 8-3848] Net D_pi_dqs_out_of_range in module/entity mig_7series_v4_2_ddr_phy_4lanes__parameterized0 does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:516]
+WARNING: [Synth 8-6014] Unused sequential element D_rst_primitives_reg was removed.  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_4lanes.v:739]
 WARNING: [Synth 8-7137] Register ddr_phy_4lanes_0.aux_out_reg in module mig_7series_v4_2_ddr_mc_phy has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:1143]
 WARNING: [Synth 8-7137] Register ddr_phy_4lanes_0.aux_out_reg in module mig_7series_v4_2_ddr_mc_phy has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:1143]
 WARNING: [Synth 8-7137] Register ddr_phy_4lanes_0.aux_out_reg in module mig_7series_v4_2_ddr_mc_phy has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:1132]
 WARNING: [Synth 8-7137] Register ddr_phy_4lanes_0.aux_out_reg in module mig_7series_v4_2_ddr_mc_phy has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:1132]
-WARNING: [Synth 8-7137] Register ddr_phy_4lanes_1.aux_out_reg in module mig_7series_v4_2_ddr_mc_phy has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:1398]
-WARNING: [Synth 8-7137] Register ddr_phy_4lanes_1.aux_out_reg in module mig_7series_v4_2_ddr_mc_phy has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:1398]
-WARNING: [Synth 8-7137] Register ddr_phy_4lanes_1.aux_out_reg in module mig_7series_v4_2_ddr_mc_phy has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:1387]
-WARNING: [Synth 8-7137] Register ddr_phy_4lanes_1.aux_out_reg in module mig_7series_v4_2_ddr_mc_phy has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy.v:1387]
 WARNING: [Synth 8-6014] Unused sequential element phy_ctl_wd_i1_reg was removed.  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:1401]
 WARNING: [Synth 8-6014] Unused sequential element phy_ctl_wr_i1_reg was removed.  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:1402]
 WARNING: [Synth 8-6014] Unused sequential element phy_ctl_wd_i2_reg was removed.  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_mc_phy_wrapper.v:1403]
@@ -924,6 +886,8 @@ WARNING: [Synth 8-6014] Unused sequential element add_largest_reg[0] was removed
 WARNING: [Synth 8-6014] Unused sequential element add_largest_reg[1] was removed.  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_wrlvl.v:517]
 WARNING: [Synth 8-6014] Unused sequential element dqs_wl_po_en_stg2_c_reg was removed.  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_wrlvl.v:628]
 WARNING: [Synth 8-6014] Unused sequential element po_en_stg2_c_reg was removed.  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_ck_addr_cmd_delay.v:162]
+WARNING: [Synth 8-6014] Unused sequential element rank_final_loop[0].final_do_max_reg[0] was removed.  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_dqs_found_cal_hr.v:1116]
+WARNING: [Synth 8-6014] Unused sequential element rank_final_loop[0].final_do_index_reg[0] was removed.  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_dqs_found_cal_hr.v:1146]
 WARNING: [Synth 8-6014] Unused sequential element dqsfound_retry_r1_reg was removed.  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_dqs_found_cal_hr.v:690]
 WARNING: [Synth 8-3848] Net dqsfound_retry_done in module/entity mig_7series_v4_2_ddr_phy_dqs_found_cal_hr does not have driver. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_dqs_found_cal_hr.v:131]
 WARNING: [Synth 8-6014] Unused sequential element gen_track_left_edge[0].pb_found_first_edge_r_reg was removed.  [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_rdlvl.v:2473]
@@ -1118,18 +1082,18 @@ WARNING: [Synth 8-7129] Port dbg_phy_init[206] in module mig_7series_v4_2_ddr_ph
 WARNING: [Synth 8-7129] Port dbg_phy_init[205] in module mig_7series_v4_2_ddr_phy_init is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2637.754 ; gain = 763.266 ; free physical = 11220 ; free virtual = 47623
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2634.027 ; gain = 756.602 ; free physical = 11730 ; free virtual = 48399
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2637.754 ; gain = 763.266 ; free physical = 11219 ; free virtual = 47622
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2634.027 ; gain = 756.602 ; free physical = 11733 ; free virtual = 48401
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2637.754 ; gain = 763.266 ; free physical = 11219 ; free virtual = 47622
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2634.027 ; gain = 756.602 ; free physical = 11733 ; free virtual = 48401
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2637.754 ; gain = 0.000 ; free physical = 11268 ; free virtual = 47671
+Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2634.027 ; gain = 0.000 ; free physical = 11754 ; free virtual = 48423
 INFO: [Netlist 29-17] Analyzing 76 Unisim elements for replacement
 WARNING: [Netlist 29-432] The IBUFG primitive 'u_mig_interface_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1146,7 +1110,7 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/mig_interfac
 INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2709.586 ; gain = 0.000 ; free physical = 11278 ; free virtual = 47682
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2702.859 ; gain = 0.000 ; free physical = 11770 ; free virtual = 48438
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 40 instances were transformed.
   IBUFDS_INTERMDISABLE => IBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT(x2)): 2 instances
@@ -1157,23 +1121,23 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   OBUFTDS => OBUFTDS_DUAL_BUF (INV, OBUFTDS(x2)): 2 instances
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 16 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2709.621 ; gain = 0.000 ; free physical = 11292 ; free virtual = 47695
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2702.895 ; gain = 0.000 ; free physical = 11773 ; free virtual = 48442
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2709.621 ; gain = 835.133 ; free physical = 11348 ; free virtual = 47752
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2702.895 ; gain = 825.469 ; free physical = 11867 ; free virtual = 48535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2717.590 ; gain = 843.102 ; free physical = 11348 ; free virtual = 47752
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2710.863 ; gain = 833.438 ; free physical = 11867 ; free virtual = 48535
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2717.590 ; gain = 843.102 ; free physical = 11348 ; free virtual = 47752
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2710.863 ; gain = 833.438 ; free physical = 11866 ; free virtual = 48533
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'xadc_supplied_temperature.tempmon_state_reg' in module 'mig_7series_v4_2_tempmon'
 INFO: [Synth 8-802] inferred FSM for state register 'wl_state_r_reg' in module 'mig_7series_v4_2_ddr_phy_wrlvl'
@@ -1367,7 +1331,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'cal2_state_r_reg' using en
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'tempmon_state_reg' using encoding 'one-hot' in module 'mig_7series_v4_2_ddr_phy_tempmon'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 2717.590 ; gain = 843.102 ; free physical = 11383 ; free virtual = 47791
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:41 ; elapsed = 00:00:41 . Memory (MB): peak = 2710.863 ; gain = 833.438 ; free physical = 11596 ; free virtual = 48289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -1378,17 +1342,17 @@ Detailed RTL Component Info :
 	   2 Input   13 Bit       Adders := 1     
 	   2 Input   12 Bit       Adders := 15    
 	   2 Input   11 Bit       Adders := 1     
-	   2 Input   10 Bit       Adders := 5     
+	   2 Input   10 Bit       Adders := 4     
 	   2 Input    9 Bit       Adders := 4     
 	   2 Input    8 Bit       Adders := 6     
 	   2 Input    7 Bit       Adders := 3     
-	   2 Input    6 Bit       Adders := 30    
+	   2 Input    6 Bit       Adders := 28    
 	   3 Input    6 Bit       Adders := 3     
-	   2 Input    5 Bit       Adders := 36    
+	   2 Input    5 Bit       Adders := 33    
 	   2 Input    4 Bit       Adders := 30    
-	   2 Input    3 Bit       Adders := 22    
+	   2 Input    3 Bit       Adders := 19    
 	   3 Input    3 Bit       Adders := 1     
-	   2 Input    2 Bit       Adders := 25    
+	   2 Input    2 Bit       Adders := 27    
 	   8 Input    2 Bit       Adders := 1     
 	   2 Input    1 Bit       Adders := 16    
 	   3 Input    1 Bit       Adders := 2     
@@ -1405,7 +1369,7 @@ Detailed RTL Component Info :
 	               80 Bit    Registers := 3     
 	               72 Bit    Registers := 1     
 	               64 Bit    Registers := 2     
-	               32 Bit    Registers := 2     
+	               32 Bit    Registers := 1     
 	               30 Bit    Registers := 1     
 	               28 Bit    Registers := 3     
 	               16 Bit    Registers := 8     
@@ -1414,25 +1378,25 @@ Detailed RTL Component Info :
 	               13 Bit    Registers := 1     
 	               12 Bit    Registers := 32    
 	               11 Bit    Registers := 1     
-	               10 Bit    Registers := 3     
-	                9 Bit    Registers := 14    
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 12    
 	                8 Bit    Registers := 7     
-	                7 Bit    Registers := 6     
-	                6 Bit    Registers := 60    
-	                5 Bit    Registers := 34    
+	                7 Bit    Registers := 3     
+	                6 Bit    Registers := 54    
+	                5 Bit    Registers := 33    
 	                4 Bit    Registers := 62    
-	                3 Bit    Registers := 46    
-	                2 Bit    Registers := 165   
-	                1 Bit    Registers := 1066  
+	                3 Bit    Registers := 42    
+	                2 Bit    Registers := 161   
+	                1 Bit    Registers := 1055  
 +---Muxes : 
-	   2 Input   80 Bit        Muxes := 7     
+	   2 Input   80 Bit        Muxes := 6     
 	   2 Input   64 Bit        Muxes := 5     
 	   4 Input   64 Bit        Muxes := 2     
 	  24 Input   35 Bit        Muxes := 1     
 	   2 Input   35 Bit        Muxes := 22    
 	   2 Input   32 Bit        Muxes := 1     
-	   2 Input   30 Bit        Muxes := 15    
-	   4 Input   30 Bit        Muxes := 5     
+	   2 Input   30 Bit        Muxes := 12    
+	   4 Input   30 Bit        Muxes := 4     
 	   2 Input   28 Bit        Muxes := 1     
 	   2 Input   21 Bit        Muxes := 6     
 	   3 Input   16 Bit        Muxes := 1     
@@ -1444,10 +1408,9 @@ Detailed RTL Component Info :
 	  11 Input   11 Bit        Muxes := 1     
 	   2 Input   11 Bit        Muxes := 7     
 	   2 Input   10 Bit        Muxes := 6     
-	   2 Input    9 Bit        Muxes := 21    
+	   2 Input    9 Bit        Muxes := 18    
 	   5 Input    9 Bit        Muxes := 1     
-	   3 Input    9 Bit        Muxes := 1     
-	   4 Input    9 Bit        Muxes := 7     
+	   4 Input    9 Bit        Muxes := 6     
 	   2 Input    8 Bit        Muxes := 11    
 	   2 Input    7 Bit        Muxes := 67    
 	   3 Input    7 Bit        Muxes := 2     
@@ -1455,13 +1418,13 @@ Detailed RTL Component Info :
 	   5 Input    7 Bit        Muxes := 2     
 	  58 Input    7 Bit        Muxes := 2     
 	 170 Input    7 Bit        Muxes := 1     
-	   2 Input    6 Bit        Muxes := 89    
-	   3 Input    6 Bit        Muxes := 3     
-	   4 Input    6 Bit        Muxes := 10    
+	   2 Input    6 Bit        Muxes := 83    
+	   4 Input    6 Bit        Muxes := 8     
 	  27 Input    6 Bit        Muxes := 4     
 	   5 Input    6 Bit        Muxes := 2     
 	  16 Input    6 Bit        Muxes := 1     
 	  24 Input    6 Bit        Muxes := 5     
+	   3 Input    6 Bit        Muxes := 2     
 	   2 Input    5 Bit        Muxes := 33    
 	   8 Input    5 Bit        Muxes := 2     
 	  27 Input    5 Bit        Muxes := 1     
@@ -1474,23 +1437,22 @@ Detailed RTL Component Info :
 	   8 Input    4 Bit        Muxes := 1     
 	   9 Input    4 Bit        Muxes := 1     
 	  23 Input    4 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 65    
+	   2 Input    3 Bit        Muxes := 63    
 	  27 Input    3 Bit        Muxes := 6     
-	   3 Input    3 Bit        Muxes := 1     
 	   8 Input    3 Bit        Muxes := 2     
 	   4 Input    3 Bit        Muxes := 2     
-	   2 Input    2 Bit        Muxes := 83    
-	   3 Input    2 Bit        Muxes := 4     
+	   2 Input    2 Bit        Muxes := 80    
+	   3 Input    2 Bit        Muxes := 5     
 	   8 Input    2 Bit        Muxes := 4     
 	  27 Input    2 Bit        Muxes := 1     
 	  24 Input    2 Bit        Muxes := 2     
 	   5 Input    2 Bit        Muxes := 1     
 	   4 Input    2 Bit        Muxes := 2     
 	   9 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 596   
-	   3 Input    1 Bit        Muxes := 17    
-	   4 Input    1 Bit        Muxes := 189   
+	   2 Input    1 Bit        Muxes := 576   
+	   3 Input    1 Bit        Muxes := 13    
 	   8 Input    1 Bit        Muxes := 4     
+	   4 Input    1 Bit        Muxes := 171   
 	  27 Input    1 Bit        Muxes := 27    
 	   5 Input    1 Bit        Muxes := 1     
 	  16 Input    1 Bit        Muxes := 21    
@@ -1517,7 +1479,7 @@ WARNING: [Synth 8-3936] Found unconnected internal register 'oclkdelay_start_dly
 WARNING: [Synth 8-3936] Found unconnected internal register 'wrcal_start_dly_r_reg' and it is trimmed from '15' to '14' bits. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_init.v:1229]
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_cal1_state_r_reg[25]) is unused and will be removed from module mig_7series_v4_2_ddr_phy_rdlvl.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:19 ; elapsed = 00:01:20 . Memory (MB): peak = 2858.676 ; gain = 984.188 ; free physical = 11296 ; free virtual = 47705
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:20 ; elapsed = 00:01:21 . Memory (MB): peak = 2857.121 ; gain = 979.695 ; free physical = 12390 ; free virtual = 49075
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1533,17 +1495,16 @@ ROM: Preliminary Mapping Report
 
 
 Distributed RAM: Preliminary Mapping Report (see note below)
-+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------+----------------------+--------------+
-|Module Name   | RTL Object                                                                                                              | Inference | Size (Depth x Width) | Primitives   | 
-+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------+----------------------+--------------+
-|mig_interface | of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg                                                                               | Implied   | 16 x 80              | RAM32M x 14  | 
-|mig_interface | ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg                                               | Implied   | 16 x 80              | RAM32M x 14  | 
-|mig_interface | ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg                                               | Implied   | 16 x 80              | RAM32M x 14  | 
-|mig_interface | ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg | Implied   | 4 x 80               | RAM32M x 14  | 
-|mig_interface | ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg | Implied   | 4 x 80               | RAM32M x 14  | 
-|mig_interface | ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg             | Implied   | 16 x 80              | RAM32M x 14  | 
-|mig_interface | ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg             | Implied   | 16 x 80              | RAM32M x 14  | 
-+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------+----------------------+--------------+
++--------------+---------------------------------------------------------------------------------------+-----------+----------------------+--------------+
+|Module Name   | RTL Object                                                                            | Inference | Size (Depth x Width) | Primitives   | 
++--------------+---------------------------------------------------------------------------------------+-----------+----------------------+--------------+
+|mig_interface | of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg                                             | Implied   | 16 x 80              | RAM32M x 14  | 
+|mig_interface | ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg             | Implied   | 16 x 80              | RAM32M x 14  | 
+|mig_interface | ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg | Implied   | 4 x 80               | RAM32M x 14  | 
+|mig_interface | ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg             | Implied   | 16 x 80              | RAM32M x 14  | 
+|mig_interface | ddr_byte_lane_D.ddr_byte_lane_D/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg | Implied   | 4 x 80               | RAM32M x 14  | 
+|mig_interface | ddr_byte_lane_D.ddr_byte_lane_D/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg             | Implied   | 16 x 80              | RAM32M x 14  | 
++--------------+---------------------------------------------------------------------------------------+-----------+----------------------+--------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
 ---------------------------------------------------------------------------------
@@ -1552,32 +1513,31 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3321] set_false_path : Empty through list for constraint at line 369 of /home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/constraints/mig_interface.xdc. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/constraints/mig_interface.xdc:369]
+WARNING: [Synth 8-3321] set_false_path : Empty through list for constraint at line 363 of /home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/constraints/mig_interface.xdc. [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/user_design/constraints/mig_interface.xdc:363]
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:22 ; elapsed = 00:01:23 . Memory (MB): peak = 2858.676 ; gain = 984.188 ; free physical = 11307 ; free virtual = 47716
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:23 ; elapsed = 00:01:25 . Memory (MB): peak = 2857.121 ; gain = 979.695 ; free physical = 12345 ; free virtual = 49034
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:23 ; elapsed = 00:01:24 . Memory (MB): peak = 2858.676 ; gain = 984.188 ; free physical = 11339 ; free virtual = 47744
+Finished Timing Optimization : Time (s): cpu = 00:01:24 ; elapsed = 00:01:25 . Memory (MB): peak = 2857.121 ; gain = 979.695 ; free physical = 12363 ; free virtual = 49051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Distributed RAM: Final Mapping Report
-+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------+----------------------+--------------+
-|Module Name   | RTL Object                                                                                                              | Inference | Size (Depth x Width) | Primitives   | 
-+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------+----------------------+--------------+
-|mig_interface | of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg                                                                               | Implied   | 16 x 80              | RAM32M x 14  | 
-|mig_interface | ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg                                               | Implied   | 16 x 80              | RAM32M x 14  | 
-|mig_interface | ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg                                               | Implied   | 16 x 80              | RAM32M x 14  | 
-|mig_interface | ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg | Implied   | 4 x 80               | RAM32M x 14  | 
-|mig_interface | ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg | Implied   | 4 x 80               | RAM32M x 14  | 
-|mig_interface | ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg             | Implied   | 16 x 80              | RAM32M x 14  | 
-|mig_interface | ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg             | Implied   | 16 x 80              | RAM32M x 14  | 
-+--------------+-------------------------------------------------------------------------------------------------------------------------+-----------+----------------------+--------------+
++--------------+---------------------------------------------------------------------------------------+-----------+----------------------+--------------+
+|Module Name   | RTL Object                                                                            | Inference | Size (Depth x Width) | Primitives   | 
++--------------+---------------------------------------------------------------------------------------+-----------+----------------------+--------------+
+|mig_interface | of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg                                             | Implied   | 16 x 80              | RAM32M x 14  | 
+|mig_interface | ddr_byte_lane_B.ddr_byte_lane_B/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg             | Implied   | 16 x 80              | RAM32M x 14  | 
+|mig_interface | ddr_byte_lane_C.ddr_byte_lane_C/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg | Implied   | 4 x 80               | RAM32M x 14  | 
+|mig_interface | ddr_byte_lane_C.ddr_byte_lane_C/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg             | Implied   | 16 x 80              | RAM32M x 14  | 
+|mig_interface | ddr_byte_lane_D.ddr_byte_lane_D/dq_gen_40.if_post_fifo_gen.u_ddr_if_post_fifo/mem_reg | Implied   | 4 x 80               | RAM32M x 14  | 
+|mig_interface | ddr_byte_lane_D.ddr_byte_lane_D/of_pre_fifo_gen.u_ddr_of_pre_fifo/mem_reg             | Implied   | 16 x 80              | RAM32M x 14  | 
++--------------+---------------------------------------------------------------------------------------+-----------+----------------------+--------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1586,7 +1546,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:24 ; elapsed = 00:01:25 . Memory (MB): peak = 2858.676 ; gain = 984.188 ; free physical = 11316 ; free virtual = 47725
+Finished Technology Mapping : Time (s): cpu = 00:01:25 ; elapsed = 00:01:27 . Memory (MB): peak = 2857.121 ; gain = 979.695 ; free physical = 12369 ; free virtual = 49054
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1604,37 +1564,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:27 ; elapsed = 00:01:28 . Memory (MB): peak = 3001.488 ; gain = 1127.000 ; free physical = 11223 ; free virtual = 47626
+Finished IO Insertion : Time (s): cpu = 00:01:28 ; elapsed = 00:01:30 . Memory (MB): peak = 2997.934 ; gain = 1120.508 ; free physical = 12245 ; free virtual = 48930
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:27 ; elapsed = 00:01:28 . Memory (MB): peak = 3001.488 ; gain = 1127.000 ; free physical = 11223 ; free virtual = 47626
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:28 ; elapsed = 00:01:30 . Memory (MB): peak = 2997.934 ; gain = 1120.508 ; free physical = 12245 ; free virtual = 48930
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:28 ; elapsed = 00:01:29 . Memory (MB): peak = 3001.488 ; gain = 1127.000 ; free physical = 11192 ; free virtual = 47601
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:29 ; elapsed = 00:01:30 . Memory (MB): peak = 2997.934 ; gain = 1120.508 ; free physical = 12266 ; free virtual = 48951
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:28 ; elapsed = 00:01:29 . Memory (MB): peak = 3001.488 ; gain = 1127.000 ; free physical = 11192 ; free virtual = 47601
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:29 ; elapsed = 00:01:30 . Memory (MB): peak = 2997.934 ; gain = 1120.508 ; free physical = 12268 ; free virtual = 48953
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:28 ; elapsed = 00:01:29 . Memory (MB): peak = 3001.488 ; gain = 1127.000 ; free physical = 11190 ; free virtual = 47599
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:29 ; elapsed = 00:01:30 . Memory (MB): peak = 2997.934 ; gain = 1120.508 ; free physical = 12264 ; free virtual = 48949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:28 ; elapsed = 00:01:29 . Memory (MB): peak = 3001.488 ; gain = 1127.000 ; free physical = 11190 ; free virtual = 47599
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:29 ; elapsed = 00:01:30 . Memory (MB): peak = 2997.934 ; gain = 1120.508 ; free physical = 12264 ; free virtual = 48949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1644,9 +1604,8 @@ Static Shift Register Report:
 +--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 |Module Name   | RTL Name                                                                                                                                                                                       | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
 +--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|mig_interface | u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_1.u_ddr_phy_4lanes/rclk_delay_reg[11]                                           | 12     | 1     | NO           | NO                 | YES               | 1      | 0       | 
-|mig_interface | u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/ddr_byte_group_io/rst_r4_reg | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
 |mig_interface | u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/rclk_delay_reg[11]                                           | 12     | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|mig_interface | u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/ddr_byte_group_io/rst_r4_reg | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
 |mig_interface | u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_calib_top/mb_wrlvl_inst.u_ddr_phy_wrlvl/phy_ctl_ready_r5_reg                                                               | 5      | 1     | NO           | NO                 | YES               | 1      | 0       | 
 |mig_interface | u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_calib_top/mb_wrlvl_inst.u_ddr_phy_ck_addr_cmd_delay/delay_done_r4_reg                                                      | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
 |mig_interface | u_mig_interface_mig/u_memc_ui_top_std/mem_intfc0/ddr_phy_top0/u_ddr_calib_top/dqsfind_calib_left.u_ddr_phy_dqs_found_cal_hr/init_dqsfound_done_r5_reg                                          | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
@@ -1677,37 +1636,37 @@ Report Cell Usage:
 +------+----------------------+------+
 |1     |BUFG                  |     3|
 |2     |BUFH                  |     1|
-|3     |BUFIO                 |     2|
+|3     |BUFIO                 |     1|
 |4     |CARRY4                |   102|
 |5     |IDELAYCTRL            |     1|
 |6     |IDELAYE2              |    16|
 |7     |IN_FIFO               |     2|
 |8     |ISERDESE2             |    16|
-|9     |LUT1                  |   312|
-|10    |LUT2                  |   431|
-|11    |LUT3                  |   607|
-|12    |LUT4                  |   620|
-|13    |LUT5                  |   857|
-|14    |LUT6                  |  1243|
+|9     |LUT1                  |   290|
+|10    |LUT2                  |   417|
+|11    |LUT3                  |   585|
+|12    |LUT4                  |   619|
+|13    |LUT5                  |   829|
+|14    |LUT6                  |  1251|
 |15    |MMCME2_ADV            |     1|
-|16    |MUXF7                 |     1|
+|16    |MUXF7                 |     3|
 |17    |ODDR                  |     5|
 |18    |OSERDESE2             |    43|
-|21    |OUT_FIFO              |     5|
+|21    |OUT_FIFO              |     4|
 |22    |PHASER_IN_PHY         |     2|
-|23    |PHASER_OUT_PHY        |     5|
-|25    |PHASER_REF            |     2|
-|26    |PHY_CONTROL           |     2|
+|23    |PHASER_OUT_PHY        |     4|
+|25    |PHASER_REF            |     1|
+|26    |PHY_CONTROL           |     1|
 |27    |PLLE2_ADV             |     1|
-|28    |RAM32M                |    54|
-|29    |RAM32X1D              |     4|
-|30    |SRL16E                |    12|
+|28    |RAM32M                |    53|
+|29    |RAM32X1D              |     6|
+|30    |SRL16E                |    11|
 |31    |SRLC32E               |     1|
 |32    |XADC                  |     1|
-|33    |FDCE                  |     3|
+|33    |FDCE                  |     2|
 |34    |FDPE                  |    72|
-|35    |FDRE                  |  2684|
-|36    |FDSE                  |    71|
+|35    |FDRE                  |  2606|
+|36    |FDSE                  |    76|
 |37    |IBUFG                 |     1|
 |38    |IOBUFDS_INTERMDISABLE |     2|
 |39    |IOBUF_INTERMDISABLE   |    16|
@@ -1716,39 +1675,39 @@ Report Cell Usage:
 |42    |OBUFT                 |     2|
 +------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:28 ; elapsed = 00:01:29 . Memory (MB): peak = 3001.488 ; gain = 1127.000 ; free physical = 11190 ; free virtual = 47599
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:29 ; elapsed = 00:01:30 . Memory (MB): peak = 2997.934 ; gain = 1120.508 ; free physical = 12264 ; free virtual = 48949
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:25 ; elapsed = 00:01:27 . Memory (MB): peak = 3001.488 ; gain = 1055.133 ; free physical = 11175 ; free virtual = 47584
-Synthesis Optimization Complete : Time (s): cpu = 00:01:28 ; elapsed = 00:01:29 . Memory (MB): peak = 3004.457 ; gain = 1127.000 ; free physical = 11175 ; free virtual = 47584
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:26 ; elapsed = 00:01:28 . Memory (MB): peak = 2997.934 ; gain = 1051.641 ; free physical = 12263 ; free virtual = 48949
+Synthesis Optimization Complete : Time (s): cpu = 00:01:29 ; elapsed = 00:01:30 . Memory (MB): peak = 3000.902 ; gain = 1120.508 ; free physical = 12263 ; free virtual = 48949
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3011.395 ; gain = 0.000 ; free physical = 11260 ; free virtual = 47669
-INFO: [Netlist 29-17] Analyzing 221 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 3009.809 ; gain = 0.000 ; free physical = 12413 ; free virtual = 49091
+INFO: [Netlist 29-17] Analyzing 224 Unisim elements for replacement
 WARNING: [Netlist 29-432] The IBUFG primitive 'u_mig_interface_mig/u_ddr3_clk_ibuf/se_input_clk.u_ibufg_sys_clk' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 2 inverter(s) to 16 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3081.297 ; gain = 0.000 ; free physical = 11277 ; free virtual = 47680
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3078.711 ; gain = 0.000 ; free physical = 12393 ; free virtual = 49078
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 82 instances were transformed.
+  A total of 83 instances were transformed.
   IBUFDS_INTERMDISABLE => IBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT(x2)): 2 instances
   IBUFG => IBUF: 1 instance 
   IOBUFDS_INTERMDISABLE => IOBUFDS_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT(x2), INV, OBUFTDS(x2)): 2 instances
   IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
   OBUFTDS => OBUFTDS_DUAL_BUF (INV, OBUFTDS(x2)): 2 instances
-  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 54 instances
-  RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 53 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 6 instances
 
-Synth Design complete | Checksum: 4a3d51c3
+Synth Design complete | Checksum: 5fa8365
 INFO: [Common 17-83] Releasing license: Vivado_Synthesis
-228 Infos, 321 Warnings, 0 Critical Warnings and 0 Errors encountered.
+221 Infos, 292 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:32 ; elapsed = 00:01:32 . Memory (MB): peak = 3081.332 ; gain = 1348.156 ; free physical = 11284 ; free virtual = 47693
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2151.410; main = 2086.426; forked = 275.244
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3897.613; main = 3081.301; forked = 1038.934
-INFO: [Coretcl 2-1174] Renamed 65 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3105.309 ; gain = 0.000 ; free physical = 11282 ; free virtual = 47692
+synth_design: Time (s): cpu = 00:01:33 ; elapsed = 00:01:33 . Memory (MB): peak = 3078.746 ; gain = 1345.570 ; free physical = 12387 ; free virtual = 49073
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2143.859; main = 2086.945; forked = 275.292
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3896.059; main = 3078.715; forked = 1038.934
+INFO: [Coretcl 2-1174] Renamed 61 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3102.723 ; gain = 0.000 ; free physical = 12387 ; free virtual = 49073
 INFO: [Common 17-1381] The checkpoint '/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/mig_interface_synth_1/mig_interface.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file mig_interface_utilization_synth.rpt -pb mig_interface_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Oct 17 19:22:01 2026...
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 17 21:47:14 2026...

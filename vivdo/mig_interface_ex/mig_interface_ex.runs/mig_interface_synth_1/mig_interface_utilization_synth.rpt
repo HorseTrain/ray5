@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2026.1 (lin64) Build 6511674 Tue Jun 16 11:01:26 MDT 2026
-| Date         : Sat Oct 17 19:22:00 2026
+| Date         : Sat Oct 17 21:47:13 2026
 | Host         : raymond-MS-7C91 running 64-bit Ubuntu 26.04.1 LTS
 | Command      : report_utilization -file mig_interface_utilization_synth.rpt -pb mig_interface_utilization_synth.pb
 | Design       : mig_interface
@@ -31,17 +31,17 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                | 3549 |     0 |          0 |     32600 | 10.89 |
-|   LUT as Logic             | 3312 |     0 |          0 |     32600 | 10.16 |
-|   LUT as Memory            |  237 |     0 |          0 |      9600 |  2.47 |
+| Slice LUTs*                | 3478 |     0 |          0 |     32600 | 10.67 |
+|   LUT as Logic             | 3242 |     0 |          0 |     32600 |  9.94 |
+|   LUT as Memory            |  236 |     0 |          0 |      9600 |  2.46 |
 |     LUT as Distributed RAM |  224 |     0 |            |           |       |
-|     LUT as Shift Register  |   13 |     0 |            |           |       |
-| Slice Registers            | 2830 |     0 |          0 |     65200 |  4.34 |
-|   Register as Flip Flop    | 2830 |     0 |          0 |     65200 |  4.34 |
+|     LUT as Shift Register  |   12 |     0 |            |           |       |
+| Slice Registers            | 2756 |     0 |          0 |     65200 |  4.23 |
+|   Register as Flip Flop    | 2756 |     0 |          0 |     65200 |  4.23 |
 |   Register as Latch        |    0 |     0 |          0 |     65200 |  0.00 |
-| F7 Muxes                   |    1 |     0 |          0 |     16300 | <0.01 |
+| F7 Muxes                   |    3 |     0 |          0 |     16300 |  0.02 |
 | F8 Muxes                   |    0 |     0 |          0 |      8150 |  0.00 |
-| Unique Control Sets        |  164 |       |          0 |      8150 |  2.01 |
+| Unique Control Sets        |  161 |       |          0 |      8150 |  1.98 |
 +----------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 Warning! LUT value is adjusted to account for LUT combining.
@@ -62,9 +62,9 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 72    |          Yes |           - |          Set |
-| 3     |          Yes |           - |        Reset |
-| 71    |          Yes |         Set |            - |
-| 2684  |          Yes |       Reset |            - |
+| 2     |          Yes |           - |        Reset |
+| 76    |          Yes |         Set |            - |
+| 2606  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -99,14 +99,14 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +-----------------------------+------+-------+------------+-----------+-------+
 | Bonded IOB                  |   49 |     0 |          0 |       210 | 23.33 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
-| PHY_CONTROL                 |    2 |     0 |          0 |         5 | 40.00 |
-| PHASER_REF                  |    2 |     0 |          0 |         5 | 40.00 |
-| OUT_FIFO                    |    5 |     0 |          0 |        20 | 25.00 |
+| PHY_CONTROL                 |    1 |     0 |          0 |         5 | 20.00 |
+| PHASER_REF                  |    1 |     0 |          0 |         5 | 20.00 |
+| OUT_FIFO                    |    4 |     0 |          0 |        20 | 20.00 |
 | IN_FIFO                     |    2 |     0 |          0 |        20 | 10.00 |
 | IDELAYCTRL                  |    1 |     0 |          0 |         5 | 20.00 |
 | IBUFDS                      |    0 |     0 |          0 |       202 |  0.00 |
-| PHASER_OUT/PHASER_OUT_PHY   |    5 |     0 |          0 |        20 | 25.00 |
-|   PHASER_OUT_PHY only       |    5 |     0 |            |           |       |
+| PHASER_OUT/PHASER_OUT_PHY   |    4 |     0 |          0 |        20 | 20.00 |
+|   PHASER_OUT_PHY only       |    4 |     0 |            |           |       |
 | PHASER_IN/PHASER_IN_PHY     |    2 |     0 |          0 |        20 | 10.00 |
 |   PHASER_IN_PHY only        |    2 |     0 |            |           |       |
 | IDELAYE2/IDELAYE2_FINEDELAY |   16 |     0 |          0 |       250 |  6.40 |
@@ -158,42 +158,42 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +--------------------------+------+---------------------+
 |         Ref Name         | Used | Functional Category |
 +--------------------------+------+---------------------+
-| FDRE                     | 2684 |        Flop & Latch |
-| LUT6                     | 1243 |                 LUT |
-| LUT5                     |  857 |                 LUT |
-| LUT4                     |  620 |                 LUT |
-| LUT3                     |  607 |                 LUT |
-| LUT2                     |  431 |                 LUT |
-| RAMD32                   |  332 |  Distributed Memory |
-| LUT1                     |  310 |                 LUT |
-| RAMS32                   |  108 |  Distributed Memory |
+| FDRE                     | 2606 |        Flop & Latch |
+| LUT6                     | 1251 |                 LUT |
+| LUT5                     |  829 |                 LUT |
+| LUT4                     |  619 |                 LUT |
+| LUT3                     |  585 |                 LUT |
+| LUT2                     |  417 |                 LUT |
+| RAMD32                   |  330 |  Distributed Memory |
+| LUT1                     |  288 |                 LUT |
+| RAMS32                   |  106 |  Distributed Memory |
 | CARRY4                   |  102 |          CarryLogic |
+| FDSE                     |   76 |        Flop & Latch |
 | FDPE                     |   72 |        Flop & Latch |
-| FDSE                     |   71 |        Flop & Latch |
 | OSERDESE2                |   43 |                  IO |
 | OBUF                     |   24 |                  IO |
 | OBUFT                    |   18 |                  IO |
 | ISERDESE2                |   16 |                  IO |
 | IDELAYE2                 |   16 |                  IO |
 | IBUF_INTERMDISABLE       |   16 |                  IO |
-| SRL16E                   |   12 |  Distributed Memory |
-| PHASER_OUT_PHY           |    5 |                  IO |
-| OUT_FIFO                 |    5 |                  IO |
+| SRL16E                   |   11 |  Distributed Memory |
 | ODDR                     |    5 |                  IO |
+| PHASER_OUT_PHY           |    4 |                  IO |
+| OUT_FIFO                 |    4 |                  IO |
 | OBUFTDS                  |    4 |                  IO |
 | IBUFDS_INTERMDISABLE_INT |    4 |                  IO |
+| MUXF7                    |    3 |               MuxFx |
 | INV                      |    3 |                 LUT |
-| FDCE                     |    3 |        Flop & Latch |
 | BUFG                     |    3 |               Clock |
-| PHY_CONTROL              |    2 |                  IO |
-| PHASER_REF               |    2 |                  IO |
 | PHASER_IN_PHY            |    2 |                  IO |
 | OBUFDS                   |    2 |                  IO |
 | IN_FIFO                  |    2 |                  IO |
+| FDCE                     |    2 |        Flop & Latch |
 | XADC                     |    1 |              Others |
 | SRLC32E                  |    1 |  Distributed Memory |
 | PLLE2_ADV                |    1 |               Clock |
-| MUXF7                    |    1 |               MuxFx |
+| PHY_CONTROL              |    1 |                  IO |
+| PHASER_REF               |    1 |                  IO |
 | MMCME2_ADV               |    1 |               Clock |
 | IDELAYCTRL               |    1 |                  IO |
 | IBUF                     |    1 |                  IO |
