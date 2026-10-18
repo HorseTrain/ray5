@@ -1,2 +1,0 @@
-clock_wizzard_sim_netlist.vhdl,vhdl,xil_defaultlib,../../../../mig_interface_ex.gen/sources_1/ip/clock_wizzard/clock_wizzard_sim_netlist.vhdl,incdir="../../../../../../../amd/2026.1/data/rsb/busdef"incdir="../../../../mig_interface_ex.gen/sources_1/ip/clock_wizzard"
-glbl.v,Verilog,xil_defaultlib,glbl.v

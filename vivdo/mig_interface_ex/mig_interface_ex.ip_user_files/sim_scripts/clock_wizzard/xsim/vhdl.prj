@@ -1,5 +1,0 @@
-vhdl xil_defaultlib  \
-"../../../../mig_interface_ex.gen/sources_1/ip/clock_wizzard/clock_wizzard_sim_netlist.vhdl" \
-
-# Do not sort compile order
-nosort
