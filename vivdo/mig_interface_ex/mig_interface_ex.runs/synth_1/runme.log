@@ -8,8 +8,8 @@ INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detect
 # SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
 # IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
 # SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
-# Start of session at: Sat Oct 17 19:36:57 2026
-# Process ID         : 763877
+# Start of session at: Sat Oct 17 19:37:25 2026
+# Process ID         : 774307
 # Current directory  : /home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/synth_1
 # Command line       : vivado -log cpu.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cpu.tcl
 # Log file           : /home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/synth_1/cpu.vds
@@ -18,20 +18,20 @@ INFO: [Common 17-3922] A valid Vivado Design Suite BASIC license has been detect
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 26.04.1 LTS
 # Processor Detail   : AMD Ryzen 9 5900X 12-Core Processor
-# CPU Frequency      : 4610.810 MHz
+# CPU Frequency      : 4674.853 MHz
 # CPU Physical cores : 12
 # CPU Logical cores  : 24
 # Host memory        : 65190 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 73780 MB
-# Available Virtual  : 57746 MB
+# Available Virtual  : 57580 MB
 #-----------------------------------------------------------
 
 ****** Vivado v2026.1 (64-bit)
   **** SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
   **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
   **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
-  **** Start of session at: Sat Oct 17 19:36:57 2026
+  **** Start of session at: Sat Oct 17 19:37:25 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -44,4 +44,395 @@ INFO: [Device 21-403] Loading part xc7s50csga324-1
 INFO: [Designutils 20-5008] Incremental synthesis strategy default
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 766560
+INFO: [Synth 8-7075] Helper process launched with PID 776917
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2393.418 ; gain = 517.031 ; free physical = 17042 ; free virtual = 53443
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'cpu' [/home/raymond/Desktop/ray5/src/cpu.vhdl:56]
+INFO: [Synth 8-638] synthesizing module 'clock_wizzard' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/synth_1/.Xil/Vivado-774307-raymond-MS-7C91/realtime/clock_wizzard_stub.vhdl:20]
+INFO: [Synth 8-638] synthesizing module 'core' [/home/raymond/Desktop/ray5/src/core.vhdl:32]
+INFO: [Synth 8-638] synthesizing module 'register_store' [/home/raymond/Desktop/ray5/src/register_store.vhdl:45]
+INFO: [Synth 8-256] done synthesizing module 'register_store' (0#1) [/home/raymond/Desktop/ray5/src/register_store.vhdl:45]
+INFO: [Synth 8-226] default block is never used [/home/raymond/Desktop/ray5/src/core.vhdl:121]
+INFO: [Synth 8-256] done synthesizing module 'core' (0#1) [/home/raymond/Desktop/ray5/src/core.vhdl:32]
+INFO: [Synth 8-638] synthesizing module 'memory_interface' [/home/raymond/Desktop/ray5/src/memory_interface.vhdl:31]
+INFO: [Synth 8-226] default block is never used [/home/raymond/Desktop/ray5/src/memory_interface.vhdl:86]
+INFO: [Synth 8-638] synthesizing module 'mig_interface' [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/synth_1/.Xil/Vivado-774307-raymond-MS-7C91/realtime/mig_interface_stub.vhdl:52]
+INFO: [Synth 8-256] done synthesizing module 'memory_interface' (0#1) [/home/raymond/Desktop/ray5/src/memory_interface.vhdl:31]
+INFO: [Synth 8-256] done synthesizing module 'cpu' (0#1) [/home/raymond/Desktop/ray5/src/cpu.vhdl:56]
+WARNING: [Synth 8-3848] Net outputs[value] in module/entity memory_interface does not have driver. [/home/raymond/Desktop/ray5/src/memory_interface.vhdl:20]
+WARNING: [Synth 8-6014] Unused sequential element led_test_reg was removed.  [/home/raymond/Desktop/ray5/src/cpu.vhdl:218]
+WARNING: [Synth 8-6014] Unused sequential element led0_r_reg was removed.  [/home/raymond/Desktop/ray5/src/cpu.vhdl:225]
+WARNING: [Synth 8-6014] Unused sequential element cores_ready_check_idx_reg was removed.  [/home/raymond/Desktop/ray5/src/cpu.vhdl:231]
+WARNING: [Synth 8-6014] Unused sequential element cores_ready_check_reg was removed.  [/home/raymond/Desktop/ray5/src/cpu.vhdl:239]
+WARNING: [Synth 8-6014] Unused sequential element cores_ready_reg was removed.  [/home/raymond/Desktop/ray5/src/cpu.vhdl:229]
+WARNING: [Synth 8-6014] Unused sequential element memory_ready_reg was removed.  [/home/raymond/Desktop/ray5/src/cpu.vhdl:264]
+WARNING: [Synth 8-6014] Unused sequential element cpu_state_reg was removed.  [/home/raymond/Desktop/ray5/src/cpu.vhdl:220]
+WARNING: [Synth 8-3848] Net memory_interface_bus[inputs][address] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:130]
+WARNING: [Synth 8-3848] Net memory_interface_bus[inputs][command] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:130]
+WARNING: [Synth 8-3848] Net memory_interface_bus[inputs][value] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:130]
+WARNING: [Synth 8-3848] Net memory_interface_bus[inputs][size] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:130]
+WARNING: [Synth 8-3848] Net memory_interface_bus[inputs][start_command] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:130]
+WARNING: [Synth 8-3848] Net core_bus_collection[0][inputs][set_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
+WARNING: [Synth 8-3848] Net core_bus_collection[0][inputs][new_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
+WARNING: [Synth 8-3848] Net core_bus_collection[1][inputs][set_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
+WARNING: [Synth 8-3848] Net core_bus_collection[1][inputs][new_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
+WARNING: [Synth 8-3848] Net core_bus_collection[2][inputs][set_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
+WARNING: [Synth 8-3848] Net core_bus_collection[2][inputs][new_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
+WARNING: [Synth 8-3848] Net core_bus_collection[3][inputs][set_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
+WARNING: [Synth 8-3848] Net core_bus_collection[3][inputs][new_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
+WARNING: [Synth 8-3848] Net core_bus_collection[4][inputs][set_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
+WARNING: [Synth 8-3848] Net core_bus_collection[4][inputs][new_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
+WARNING: [Synth 8-3848] Net core_bus_collection[5][inputs][set_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
+WARNING: [Synth 8-3848] Net core_bus_collection[5][inputs][new_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
+WARNING: [Synth 8-3848] Net core_bus_collection[6][inputs][set_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
+WARNING: [Synth 8-3848] Net core_bus_collection[6][inputs][new_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
+WARNING: [Synth 8-3848] Net core_bus_collection[7][inputs][set_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
+WARNING: [Synth 8-3848] Net core_bus_collection[7][inputs][new_program_counter] in module/entity cpu does not have driver. [/home/raymond/Desktop/ray5/src/cpu.vhdl:71]
+WARNING: [Synth 8-7129] Port outputs[value][0] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][1] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][2] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][3] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][4] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][5] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][6] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][7] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][8] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][9] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][10] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][11] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][12] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][13] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][14] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][15] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][16] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][17] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][18] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][19] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][20] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][21] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][22] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][23] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][24] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][25] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][26] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][27] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][28] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][29] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][30] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][31] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][32] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][33] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][34] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][35] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][36] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][37] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][38] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][39] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][40] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][41] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][42] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][43] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][44] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][45] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][46] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][47] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][48] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][49] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][50] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][51] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][52] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][53] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][54] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][55] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][56] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][57] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][58] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][59] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][60] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][61] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][62] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port outputs[value][63] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][0] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][1] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][2] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][3] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][4] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][5] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][6] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][7] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][8] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][9] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][10] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][11] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][12] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][13] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][14] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][15] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][16] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][17] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][18] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][19] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][20] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][21] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][22] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][23] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][24] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][25] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][26] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][27] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][28] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][29] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][30] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][31] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][32] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][33] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][34] in module memory_interface is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[address][35] in module memory_interface is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2484.387 ; gain = 608.000 ; free physical = 16959 ; free virtual = 53362
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2493.293 ; gain = 616.906 ; free physical = 16963 ; free virtual = 53366
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2493.293 ; gain = 616.906 ; free physical = 16963 ; free virtual = 53366
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2493.293 ; gain = 0.000 ; free physical = 16953 ; free virtual = 53356
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/clock_wizzard/clock_wizzard/clock_wizzard_in_context.xdc] for cell 'clock_wizzard'
+Finished Parsing XDC File [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/clock_wizzard/clock_wizzard/clock_wizzard_in_context.xdc] for cell 'clock_wizzard'
+Parsing XDC File [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/mig_interface_in_context.xdc] for cell 'memory_interface/mig'
+Finished Parsing XDC File [/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.gen/sources_1/ip/mig_interface/mig_interface/mig_interface_in_context.xdc] for cell 'memory_interface/mig'
+Parsing XDC File [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc]
+Finished Parsing XDC File [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/raymond/Desktop/ray5/src/Arty-S7-50-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cpu_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/cpu_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2589.062 ; gain = 0.000 ; free physical = 16875 ; free virtual = 53277
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2589.098 ; gain = 0.000 ; free physical = 16869 ; free virtual = 53271
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2589.098 ; gain = 712.711 ; free physical = 16739 ; free virtual = 53143
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2597.066 ; gain = 720.680 ; free physical = 16739 ; free virtual = 53143
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2597.066 ; gain = 720.680 ; free physical = 16739 ; free virtual = 53142
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'register_store'
+INFO: [Synth 8-802] inferred FSM for state register 'register_store_init_state_reg' in module 'core'
+INFO: [Synth 8-802] inferred FSM for state register 'core_state_reg' in module 'core'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                               00 |                               00
+                 iSTATE1 |                               01 |                               01
+                 iSTATE2 |                               10 |                               10
+                  iSTATE |                               11 |                               11
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'register_store'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+register_store_not_ready |                               00 |                               00
+register_store_set_reset |                               01 |                               01
+register_store_resetting |                               10 |                               10
+    register_store_ready |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'register_store_init_state_reg' using encoding 'User encoding' in module 'core'
+WARNING: [Synth 8-13157] FSM with state register 'register_store_init_state_reg' is not having reset. This may cause incorrect behavior. User should consider using FSM_SAFE_STATE attribute on the register
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+ core_state_initializing |                              001 |                              000
+         core_state_idle |                              010 |                              001
+core_state_set_program_counter |                              100 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'core_state_reg' using encoding 'one-hot' in module 'core'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2597.066 ; gain = 720.680 ; free physical = 16728 ; free virtual = 53134
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'cores[0].core_i' (core) to 'cores[1].core_i'
+INFO: [Synth 8-223] decloning instance 'cores[0].core_i' (core) to 'cores[2].core_i'
+INFO: [Synth 8-223] decloning instance 'cores[0].core_i' (core) to 'cores[3].core_i'
+INFO: [Synth 8-223] decloning instance 'cores[0].core_i' (core) to 'cores[4].core_i'
+INFO: [Synth 8-223] decloning instance 'cores[0].core_i' (core) to 'cores[5].core_i'
+INFO: [Synth 8-223] decloning instance 'cores[0].core_i' (core) to 'cores[6].core_i'
+INFO: [Synth 8-223] decloning instance 'cores[0].core_i' (core) to 'cores[7].core_i'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    4 Bit       Adders := 2     
++---Registers : 
+	               64 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input   64 Bit        Muxes := 2     
+	   3 Input   64 Bit        Muxes := 1     
+	   4 Input   64 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 8     
+	   4 Input    1 Bit        Muxes := 12    
+	   3 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element cores[0].core_i/general_purpose_registers/register_collection_reg was removed. 
+WARNING: [Synth 8-3332] Sequential element (cores[0].core_i/general_purpose_registers/FSM_sequential_state_reg[1]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (cores[0].core_i/general_purpose_registers/FSM_sequential_state_reg[0]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (cores[0].core_i/FSM_onehot_core_state_reg[2]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (cores[0].core_i/FSM_onehot_core_state_reg[1]) is unused and will be removed from module cpu.
+WARNING: [Synth 8-3332] Sequential element (cores[0].core_i/FSM_onehot_core_state_reg[0]) is unused and will be removed from module cpu.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2597.066 ; gain = 720.680 ; free physical = 16632 ; free virtual = 53041
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2672.066 ; gain = 795.680 ; free physical = 16855 ; free virtual = 53270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2672.066 ; gain = 795.680 ; free physical = 16855 ; free virtual = 53270
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2681.082 ; gain = 804.695 ; free physical = 16846 ; free virtual = 53262
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2886.895 ; gain = 1010.508 ; free physical = 16319 ; free virtual = 52790
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2886.895 ; gain = 1010.508 ; free physical = 16319 ; free virtual = 52790
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2886.895 ; gain = 1010.508 ; free physical = 16320 ; free virtual = 52791
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2886.895 ; gain = 1010.508 ; free physical = 16319 ; free virtual = 52790
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2886.895 ; gain = 1010.508 ; free physical = 16319 ; free virtual = 52790
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2886.895 ; gain = 1010.508 ; free physical = 16319 ; free virtual = 52790
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |clock_wizzard |         1|
+|2     |mig_interface |         1|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------------+------+
+|      |Cell          |Count |
++------+--------------+------+
+|1     |clock_wizzard |     1|
+|2     |mig_interface |     1|
++------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2886.895 ; gain = 1010.508 ; free physical = 16319 ; free virtual = 52790
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2886.895 ; gain = 914.703 ; free physical = 16297 ; free virtual = 52768
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2886.902 ; gain = 1010.508 ; free physical = 16297 ; free virtual = 52768
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2886.902 ; gain = 0.000 ; free physical = 16297 ; free virtual = 52768
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2886.902 ; gain = 0.000 ; free physical = 16338 ; free virtual = 52808
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: ea50da8b
+INFO: [Common 17-83] Releasing license: Vivado_Synthesis
+40 Infos, 136 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:20 . Memory (MB): peak = 2886.930 ; gain = 1154.855 ; free physical = 16327 ; free virtual = 52797
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1943.510; main = 1943.510; forked = 275.049
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3636.004; main = 2886.898; forked = 1038.934
+INFO: [Common 17-1381] The checkpoint '/home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/synth_1/cpu.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file cpu_utilization_synth.rpt -pb cpu_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Oct 17 19:37:49 2026...

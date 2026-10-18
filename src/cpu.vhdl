@@ -43,7 +43,7 @@ entity cpu is
         -- In outs.
         ddr3_dq             : inout std_logic_vector(15 downto 0);
         ddr3_dqs_p          : inout std_logic_vector(1 downto 0);
-        ddr3_dqs_n          : inout std_logic_vector(1 downto 0);
+        ddr3_dqs_n          : inout std_logic_vector(1 downto 0)
         
         ------------------------------------------------------------------------
         -- @brief LED's.

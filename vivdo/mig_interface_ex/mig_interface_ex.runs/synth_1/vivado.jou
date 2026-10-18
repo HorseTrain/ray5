@@ -3,8 +3,8 @@
 # SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
 # IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
 # SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
-# Start of session at: Sat Oct 17 19:36:57 2026
-# Process ID         : 763877
+# Start of session at: Sat Oct 17 19:37:25 2026
+# Process ID         : 774307
 # Current directory  : /home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/synth_1
 # Command line       : vivado -log cpu.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cpu.tcl
 # Log file           : /home/raymond/Desktop/ray5/vivdo/mig_interface_ex/mig_interface_ex.runs/synth_1/cpu.vds
@@ -13,12 +13,12 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 26.04.1 LTS
 # Processor Detail   : AMD Ryzen 9 5900X 12-Core Processor
-# CPU Frequency      : 4610.810 MHz
+# CPU Frequency      : 4674.853 MHz
 # CPU Physical cores : 12
 # CPU Logical cores  : 24
 # Host memory        : 65190 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 73780 MB
-# Available Virtual  : 57746 MB
+# Available Virtual  : 57580 MB
 #-----------------------------------------------------------
 source cpu.tcl -notrace
