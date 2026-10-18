@@ -49,7 +49,7 @@ entity cpu is
         ------------------------------------------------------------------------
         -- @brief LED's.
         ------------------------------------------------------------------------
-        led0_r              : out std_logic
+        led                 : out unsigned (0 to 3)
     );
 
 end entity;
@@ -144,7 +144,17 @@ architecture rtl of cpu is
     -- Memory ready flag. 
     signal memory_ready : std_logic := '0';
     
-    -- signal led0_r : std_logic;
+    ----------------------------------------------------------------------------
+    -- @brief LED patterns. 
+    ----------------------------------------------------------------------------
+
+    subtype green_led_pattern_t is unsigned (0 to 3);
+ 
+    -- Green LED init pattern. 
+    signal green_led_init_pattern : green_led_pattern_t; 
+
+    -- Green LED idle pattern.
+    signal green_led_idle_pattern : green_led_pattern_t;
 
 begin
 
@@ -218,6 +228,13 @@ begin
     ddr3_dqs_n <= memory_interface_bus.ddr3_in_outs.ddr3_dqs_n;
 
     ----------------------------------------------------------------------------
+    -- LEDs.
+    ----------------------------------------------------------------------------
+
+    green_led_init_pattern <= "00" & led_test(7 to 8); 
+    green_led_idle_pattern <= shift_left(to_unsigned(1, 4), to_integer(led_test(6 to 7)));
+
+    ----------------------------------------------------------------------------
     -- CPU Process.
     ----------------------------------------------------------------------------
 
@@ -234,7 +251,7 @@ begin
                 when CPU_STATE_INITIALIZING =>
 
                     -- Pulse the LED to signal the cpu is initializing.
-                    led0_r <= led_test(5);
+                    led <= green_led_init_pattern;
 
                     -- Only initiate the cores if they are not ready.
                     if cores_ready = '0' then
@@ -306,14 +323,13 @@ begin
 
                     -- Set the core0 entry point.
 
-                    -- TODO this is temp.
-                    led0_r <= led_test(6);
+                    led <= green_led_idle_pattern;
 
 
                 when others =>
 
                     -- Processor is hung up, and requires a restart.
-                    led0_r <= '1';
+                    led <= "1111";
 
                     null;
 
